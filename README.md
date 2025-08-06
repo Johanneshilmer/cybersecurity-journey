@@ -19,5 +19,4 @@ I'm documenting my progress as I work toward becoming a **SOC Analyst**.
 
 Check out the folders for:
 - `tryhackme/` – My path walkthroughs
-- `labs/` – Packet analysis, log inspection, detection
 - `notes/` – Commands, concepts, cheatsheets
