@@ -1,0 +1,239 @@
+# Chapter 1
+
+- Module 1
+Terms and definitions from Course 1, Module 1
+
+Cybersecurity (or security): The practice of ensuring confidentiality, integrity, and availability of information by protecting networks, devices, people, and data from unauthorized access or criminal exploitation
+
+Cloud security: The process of ensuring that assets stored in the cloud are properly configured and access to those assets is limited to authorized users
+
+Internal threat: A current or former employee, external vendor, or trusted partner who poses a security risk
+
+Network security: The practice of keeping an organization's network infrastructure secure from unauthorized access
+
+Personally identifiable information (PII): Any information used to infer an individual’s identity
+
+Security posture: An organization’s ability to manage its defense of critical assets and data and react to change 
+
+Sensitive personally identifiable information (SPII): A specific type of PII that falls under stricter handling guidelines
+
+Technical skills: Skills that require knowledge of specific tools, procedures, and policies 
+
+Threat: Any circumstance or event that can negatively impact assets
+
+Threat actor: Any person or group who presents a security risk
+
+Transferable skills: Skills from other areas that can apply to different careers 
+
+
+
+
+
+
+
+- Module 2
+
+Understanding past attacks can provide direction for how to handle or investigate inceidents in you job.
+
+Computer virus today know as malware attaches itself to programs or document and spreads and infects more computers.
+
+# Different attacks
+
+- Phishing
+
+Phishing is the use of digital communications to trick people into revealing sensitive data or deploying malicious software. 
+
+Some of the most common types of phishing attacks today include: 
+
+    Business Email Compromise (BEC): A threat actor sends an email message that seems to be from a known source to make a seemingly legitimate request for information, in order to obtain a financial advantage.
+
+    Spear phishing: A malicious email attack that targets a specific user or group of users. The email seems to originate from a trusted source.
+
+    Whaling: A form of spear phishing. Threat actors target company executives to gain access to sensitive data.
+
+    Vishing: The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source.
+
+    Smishing: The use of text messages to trick users, in order to obtain sensitive information or to impersonate a known source.
+
+- Malware
+
+Malware is software designed to harm devices or networks. There are many types of malware. The primary purpose of malware is to obtain money, or in some cases, an intelligence advantage that can be used against a person, an organization, or a territory.  
+
+Some of the most common types of malware attacks today include: 
+
+    Viruses: Malicious code written to interfere with computer operations and cause damage to data and software. A virus needs to be initiated by a user (i.e., a threat actor), who transmits the virus via a malicious attachment or file download. When someone opens the malicious attachment or download, the virus hides itself in other files in the now infected system. When the infected files are opened, it allows the virus to insert its own code to damage and/or destroy data in the system.
+
+    Worms: Malware that can duplicate and spread itself across systems on its own. In contrast to a virus, a worm does not need to be downloaded by a user. Instead, it self-replicates and spreads from an already infected computer to other devices on the same network.
+
+    Ransomware: A malicious attack where threat actors encrypt an organization's data and demand payment to restore access. 
+
+    Spyware: Malware that’s used to gather and sell information without consent. Spyware can be used to access devices. This allows threat actors to collect personal data, such as private emails, texts, voice and image recordings, and locations.
+
+- Social Engineering 
+
+Social engineering is a manipulation technique that exploits human error to gain private information, access, or valuables. Human error is usually a result of trusting someone without question. It’s the mission of a threat actor, acting as a social engineer, to create an environment of false trust and lies to exploit as many people as possible. 
+
+Some of the most common types of social engineering attacks today include:
+
+    Social media phishing: A threat actor collects detailed information about their target from social media sites. Then, they initiate an attack.
+
+    Watering hole attack: A threat actor attacks a website frequently visited by a specific group of users.
+
+    USB baiting: A threat actor strategically leaves a malware USB stick for an employee to find and install, to unknowingly infect a network. 
+
+    Physical social engineering: A threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location.
+
+
+- Computer virus: 
+Malicious code written to interfere with computer operations and cause damage to data and software
+
+- Cryptographic attack: 
+An attack that affects secure forms of communication between a sender and intended recipient
+
+- Hacker: 
+Any person who uses computers to gain access to computer systems, networks, or data
+
+- Malware: 
+Software designed to harm devices or networks
+
+- Password attack: 
+An attempt to access password secured devices, systems, networks, or data
+
+- Phishing: 
+The use of digital communications to trick people into revealing sensitive data or deploying malicious software
+
+- Physical attack: 
+A security incident that affects not only digital but also physical environments where the incident is deployed
+
+- Physical social engineering: 
+An attack in which a threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location
+
+- Social engineering: 
+A manipulation technique that exploits human error to gain private information, access, or valuables
+
+- Social media phishing: 
+A type of attack where a threat actor collects detailed information about their target on social media sites before initiating the attack
+
+- Spear phishing: 
+A malicious email attack targeting a specific user or group of users, appearing to originate from a trusted source
+
+- Supply-chain attack: 
+An attack that targets systems, applications, hardware, and/or software to locate a vulnerability where malware can be deployed
+
+- USB baiting: 
+An attack in which a threat actor strategically leaves a malware USB stick for an employee to find and install to unknowingly infect a network
+
+- Virus: 
+refer to “computer virus”
+
+- Vishing: 
+The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source
+
+- Watering hole attack: 
+A type of attack when a threat actor compromises a website frequently visited by a specific group of users
+
+
+
+
+-- CISSP Securitu domains "Certified Information Systems Security Professional" --
+  Security and Risk Management
+    - Updating software and policy. "Social engineering attack" "Supply-chain attack"
+
+  Assets Security
+    - Secures digital and physical assets. "Physical attack"
+
+  Security Architecture and Engineering
+    - Optimizes data security with tools, systems, like "firewall". "Supply-chain attack"
+
+  Communication and Network Security
+    - manage and secure physical networks and wireless communications. "Password attack" "Adversarial artificial intelligence" "Cryptographic attack"
+
+  Identity and Access Management
+    - Keep data secure by ensuring users follow policies. "Adversarial artificial intelligence"
+
+  Security Assessment and Testing
+    - Lead security control testing, collecting and analyzing data.
+
+  Security Operations
+    - Conducting investigations and implementing preventative measures. "Supply-chain attack"
+
+  Software Development Security
+    - Uses secure coding practices.
+
+
+## Password attack
+
+A password attack is an attempt to access password-secured devices, systems, networks, or data. Some forms of password attacks that you’ll learn about later in the certificate program are:  
+
+    Brute force
+
+    Rainbow table
+
+Password attacks fall under the communication and network security domain. 
+Social engineering attack
+
+Social engineering is a manipulation technique that exploits human error to gain private information, access, or valuables. Some forms of social engineering attacks that you will continue to learn about throughout the program are: 
+
+    Phishing
+
+    Smishing
+
+    Vishing
+
+    Spear phishing
+
+    Whaling
+
+    Social media phishing
+
+    Business Email Compromise (BEC)
+
+    Watering hole attack
+
+    USB (Universal Serial Bus) baiting
+
+    Physical social engineering 
+
+Social engineering attacks are related to the security and risk management domain.
+Physical attack
+
+A physical attack is a security incident that affects not only digital but also physical environments where the incident is deployed. Some forms of physical attacks are:
+
+    Malicious USB cable
+
+    Malicious flash drive
+
+    Card cloning and skimming
+
+Physical attacks fall under the asset security domain. 
+Adversarial artificial intelligence
+
+Adversarial artificial intelligence is a technique that manipulates artificial intelligence and machine learning
+
+ technology to conduct attacks more efficiently. Adversarial artificial intelligence falls under both the communication and network security and the identity and access management domains.
+Supply-chain attack
+
+A supply-chain attack targets systems, applications, hardware, and/or software to locate a vulnerability where malware can be deployed. Because every item sold undergoes a process that involves third parties, this means that the security breach can occur at any point in the supply chain. These attacks are costly because they can affect multiple organizations and the individuals who work for them. Supply-chain attacks can fall under several domains, including but not limited to the security and risk management, security architecture and engineering, and security operations domains.
+Cryptographic attack
+
+A cryptographic attack affects secure forms of communication between a sender and intended recipient. Some forms of cryptographic attacks are: 
+
+    Birthday
+
+    Collision
+
+    Downgrade
+
+Cryptographic attacks fall under the communication and network security domain. 
+
+
+
+
+
+
+
+
+
+- Module 3
+
+
