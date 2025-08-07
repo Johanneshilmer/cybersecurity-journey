@@ -1,5 +1,12 @@
 ## 📚 Cyber Security Concepts
 
-#IDS (Intrusion Detection System)
+## Required qualifications:
+- Basic understanding of Networking ( OSI model (Open Systems Interconnection Model) or  TCP/IP model (Transmission Control Protocol/Internet Protocol Model)), 
+  Operating Systems (Windows, Linux), Web applications. To further learn about OSI and TCP/IP models, please refer to the Introductory Networking Room.
+- Scripting/programming skills are a plus
+
+
+# IDS (Intrusion Detection System)
 It's a security system that ower viewing networks och systems for dameging activitis or policy violations.
 When it finds somthing suspected or damegning it alerts the admins or SOC.
+
