@@ -1,0 +1,191 @@
+Foundations of Cybersecurity – Kapitel 1
+Modul 1 – Grunderna i cybersäkerhet
+
+Termer och definitioner:
+
+    Cybersecurity (or security): Praktiken att säkerställa konfidentialitet, integritet och tillgänglighet av information genom att skydda nätverk, enheter, personer och data från obehörig åtkomst eller kriminellt utnyttjande.
+
+    Cloud security: Processen att säkerställa att tillgångar som lagras i molnet är korrekt konfigurerade och att åtkomst till dessa tillgångar är begränsad till auktoriserade användare.
+
+    Internal threat: En nuvarande eller tidigare anställd, extern leverantör eller betrodd partner som utgör en säkerhetsrisk.
+
+    Network security: Praktiken att hålla en organisations nätverksinfrastruktur säker från obehörig åtkomst.
+
+    Personally identifiable information (PII): All information som kan användas för att identifiera en individ.
+
+    Security posture: En organisations förmåga att hantera sitt försvar av kritiska tillgångar och data samt att reagera på förändringar.
+
+    Sensitive personally identifiable information (SPII): En specifik typ av PII som omfattas av strängare hanteringsriktlinjer.
+
+    Technical skills: Färdigheter som kräver kunskap om specifika verktyg, procedurer och policys.
+
+    Threat: Alla omständigheter eller händelser som kan påverka tillgångar negativt.
+
+    Threat actor: En person eller grupp som utgör en säkerhetsrisk.
+
+    Transferable skills: Färdigheter från andra områden som kan tillämpas i olika karriärer.
+
+
+
+
+
+
+
+- Foundations of Cybersecurity Module 2
+
+Att förstå tidigare attacker kan ge vägledning för hur man hanterar eller undersöker incidenter i sitt arbete.
+
+Ett datorvirus, idag känt som skadlig kod (malware), fäster sig vid program eller dokument och sprids sedan till fler datorer.
+Olika typer av attacker
+Phishing
+
+Phishing är användningen av digital kommunikation för att lura människor att avslöja känslig information eller installera skadlig kod.
+
+Vanliga typer av phishingattacker:
+
+    BEC (Business Email Compromise): En hotaktör skickar ett e-postmeddelande som verkar komma från en betrodd källa för att begära information i syfte att få ekonomisk vinning.
+
+    Spear phishing: En riktad e-postattack mot en specifik användare eller grupp, där meddelandet ser ut att komma från en betrodd källa.
+
+    Whaling: En typ av spear phishing där företagets chefer är målet för att få tillgång till känslig information.
+
+    Vishing: Utnyttjande av röstkommunikation (ex. telefonsamtal) för att få känslig information eller utge sig för att vara någon annan.
+
+    Smishing: Användning av SMS för att lura användare att avslöja känslig information eller att utge sig för att vara någon annan.
+
+Malware (skadlig kod)
+
+Skadlig kod är programvara som är utformad för att skada enheter eller nätverk. Syftet är ofta ekonomisk vinning eller underrättelsefördelar.
+
+Vanliga typer:
+
+    Virus: Skadlig kod som stör datorns funktioner och skadar data eller programvara. Kräver att en användare initierar den (ex. via bifogad fil eller nedladdning).
+
+    Mask (worm): Skadlig kod som kan kopiera och sprida sig själv utan användarens inblandning.
+
+    Ransomware: En attack där angripare krypterar en organisations data och kräver betalning för att återställa åtkomst.
+
+    Spyware: Skadlig kod som samlar in och säljer information utan samtycke, t.ex. privata meddelanden, bilder, ljud och platsinformation.
+
+Social engineering
+
+Social engineering är en manipulationsteknik som utnyttjar mänskliga misstag för att få tillgång till privat information, åtkomst eller värdefulla tillgångar.
+
+Vanliga typer:
+
+    Phishing via sociala medier: Hotaktören samlar information om målet via sociala medier innan attacken utförs.
+
+    Watering hole-attack: Hotaktören infekterar en webbplats som ofta besöks av en specifik grupp.
+
+    USB-bete: Hotaktören lämnar strategiskt en infekterad USB-sticka för någon att hitta och ansluta till företagets datorer.
+
+    Physical social engineering: Hotaktören utger sig för att vara en anställd, kund eller leverantör för att få fysisk åtkomst till en plats.
+
+
+Andra nyckelbegrepp:
+
+    Computer virus: Skadlig kod skriven för att störa datorns funktioner och orsaka skador på data eller program.
+
+    Cryptographic attack: En attack som påverkar säkra kommunikationsformer mellan sändare och mottagare.
+
+    Hacker: En person som använder datorer för att få tillgång till system, nätverk eller data.
+
+    Password attack: Ett försök att få åtkomst till lösenordsskyddade enheter, system, nätverk eller data.
+
+    Physical attack: En säkerhetsincident som påverkar både digitala och fysiska miljöer.
+
+    Supply-chain attack: En attack som riktar sig mot system, applikationer, hårdvara eller mjukvara för att hitta sårbarheter där skadlig kod kan införas.
+
+
+Domäner enligt CISSP (Certified Information Systems Security Professional)
+
+    Security and Risk Management: Uppdatera programvara och policyer. Ex: social engineering, supply-chain attack.
+
+    Assets Security: Skyddar digitala och fysiska tillgångar. Ex: fysisk attack.
+
+    Security Architecture and Engineering: Optimerar datasäkerhet med verktyg och system som brandväggar. Ex: supply-chain attack.
+
+    Communication and Network Security: Hanterar och skyddar nätverk och trådlös kommunikation. Ex: lösenordsattack, kryptografisk attack, AI-baserade hot.
+
+    Identity and Access Management: Säkrar data genom att se till att användare följer åtkomstpolicyer. Ex: AI-hot.
+
+    Security Assessment and Testing: Leder tester av säkerhetskontroller, samlar och analyserar data.
+
+    Security Operations: Utför undersökningar och implementerar förebyggande åtgärder. Ex: supply-chain attack.
+
+    Software Development Security: Använder säkra kodningsmetoder.
+
+
+
+
+
+
+
+Modul 3 – Säkerhetsramverk
+Säkerhetsramverk (security frameworks):
+
+    Identifiera och dokumentera säkerhetsmål
+
+    Sätt upp riktlinjer för att uppnå säkerhetsmålen
+
+    Implementera säkerhetsprocesser
+
+    Övervaka och kommunicera resultat
+
+Säkerhetskontroller (security controls):
+
+Skyddsåtgärder utformade för att minska specifika risker, till exempel att hålla koll på vilka som genomgått cybersäkerhetsutbildning.
+CIA-modellen (Confidentiality, Integrity, Availability)
+
+    Konfidentialitet: Endast auktoriserade användare kan komma åt specifik data.
+
+    Integritet: Data är korrekt, autentisk och tillförlitlig.
+
+    Tillgänglighet: Data är åtkomlig för de som är behöriga.
+
+
+NIST Cybersecurity Framework (CSF)
+
+Ett ramverk som består av standarder, riktlinjer och bästa praxis för att hantera cybersäkerhetsrisker.
+
+
+
+
+
+
+Modul 4 – Security tools and programming languages
+
+Log = Är "inspelade" events som händer i ett system.
+
+(SIEM) Security Information and Event Management = Ett verktyg som samlar in och analyserar log data för övervakning.
+Tools för SOC analys
+    - Splunk = Är data analyserings platform som förser med SIEM lösningar.
+    - Chronicle = Är googles egna och liknar Splunk men denna är cloud based.
+Mer tools
+    - Playbook = Manual som förser detaljer om hur man agerar mot actions, för det händer, innan det händer och under en händelse. Dokumentation om processer start till slut.
+    - Network protocol analyzer (packet sniffer) = verktyg som fångar och analyserar datatrafik inom nätverk namn på dessa är tcpdump och wireshark
+
+Python:
+    Används för att optimera uppgifter genom automation.
+Linux:
+    Analysera loggar.
+SQL (Structured Query Language):
+    Används för att interagera med databaser söka igenom specifik data.
+Web vulnerability:
+    Är sårbarheter i en websida/webbapplikation som hackare kan utnyttja.
+Antivirus software:
+    Används för att förhindra, upptäcka, få bort virus från datorn.
+Intrusion detection system (IDS):
+    Säkerhetsverktyg som övervakar nätverkstrafik och system för att upptäcka misstänkt eller skadlig aktivitet samt policyöverträdelser.
+Encryption:
+    Gör data oläsbar och svår att decode.
+Penetration testing:
+    Personer som simulerar attacker mot företag för att testa deras säkerhet.
+
+Portfolio:
+    Demonstrerar sina färdigheter genom olika projekt man har gjort, dessa kan man visa arbetsgivare.
+        - Dokumentera din väg, hur du lär dig, vad du lär dig.
+        - Showcase labbar.
+
+
+
