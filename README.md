@@ -2,6 +2,7 @@
 
 Welcome to my personal cybersecurity learning repo!  
 I'm documenting my progress as I work toward becoming a **SOC Analyst**.
+**Unfortunately, all notes will be in Swedish because then I will learn more effectively**.
 
 ## 📚 Active Learning
 
