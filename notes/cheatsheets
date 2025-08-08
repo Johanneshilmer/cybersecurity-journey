@@ -1,1 +1,5 @@
 
+**Linux**
+
+**dig www.google.com**
+gör så att man får all information om ens IPadress samt annan information om webbservern, dig är användbart eftersom det spelar ingen roll ifall servern är off eller inte så får man all information. Till skillnad från **ping** då man måste prata med servern.
