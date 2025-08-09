@@ -61,4 +61,33 @@
 
 Kort sagt:
 
-Sysinternals Suite är ett “Swiss Army Knife” för dig som vill ha full kontroll och insyn i vad som händer i Windows på detaljnivå. Det är ett av de viktigaste verktygen för både systemadministratörer, IT-säkerhetsexperter och SOC-analytiker när de felsöker och analyserar Windows-miljöer.
+Sysinternals Suite är ett “Swiss Army Knife” för dig som vill ha full kontroll och insyn i vad som händer i Windows på detaljnivå. 
+Det är ett av de viktigaste verktygen för både systemadministratörer, IT-säkerhetsexperter och SOC-analytiker när de felsöker och analyserar Windows-miljöer.
+
+
+
+** Vad används Wireshark till? **
+
+1. Analysera nätverkstrafik
+    Se exakt vilka paket som skickas och tas emot på ett nätverk.
+
+    Inspektera paketens innehåll — t.ex. IP-adresser, protokoll, portar, data i HTTP, DNS, FTP med mera.
+
+2. Felsökning av nätverksproblem
+    Hitta flaskhalsar, fördröjningar och paketförluster.
+
+    Se om trafik går dit den ska och hur lång tid det tar.
+
+3. Säkerhetsanalys och incidenthantering
+    Upptäcka misstänkt trafik eller attacker (t.ex. port scanning, DoS, man-in-the-middle).
+
+    Analysera skadlig trafik och misstänkta paketinnehåll.
+
+4. Lära sig och utbilda
+    Studera hur nätverksprotokoll fungerar i detalj.
+
+    Perfekt för utbildning i nätverk och säkerhet.
+
+Hur fungerar det?
+
+Wireshark “fångar upp” nätverkspaket genom att placera nätverkskortet i “promiscuous mode”, vilket innebär att den kan läsa all trafik som passerar på nätverket (inte bara trafik till/från din dator).
