@@ -1,0 +1,64 @@
+
+** Sysinternals Suite **
+  Exakt, Sysinternals Suite är en samling med över 70 små, superkraftfulla verktyg från Microsoft, som hjälper dig granska och felsöka Windows på djupet. 
+  Perfekt för en SOC-analytiker! 🕵️‍♂️
+  
+  **Öppna verktyg individuellt**
+  
+      Gå till mappen och starta precis det verktyg du behöver, t.ex.:
+  
+          Procmon.exe — Process Monitor, för att övervaka alla fil-, register- och processhändelser i realtid
+  
+          ProcessExplorer.exe — som Aktivitetshanteraren fast mycket mer detaljerad
+  
+          Autoruns.exe — ser vilka program som startar automatiskt med Windows
+  
+          PsExec.exe — köra processer på distans eller med andra rättigheter
+  
+  1. Kör från kommandoprompt eller PowerShell
+  
+      Många verktyg går att använda via kommandorad, t.ex. PsExec, PsList osv.
+  
+      Öppna PowerShell eller CMD, navigera till mappen (cd C:\Sysinternals) och kör t.ex. Procmon.exe
+  
+  2. Tips för att komma igång
+  
+      Börja med Process Explorer för att se vilka processer som körs och deras resurser
+  
+      Använd Process Monitor för att fånga och analysera händelser i systemet
+  
+      Kolla Autoruns för att se och rensa autostart-program (ofta bra vid malware-analys)
+
+
+** Vad används Sysinternals Suite till i praktiken? **
+1. Felsökning av system och program
+
+    Identifiera varför en dator är långsam eller kraschar
+
+    Se vilka processer som använder mest CPU eller minne
+
+    Följa exakt vad ett program gör (t.ex. vilka filer och registernycklar det läser/ändrar) med Process Monitor
+
+2. Säkerhetsanalys och malware-undersökning
+
+    Kolla vilka program som startar automatiskt vid uppstart (med Autoruns) — ofta en väg in för skadlig kod
+
+    Identifiera okända eller misstänkta processer med Process Explorer
+
+    Köra program med andra rättigheter eller på distans med PsExec
+
+3. Systemadministration och kontroll
+
+    Se alla öppna nätverksanslutningar och vilka processer som använder dem (TCPView)
+
+    Analysera vilka DLL-filer ett program laddar (ListDLLs)
+
+    Hantera tjänster och processer utan att behöva starta om datorn
+
+4. Automatisering och scripting
+
+    Många verktyg går att köra från kommandorad och kan integreras i egna scripts för övervakning och hantering
+
+Kort sagt:
+
+Sysinternals Suite är ett “Swiss Army Knife” för dig som vill ha full kontroll och insyn i vad som händer i Windows på detaljnivå. Det är ett av de viktigaste verktygen för både systemadministratörer, IT-säkerhetsexperter och SOC-analytiker när de felsöker och analyserar Windows-miljöer.
