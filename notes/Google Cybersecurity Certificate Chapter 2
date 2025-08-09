@@ -1,0 +1,144 @@
+Play it safe: Manage security risks: Modul 1
+
+  CISSP 8 domäner används för att organisera dagliga uppgifter och identifiera hot och för att säkerställa organisationens säkerhet.
+
+    - "Security posture" avser en organisations förmåga att hantera sitt försvar av kritiska tillgångar och reagerar på förändring.
+
+De 8 domäner i CISSP (Certified Information Systems Security Professional)
+1. Security and Risk Management
+  Det här är grunden för all säkerhetspraxis. Den handlar om hur man bygger, styr och upprätthåller ett säkerhetsprogram i organisationen.
+  Här ingår saker som informationssäkerhetspolicyer, riskanalyser, regelefterlevnad (t.ex. GDPR, ISO 27001), etik och ramverk för styrning.
+  Man lär sig även metoder för att mäta risk (kvalitativt och kvantitativt) och bestämma hur man hanterar den – acceptera, undvika, överföra eller reducera.
+
+2. Asset Security
+  Denna domän fokuserar på identifiering, klassificering och hantering av tillgångar (data, system, hårdvara).
+  Man arbetar med dataklassificering (t.ex. "hemlig", "intern", "publik"), ägarskap, livscykelhantering och korrekt hantering av lagring, överföring och destruktion av data.
+  Målet är att säkerställa att data alltid skyddas enligt dess känslighet.
+
+3. Security Architecture and Engineering
+  Här handlar det om den tekniska grunden för säkerhet.
+  Man studerar säker design av system och nätverk, kryptografi, säker hårdvara, och hur man bygger motståndskraftiga system.
+  Det omfattar även säkerhetsmodeller, säkerhetsprinciper som "least privilege", samt skydd mot fysiska och logiska hot.
+
+4. Communication and Network Security
+  Fokuserar på säker kommunikation och nätverksarkitektur.
+  Det täcker allt från OSI-modellen, TCP/IP, brandväggar och VPN till trådlös säkerhet och skydd mot nätverksattacker som DDoS och man-in-the-middle.
+  Man lär sig även segmentering, zero trust och hur man säkrar både interna och externa nätverk.
+
+5. Identity and Access Management (IAM)
+  Här handlar det om kontroll över vem som får göra vad.
+  Man täcker autentisering (lösenord, multifaktor, biometrik), auktorisation (RBAC, ABAC) och ansvarsskyldighet (loggning, spårbarhet).
+  Målet är att se till att rätt person får rätt åtkomst vid rätt tid — och ingen annan.
+
+6. Security Assessment and Testing
+  Denna domän täcker metoder för att mäta och testa säkerhet.
+  Det kan vara allt från interna revisioner, sårbarhetsscanningar och penetrationstester till kontinuerlig övervakning och logggranskning.
+  Man lär sig även att utveckla testplaner och rapportera resultat för förbättring.
+
+7. Security Operations
+  Här fokuserar man på den dagliga driften av säkerhet.
+  Det innefattar incidenthantering, katastrofåterställning, logghantering, säkerhetsövervakning, forensik och fysisk säkerhet.
+  Man tränar på att snabbt kunna upptäcka, svara på och återhämta sig från säkerhetsincidenter.
+
+8. Software Development Security
+  Den sista domänen handlar om säker utveckling av programvara.
+  Det täcker säkra kodningsprinciper, hotmodellering, sårbarheter som SQL-injektion och XSS, samt säkerhetsåtgärder i hela utvecklingslivscykeln (SDLC).
+  Man tittar även på DevSecOps och hur man bygger in säkerhet från början.
+
+💡 Enkelt sätt att minnas
+Du kan tänka på det som:
+
+    1–2: Policy och data
+
+    3–4: Teknik och nätverk
+
+    5–6: Kontroll och verifiering
+
+    7–8: Drift och utveckling
+
+
+
+Finns tre olika lager av web
+  1 Surface Web
+    Är webben som vi alla söker oss runt på som google till exempel.
+
+  2. deep web
+    Är nätverk där man ofta kräver autentisering så som interna företags nätverk.
+
+  3. dark web
+    Kan bara nås genom specialla software.
+
+
+
+NIST (National Institute of Standards and Technology)
+
+NIST's (Risk Management Framework) eller RMF
+  Det finns 7 steg inom RMF
+1. Prepare – Förberedelse
+  Här förbereder man organisationen och projektet på riskhanteringsprocessen. 
+  Det handlar om att definiera roller, resurser, kommunikationsplaner och att förstå den övergripande riskmiljön.
+  Exempel: IT-säkerhetsteamet samlar ledning, systemägare och utvecklare för att fastställa hur man ska hantera risker och vilka standarder (t.ex. NIST SP 800-53) som ska följas.
+
+2. Categorize – Kategorisera systemet
+  Man bedömer systemets betydelse och känslighet baserat på de data det hanterar och konsekvenserna av en incident (konfidentialitet, integritet, tillgänglighet).
+  Exempel: Ett system som hanterar patientjournaler klassas som hög känslighet eftersom läckage skulle ha allvarliga konsekvenser.
+
+3. Select – Välj säkerhetskontroller
+  Utifrån klassificeringen väljer man vilka säkerhetskontroller som ska användas (t.ex. brandväggar, kryptering, multifaktorautentisering). 
+  NIST SP 800-53 används ofta som referens.
+  Exempel: För ett system med känsliga uppgifter väljs stark kryptering (AES-256), begränsad nätverksåtkomst och detaljerad loggning.
+
+4. Implement – Implementera kontroller
+  Här sätter man på plats de säkerhetskontroller man valt och dokumenterar hur de är implementerade.
+  Exempel: Installera en SIEM-lösning, konfigurera brandväggar, införa MFA och dokumentera inställningarna.
+
+5. Assess – Bedöm kontrollerna
+  Man testar och granskar säkerhetskontrollerna för att säkerställa att de fungerar som tänkt. 
+  Detta kan göras genom revision, scanning, penetrationstester eller kodgranskning.
+  Exempel: Säkerhetsteamet kör en sårbarhetsscan och försöker utföra en intern penetrationstest för att se om MFA och brandväggar står emot attacker.
+
+6. Authorize – Godkänn systemet
+  En beslutsfattare (Authorizing Official) avgör om systemet får driftsättas baserat på risknivån och testresultaten. Detta är som ett “grönt ljus” att gå live.
+  Exempel: Efter att säkerhetsteamet visat att riskerna är inom acceptabla nivåer ger ledningen tillstånd att driftsätta systemet.
+
+7. Monitor – Övervaka kontinuerligt
+  Efter driftsättning måste systemet kontinuerligt övervakas, uppdateras och återbedömas när hotbilden eller systemets användning förändras.
+  Exempel: Säkerhetsteamet övervakar loggar, svarar på incidenter, uppdaterar mjukvara och gör årliga riskbedömningar.
+
+💡 Kom ihåg: RMF är cykliskt — när förändringar sker (ny mjukvara, nya hot, nya lagkrav) börjar processen om från början.
+
+
+
+
+
+Play it safe: Manage security risks: Modul 2
+
+Cybersecurity Framework (CSF)
+  Guidline för att bygga en plan för att hjälpa att minska risker och hot mot data och privacy
+
+Security Controls
+  Är till för att reducera specifika säkerhetshot.
+
+  MÄNNISKOR ÄR DET STÖRSTA HOTET MOT SÄKERHET
+
+
+  Encryption: gör om läsbar data till krypterad form.
+
+  Authentication: verifierar vem personen som loggar in är.
+
+  Biometrics: är ett uniktsätt att verifiera en person, använder ofta finger, ögon eller hand scanning.
+
+  Authorization: Gör tillträde till specifika områden till folk som ska ha det.
+
+Hot
+  Vishing: som fishing fast man gör det med sin röst.
+
+
+CIA-modellen (Confidentiality, Integrity, Availability)
+      Hjälper organisationer hur man ser på risker när man sätter upp system och säkerhets policy.
+
+    Confidentiality: Endast auktoriserade användare kan komma åt specifik data.
+
+    Integrity: Data är korrekt, autentisk och tillförlitlig.
+
+    Availability: Data är åtkomlig för de som är behöriga.
