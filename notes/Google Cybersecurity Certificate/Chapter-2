@@ -113,10 +113,10 @@ NIST's (Risk Management Framework) eller RMF
 
 Play it safe: Manage security risks: Modul 2
 
-Cybersecurity Framework (CSF)
-  Guidline för att bygga en plan för att hjälpa att minska risker och hot mot data och privacy
+Cybersecurity Framework (CSF) (Guidlines)
+  **Frivilig** guidline för att bygga en plan för att hjälpa att minska risker och hot mot data och privacy
 
-Security Controls
+Security Controls (Specifika för ett hot)
   Är till för att reducera specifika säkerhetshot.
 
   MÄNNISKOR ÄR DET STÖRSTA HOTET MOT SÄKERHET
@@ -142,3 +142,87 @@ CIA-modellen (Confidentiality, Integrity, Availability)
     Integrity: Data är korrekt, autentisk och tillförlitlig.
 
     Availability: Data är åtkomlig för de som är behöriga.
+
+
+**Företag använder FRAMEWORKS som en startpunkt för att planera risker och hot som kan förstöra känslig data och tillgångar.**
+
+CSF (CyberSecurity Framework)
+Innehåller 6 olika funktioner för att säkerställa att organisationen har effektiv säkerhets strategi.
+
+  1. Govern (Nyligen tillagd)
+    Betonar vikten av säkerhet på alla nivåer i organisationen. Etablera och upprätthålla strukturer och processer.
+      - cybersäkerhetsmål
+      - säkerställa ledarskapets engagemang
+      - riskhanteringsstrategi
+      - förbättra cybersäkerhetsprestanda
+
+  2. Identify
+    Hantering av cybersäkerhetsrisker och effekt på organisationens personal och tillgångar.
+    Som att övervaka de interna nätverket efter hot.
+
+  3. Protect
+    Strategi för att skydda organisationen genom att implementera policy, utbildning och verktyg som hjälper att miska hoten.
+
+  4. Detect
+    Identifiera säkerhetsrisker och förbättra analyserings kapasiteten för att öka hastigheten och effektiviteten att hitta hot.
+
+  5. Respond
+    Säkerställer att rätt objekt används för att fånga och få bort hot och analysera säkerhets incidenter, samt implementera förbättringar till säkerhets processen.
+
+  6. Recover
+    Är processen att få tillbaka smittade system till normalt.
+
+OWASP (Open Web Application Security Project)
+  - "Minimize attack surface area" Minimera attack ytan. (isolera attacken)
+  - "Principle of least privilega" Ha så lite privilege som möjligt för att kunna utföra sitt jobb.
+  - "Defense in depth" Att man har flera security controls som skyddar från olika perspektiv.
+  - "Separation of duties" Att man inte ska kunna ha tillgångar till massa olika system så man kan missanvända detta.
+  - "Keep security simple" Att ha får kronliga lösningar kan göra det svårt att underhålla.
+  - "Fix security issues correctly" Som tillexemepl att fixa wifi lösenordet och det blir för enkelt, sätter man strikta regler för lösenord blir allt bättre.
+  - "Establish secure defaults" Menar att standardläga ska vara säkrast och att det ska kräva mycket ändringar att göra det osäkert.
+  - "Fail securely" Menas att när en kontroll misslyckas eller stoppas så ska systemet inte tillåta något ist för att tillåta allt.
+  - "Don’t trust services" Att man inte ska lita fullt ut på externa partners eftersom dom kan ha andra säkerhetspolisy
+  - "Avoid security by obscurity" Säkerheten ska bygga på robusta, testade och verifierade skyddsåtgärder, inte på att angriparen förväntas sakna insyn.
+
+** Plan a security audit **
+  En Security audit är en granskning av organisationens säkerhetskontroller och policyer mot en uppsättningar förväntningar.
+
+  *Internal Security audit*:
+    Görs för att förbättra organisationens säkerhetsställning och hjälpa företaget undvika böter från styrande myndigheter pga brister.
+    Dessa hjälper organisationer identifiera risker och bedömma security control för att kunna korrigera dem.
+      - Establishing the scope and goals
+      - Conducting a risk assessment
+      - Completing a controls assessment
+      - Assessoing compliance
+      - Communicatiing results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
