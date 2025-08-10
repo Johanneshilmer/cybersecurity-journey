@@ -37,3 +37,113 @@
   `Ping-kommando` → `ICMP (Internet)` → `IP-adressering` → `Ethernet/Wi-Fi`
 - När du **streamar en video**:  
   `Videospelare (App Layer)` → `UDP (Transport)` → `IP (Internet)` → `Wi-Fi/Ethernet`
+
+
+
+
+
+                  🌐 NÄTVERKSPROTOKOLL – Snabb översikt
+┌──────────────────────────────────────────────────────────────────────────┐
+|  APPLICATION LAYER – "Tjänster och program"                              |
+|  --------------------------------------------------------------------     |
+|  HTTP / HTTPS  → Webbsidor (okrypterad/krypterad)                         |
+|  FTP           → Filöverföring                                            |
+|  SMTP          → Skicka e-post                                            |
+|  IMAP / POP3   → Hämta e-post                                              |
+|  DNS           → Namn → IP-översättning                                   |
+└──────────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+|  TRANSPORT LAYER – "Hur data skickas"                                    |
+|  --------------------------------------------------------------------     |
+|  TCP → Tillförlitlig, ordnad leverans (webb, e-post)                      |
+|  UDP → Snabb, utan felkontroll (streaming, spel)                          |
+|  PORTNUMMER → Identifierar vilken tjänst som tar emot data                |
+└──────────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+|  INTERNET LAYER – "Adress och väg"                                       |
+|  --------------------------------------------------------------------     |
+|  IP (IPv4 / IPv6) → Adressering av paket                                 |
+|  ICMP → Diagnostik & felrapport (ping)                                   |
+|  ARP  → Översätter IP → MAC-adress                                       |
+|  Routing-protokoll: OSPF, BGP, RIP                                       |
+└──────────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+|  NETWORK ACCESS LAYER – "Fysisk leverans"                                |
+|  --------------------------------------------------------------------     |
+|  Ethernet → Kabelanslutning                                              |
+|  Wi-Fi   → Trådlös anslutning                                            |
+|  PPP     → Punkt-till-punkt-länk                                         |
+|  MAC-adress → Unik hårdvaruidentifierare                                 |
+└──────────────────────────────────────────────────────────────────────────┘
+
+📌 EXEMPELFLÖDE:
+"Öppna en webbsida via Wi-Fi"
+   HTTP → TCP → IP → Wi-Fi → Internet → Mottagare
+
+
+
+                  🌐 NÄTVERKSPROTOKOLL – DETALJERAD
+================================================================================
+ APPLICATION LAYER – "Tjänster och program"
+--------------------------------------------------------------------------------
+  HTTP        → Hämtar och visar webbsidor (okrypterad kommunikation)
+  HTTPS       → Samma som HTTP, men krypterad med TLS/SSL
+  FTP         → Filöverföring mellan klient och server
+  SMTP        → Skickar e-post till en mailserver
+  IMAP / POP3 → Hämtar e-post (IMAP = lämnar kopia på server, POP3 = laddar ner)
+  DNS         → Översätter domännamn (t.ex. google.com) till IP-adress
+
+                                │
+                                ▼
+================================================================================
+ TRANSPORT LAYER – "Hur data skickas"
+--------------------------------------------------------------------------------
+  TCP         → Tillförlitlig, ordnad dataöverföring med felkontroll
+                 (Används av webbsidor, e-post, filöverföring)
+  UDP         → Snabb, enkel överföring utan felkontroll
+                 (Används för streaming, VoIP, onlinespel)
+  Portnummer  → Identifierar vilken tjänst på en enhet som ska ta emot datan
+                 (t.ex. Port 80 = HTTP, Port 443 = HTTPS, Port 25 = SMTP)
+
+                                │
+                                ▼
+================================================================================
+ INTERNET LAYER – "Adress och väg"
+--------------------------------------------------------------------------------
+  IP (IPv4 / IPv6) → Adresserar varje enhet på nätverket och dirigerar paketen
+  ICMP             → Skickar felmeddelanden och används för diagnostik (t.ex. ping)
+  ARP              → Översätter IP-adresser till MAC-adresser inom lokalt nätverk
+  Routingprotokoll:
+     - OSPF → Används i interna nätverk för att hitta snabbaste vägen
+     - BGP  → Används mellan internetoperatörer för att dirigera trafik globalt
+     - RIP  → Äldre, enklare routingprotokoll (används sällan idag)
+
+                                │
+                                ▼
+================================================================================
+ NETWORK ACCESS LAYER – "Fysisk leverans"
+--------------------------------------------------------------------------------
+  Ethernet → Överför data via kabel i lokala nätverk (LAN)
+  Wi-Fi    → Överför data trådlöst i lokala nätverk
+  PPP      → Enkel protokoll för punkt-till-punkt-förbindelser (t.ex. modem)
+  MAC-adress → Unik fysisk identifierare för varje nätverkskort
+
+================================================================================
+📌 DATAFLÖDES-EXEMPEL:
+"Öppna en webbsida via Wi-Fi"
+  1. HTTP (Application Layer) – Begär webbsida
+  2. TCP (Transport Layer) – Datan packas och kontrolleras
+  3. IP (Internet Layer) – Bestämmer vart datan ska skickas
+  4. Wi-Fi (Network Access Layer) – Skickar paketet trådlöst till mottagaren
+
+📌 MINNESREGEL: 
+   Alla → Application
+   Tre  → Transport
+   Internet → Internet
+   Nät → Network Access
