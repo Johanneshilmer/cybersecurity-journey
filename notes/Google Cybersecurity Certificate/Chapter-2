@@ -201,9 +201,17 @@ OWASP (Open Web Application Security Project)
 
 Play it safe: Manage security risks: Modul 3
 
+** SIEM tools (Security Information and Event Management) **
+  It säkerhets professionella använder verktyg för att tackla olika utmaningar så som, samla in data, analysera data och hot, automatisera uppgifter.
 
+  **Firewall logs**
+    Är registreringar över nätverkstrafik som passerar/ försöker passera brandväggen.
 
+  **Network logs**
+    Är registreringar över händelser och aktiviteter på ett datanätverk.
 
+  **Server logs**
+    Är filer som skapas pch underhålls av serverar för att registrera all aktivitet och transaktioner så som login fil delning som sker på servern.
 
 
 
