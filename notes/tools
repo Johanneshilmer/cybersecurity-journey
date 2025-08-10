@@ -1,93 +1,48 @@
+=======================================================================
+                     SOC ANALYST DASHBOARD - CHEAT SHEET
+=======================================================================
+🎯 Målet: Snabb åtkomst till verktyg, kommandon & användningsområden
+          för dagligt arbete inom incidenthantering & säkerhetsanalys.
+=======================================================================
 
-** Sysinternals Suite **
-  Exakt, Sysinternals Suite är en samling med över 70 små, superkraftfulla verktyg från Microsoft, som hjälper dig granska och felsöka Windows på djupet. 
-  Perfekt för en SOC-analytiker! 🕵️‍♂️
-  
-  **Öppna verktyg individuellt**
-  
-      Gå till mappen och starta precis det verktyg du behöver, t.ex.:
-  
-          Procmon.exe — Process Monitor, för att övervaka alla fil-, register- och processhändelser i realtid
-  
-          ProcessExplorer.exe — som Aktivitetshanteraren fast mycket mer detaljerad
-  
-          Autoruns.exe — ser vilka program som startar automatiskt med Windows
-  
-          PsExec.exe — köra processer på distans eller med andra rättigheter
-  
-  1. Kör från kommandoprompt eller PowerShell
-  
-      Många verktyg går att använda via kommandorad, t.ex. PsExec, PsList osv.
-  
-      Öppna PowerShell eller CMD, navigera till mappen (cd C:\Sysinternals) och kör t.ex. Procmon.exe
-  
-  2. Tips för att komma igång
-  
-      Börja med Process Explorer för att se vilka processer som körs och deras resurser
-  
-      Använd Process Monitor för att fånga och analysera händelser i systemet
-  
-      Kolla Autoruns för att se och rensa autostart-program (ofta bra vid malware-analys)
++----------------------+------------------------+----------------------+
+|   SYSINTERNALS       |       WIRESHARK        |        SPLUNK        |
+|----------------------|------------------------|----------------------|
+| 📦 70+ Windows-verktyg| 🌐 Paketanalys på nätverk | 📊 Logg- & dataanalys  |
+| Procmon    - Fil/reg  | Starta capture:         | Sök:                  |
+| ProcessExp - Process  |   wireshark &           |  index=main error     |
+| Autoruns   - Autostart| Filter:                 | Aggregera:            |
+| PsExec     - Remote   |   ip.addr==10.0.0.5     |  | stats count by ip  |
+| TCPView    - Nätverk  | Protokollfilter:        | Timechart:            |
+| ListDLLs   - DLL-info |   http, dns, tcp, udp   |  | timechart count    |
+|----------------------|------------------------|----------------------|
+| Felsökning av CPU,    | Felsök paketförlust,    | Samla loggar från     |
+| RAM, processer        | hög latens              | servrar, nätverk, app |
+| Malware-analys        | Säkerhet: hitta DoS,    | Skapa dashboards      |
+| Automatisering (PS/CMD)| MITM, scanning         | Larma på avvikelser   |
++----------------------+------------------------+----------------------+
 
++----------------------+------------------------+----------------------+
+|        NMAP          |        ELK/KIBANA      |     ANDRA VERKTYG    |
+|----------------------|------------------------|----------------------|
+| 🔍 Nätverksskanning   | 📊 Loggvisualisering   | YARA - Malware-sign. |
+| Host discovery:       | Sök i Elasticsearch:   | VirusTotal - File/URL|
+|   nmap -sn 10.0.0.0/24|  process:chrome        | Check                 |
+| Portskanning:         | Skapa dashboards       | MISP - Threat Intel  |
+|   nmap -p 80,443 host | Real-tidsmonitorering  | Zeek - Nätverkslogs  |
+| Service-detektering:  | Visual analysera hot   | Sigma - SIEM regler  |
+|   nmap -sV host       |                        | CyberChef - Dataops  |
+| OS-detektering:       |                        |                       |
+|   nmap -O host        |                        |                       |
+|----------------------|------------------------|----------------------|
+| Kartlägg attackytor   | SOC visualisering      | Threat hunting        |
+| Upptäck öppna portar  | Incident dashboards    | Forensisk analys     |
++----------------------+------------------------+----------------------+
 
-** Vad används Sysinternals Suite till i praktiken? **
-1. Felsökning av system och program
-
-    Identifiera varför en dator är långsam eller kraschar
-
-    Se vilka processer som använder mest CPU eller minne
-
-    Följa exakt vad ett program gör (t.ex. vilka filer och registernycklar det läser/ändrar) med Process Monitor
-
-2. Säkerhetsanalys och malware-undersökning
-
-    Kolla vilka program som startar automatiskt vid uppstart (med Autoruns) — ofta en väg in för skadlig kod
-
-    Identifiera okända eller misstänkta processer med Process Explorer
-
-    Köra program med andra rättigheter eller på distans med PsExec
-
-3. Systemadministration och kontroll
-
-    Se alla öppna nätverksanslutningar och vilka processer som använder dem (TCPView)
-
-    Analysera vilka DLL-filer ett program laddar (ListDLLs)
-
-    Hantera tjänster och processer utan att behöva starta om datorn
-
-4. Automatisering och scripting
-
-    Många verktyg går att köra från kommandorad och kan integreras i egna scripts för övervakning och hantering
-
-Kort sagt:
-
-Sysinternals Suite är ett “Swiss Army Knife” för dig som vill ha full kontroll och insyn i vad som händer i Windows på detaljnivå. 
-Det är ett av de viktigaste verktygen för både systemadministratörer, IT-säkerhetsexperter och SOC-analytiker när de felsöker och analyserar Windows-miljöer.
-
-
-
-** Vad används Wireshark till? **
-
-1. Analysera nätverkstrafik
-    Se exakt vilka paket som skickas och tas emot på ett nätverk.
-
-    Inspektera paketens innehåll — t.ex. IP-adresser, protokoll, portar, data i HTTP, DNS, FTP med mera.
-
-2. Felsökning av nätverksproblem
-    Hitta flaskhalsar, fördröjningar och paketförluster.
-
-    Se om trafik går dit den ska och hur lång tid det tar.
-
-3. Säkerhetsanalys och incidenthantering
-    Upptäcka misstänkt trafik eller attacker (t.ex. port scanning, DoS, man-in-the-middle).
-
-    Analysera skadlig trafik och misstänkta paketinnehåll.
-
-4. Lära sig och utbilda
-    Studera hur nätverksprotokoll fungerar i detalj.
-
-    Perfekt för utbildning i nätverk och säkerhet.
-
-Hur fungerar det?
-
-Wireshark “fångar upp” nätverkspaket genom att placera nätverkskortet i “promiscuous mode”, vilket innebär att den kan läsa all trafik som passerar på nätverket (inte bara trafik till/från din dator).
+=======================================================================
+⚡  Daglig rutin för SOC-analytiker:
+[1] Övervaka loggar & nätverk (Splunk, ELK, Wireshark, Zeek)
+[2] Identifiera & isolera hot (Sysinternals, Nmap, YARA)
+[3] Analysera incidenter (Wireshark, CyberChef, MISP)
+[4] Rapportera & dokumentera (Kibana dashboards, SIEM alerts)
+=======================================================================
