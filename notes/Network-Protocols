@@ -1,0 +1,39 @@
+
+                                🌐 NETWORK PROTOCOLS
+                                        |
+    ---------------------------------------------------------------------------------
+    |                |                        |                          |
+ APPLICATION      TRANSPORT                 INTERNET                 NETWORK ACCESS
+   LAYER           LAYER                     LAYER                        LAYER
+    |                |                        |                          |
+    |                |                        |                          |
+ HTTP  → Laddar webbsidor        TCP → Tillförlitlig dataöverföring     IP → Adressering av paket
+ HTTPS → Säker webbsurf          (webbsidor, e-post)                    (IPv4/IPv6)
+ FTP   → Filöverföring           UDP → Snabb, utan felkontroll          ICMP → Ping, felrapport
+ SMTP  → Skicka e-post           (streaming, VoIP)                      ARP → Översätter IP→MAC
+ IMAP/POP3 → Hämta e-post        PORTNUMMER → Identifierar tjänster     Ethernet → Kabelnätverk
+ DNS   → Domännamn till IP                                              Wi-Fi → Trådlöst nätverk
+                                                                      PPP → Punkt-till-punkt-länk
+
+    |                |                        |                          |
+    |                |                        |                          |
+ Webb & API-er  → HTTP/HTTPS          Routing Protocols:            Fysisk överföring av data
+ E-posttjänster → SMTP, IMAP, POP3       OSPF → Intern routing      via kabel, fiber, radio
+ Filservrar     → FTP                    BGP  → Internet-routing
+ Domänhantering → DNS                    RIP  → Äldre routingprotokoll
+
+
+📌 **SAMMANHANG & SAMSPEL:**
+- **Application Layer** använder tjänster från Transport Layer för att skicka data (t.ex. HTTP över TCP).
+- **Transport Layer** bryter upp data i segment och skickar dem via Internet Layer.
+- **Internet Layer** paketerar segmenten i IP-paket och bestämmer vägen till mottagaren.
+- **Network Access Layer** hanterar den fysiska leveransen över kablar eller trådlösa nät.
+- **Routing Protocols** arbetar på Internetlagret för att avgöra bästa vägen för paketen.
+
+📍 **EXEMPEL I VERKLIGHETEN:**
+- När du **surfar på en webbplats**:  
+  `Webbläsare (HTTP/HTTPS)` → `TCP (Transport)` → `IP (Internet)` → `Ethernet/Wi-Fi (Network Access)`
+- När du **pingar en server**:  
+  `Ping-kommando` → `ICMP (Internet)` → `IP-adressering` → `Ethernet/Wi-Fi`
+- När du **streamar en video**:  
+  `Videospelare (App Layer)` → `UDP (Transport)` → `IP (Internet)` → `Wi-Fi/Ethernet`
