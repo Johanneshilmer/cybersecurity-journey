@@ -1,13 +1,43 @@
-## 📚 Cyber Security Concepts
+=======================================================================
+   IDS / IPS - SOC ANALYST CHEAT SHEET
+=======================================================================
 
-## Required qualifications:
-- Basic understanding of Networking ( OSI model (Open Systems Interconnection Model) or  TCP/IP model (Transmission Control Protocol/Internet Protocol Model)), 
-  Operating Systems (Windows, Linux), Web applications. To further learn about OSI and TCP/IP models, please refer to the Introductory Networking Room.
-- Scripting/programming skills are a plus
++----------------------+----------------------------------------------+
+|       IDS            |                  IPS                        |
+| (Intrusion Detection | (Intrusion Prevention System)                |
+|       System)        |                                              |
++----------------------+----------------------------------------------+
+| 📡 Syfte: Upptäcka   | 🛡 Syfte: Upptäcka OCH blockera               |
+| skadlig aktivitet    | skadlig aktivitet i realtid                  |
+| eller policybrott.   |                                              |
++----------------------+----------------------------------------------+
+| 🔍 Funktion:         | 🚫 Funktion:                                 |
+| - Övervakar nätverk  | - Övervakar nätverk                          |
+|   & systemtrafik     |   & systemtrafik                             |
+| - Identifierar hot   | - Identifierar hot                           |
+| - Larmar SOC/admin   | - Blockerar trafiken innan skada sker        |
++----------------------+----------------------------------------------+
+| 📄 Exempel:          | 📄 Exempel:                                  |
+| - Snort               | - Snort i IPS-läge                          |
+| - Suricata            | - Suricata i IPS-läge                       |
++----------------------+----------------------------------------------+
+| 📌 Fördelar:         | 📌 Fördelar:                                 |
+| - Bra för analys     | - Skyddar i realtid                          |
+| - Kräver ingen       | - Stoppar attacker omedelbart                |
+|   direkt påverkan    |                                              |
++----------------------+----------------------------------------------+
+| ⚠️ Nackdelar:        | ⚠️ Nackdelar:                                |
+| - Passiv (upptäcker  | - Kan blockera legitim trafik                |
+|   men stoppar inte)  |   om felkonfigurerad                         |
++----------------------+----------------------------------------------+
+| 💡 Användningsfall:  | 💡 Användningsfall:                          |
+| - Incidentanalys     | - Perimeterförsvar                           |
+| - Upptäcka långsamma | - Skydd mot DoS/DDoS                         |
+|   attacker           | - Blockera kända signaturer                  |
++----------------------+----------------------------------------------+
 
-
-# IDS (Intrusion Detection System)
-It's a security system that ower viewing networks och systems for dameging activitis or policy violations.
-When it finds somthing suspected or damegning it alerts the admins or SOC.
-
-# IPS (Intrusion Prevention System)
+=======================================================================
+ SOC FLOW:
+  IDS = "Sensor" -> Larm -> Mänsklig analys -> Beslut
+  IPS = "Sensor + Sköld" -> Automatisk blockering i realtid
+=======================================================================
