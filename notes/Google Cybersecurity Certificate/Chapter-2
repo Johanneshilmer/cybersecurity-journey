@@ -202,7 +202,7 @@ OWASP (Open Web Application Security Project)
 Play it safe: Manage security risks: Modul 3
 
 ** SIEM tools (Security Information and Event Management) **
-  It säkerhets professionella använder verktyg för att tackla olika utmaningar så som, samla in data, analysera data och hot, automatisera uppgifter.
+  It säkerhets professionella använder verktyg för att tackla olika utmaningar så som samla in data, analysera data och hot, automatisera uppgifter.
 
   **Firewall logs**
     Är registreringar över nätverkstrafik som passerar/ försöker passera brandväggen.
@@ -213,16 +213,76 @@ Play it safe: Manage security risks: Modul 3
   **Server logs**
     Är filer som skapas pch underhålls av serverar för att registrera all aktivitet och transaktioner så som login fil delning som sker på servern.
 
+  ** Metrics **
+    Är viktiga tekniska attributer såsom svarstid, tillgänglighet och felfrekvens som används för att bedöma en applikations prestanda.
+      - En SIEM tool kan göras om för användarens behov för att visa den "metrics" som den vill se.
+
+  -- Vanliga SIEM tools --
+    - Self-hosted
+      Kräver att organisationen installerar, dirver och underhåller med hjälp av sin egna fysiska infrastruktur, så som serverkapacitet.
+      Dessa applikationer underhålls av organisationens IT-avdelning inte tredjepartsleverantörer.
+
+    - Cloud-hosted
+      Underhålls utav SIEM leverantören eftersom den är tillgänglig på nätet.
+      Sådanna verktyg är bra för organisationer som inte vill investera och underhålla sin egen infrastruktur.
+
+    - Hybrid (lite av både self/cloud-hosted)
+      Används för att utnyttja molnets fördelar samtidigt som att man bibehåller fysisk konroll över data.
+
+          Själva verktygen Splunk Enterprise, Splunk Cloud, och Chronicle
+
+    **Splunk är en data analyseringsplatform och Splunk Enterprise förser med SIEM lösningar.**
+      - Splunk Enterprise är en self-hosting tool som analyserar, söker inom organisationens loggar.
+      - Splunk cloud gör samma sak fast över nätet för cloud/hybrid hosting.
+      - Chronicle som är googles egna som också har self/cloud/hybrid hosting.
+
+    Open-scource / Proprietary
+
+    ** Olika dashboard för SIEM tools Splunk
+
+    Splunk
+    - Security posture dashboard
+      Visar de senaste 24 timmarna av säkerhetsrelaterade händelser och trender. 
+      Används av SOC-team för att övervaka och undersöka potentiella hot i realtid, exempelvis misstänkt nätverkstrafik från en viss IP-adress.
+
+    - Executive summary dashboard
+        Ger en överblick över organisationens säkerhetsläge över tid. 
+        Används för att ge hög nivå-insikter till beslutsfattare och förbättra säkerhetsåtgärder, t.ex. 
+        sammanställningar av incidenter och trender under en viss period.
+
+    - Incident review dashboard
+        Hjälper till att identifiera misstänkta mönster vid incidenter och lyfter fram högriskposter som kräver omedelbar granskning. 
+        Ger en visuell tidslinje över händelserna före en incident.
+
+    - Risk analysis dashboard
+        Identifierar risker för specifika objekt (användare, datorer, IP-adresser) och visar avvikande beteende, 
+        som inloggningar utanför arbetstid eller onormalt hög nätverkstrafik. Hjälper till att prioritera riskåtgärder.
 
 
+    Chronicle *Google*  cloud-native
+    - Enterprise insights dashboard
+        Visar senaste varningarna och misstänkta domännamn (IOCs) med sannolikhetspoäng och allvarlighetsgrad. 
+        Används för att övervaka t.ex. inloggningsförsök på viktiga tillgångar från ovanliga platser eller enheter.
 
+    - Data ingestion and health dashboard
+        Visar antal loggar, loggkällor och hur väl data tas emot. 
+        Säkerställer att loggkällor är rätt konfigurerade och att inga fel uppstår vid insamling.
 
+    - IOC matches dashboard
+        Visar de största hoten och riskerna över tid genom att spåra domäner, IP-adresser och enheter. 
+        Används för att identifiera trender och fokusera på de mest prioriterade hoten.
 
+    - Main dashboard
+        Ger en övergripande översikt över dataflöde, varningar och händelser över tid. 
+        Innehåller tidslinjer för säkerhetshändelser, t.ex. en ökning av misslyckade inloggningar.
 
+    - Rule detections dashboard
+        Visar statistik över de vanligaste och mest allvarliga incidenterna och vilka regler som utlöste dem. 
+        Används för att hantera återkommande incidenter och ta fram åtgärdsstrategier.
 
-
-
-
+    - User sign in overview dashboard
+        Ger information om användares inloggningsbeteende. Kan upptäcka ovanliga aktiviteter, t.ex. 
+        samtidiga inloggningar från olika platser, för att förebygga kontohot och applikationsrisker.
 
 
 
