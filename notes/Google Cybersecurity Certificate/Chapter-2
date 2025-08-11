@@ -288,9 +288,70 @@ Play it safe: Manage security risks: Modul 3
 
 
 
+Play it safe: Manage security risks: Modul 4
 
+  ** Playbook ** 
+    Är fördefinierad inom organisationen den innehåller steg för steg plan hur ett säkerhetsteam ska agera vid specifika händelser eller incidenter.
+    Nästan som brandövningsplan fast för digitala bränder.
 
+    **Syftet** är att göra incidenthanteringen snabbare, konsekvent och mindre beroende av individens minne och imrovisation.
+      - Scenario – vilken typ av hot eller incident den gäller (t.ex. nätfiske, ransomware, dataläckor).
+      - Trigger – vad som utlöser processen (t.ex. en larmregel i ett SIEM-verktyg).
+      - Åtgärdssteg – exakt vilka tekniska och administrativa åtgärder som ska utföras och i vilken ordning.
+      - Roller och ansvar – vem i teamet som ska göra vad.
+      - Kommunikationsplan – vem som ska informeras, både internt och externt.
+      - Dokumentation – hur alla steg och resultat ska loggas för analys och rapportering.
 
+          Inom SOAR (Security Orchestration, Automation, and Response) kan playbooks till och med automatiseras, 
+          så att vissa åtgärder sker direkt utan mänsklig inblandning.
+          En SOAR kan tillexempel låsa en användare om man har försökt logga in utan att lyckas för många gånger,
+          så kan en SOC sedan analysera händelsen och sedan göra åtgärd.
 
+Man kan använda Playbooks för:
+  - Open attacks
+  - Privacy incidents
+  - Data leaks
+  - DDOS attacker
+  - Service alerts
+  - Mycket annat
 
+  Det finns olika typer av playbooks
+
+Incident Response Playbook
+  Är en detaljerad plan som besriver hur en organisation ska hantera och åtgärda en säkerhetsincident.
+  Från det att den upptäcks till den är helt löst och lärdomar är dokumenterade.
+
+*Här är typsiska steg för en Incident Response Playbook*
+1. Förberedelse (Preparation)
+  - Säkerställ att alla verktyg (SIEM, EDR, forensikverktyg) är på plats.
+  - Definiera roller och ansvar (t.ex. SOC-analytiker, IT-drift, ledning, juridik).
+  - Genomför utbildningar och övningar (tabletop exercises).
+
+2. Identifiering (Detection and analysis)
+  - Upptäck incidenten via SIEM-larm, IDS/IPS, eller rapport från användare.
+  - Bekräfta om det är en faktisk incident.
+  - Kategorisera incidenten (t.ex. dataintrång, skadlig kod, nätfiske).
+  - Dokumentera initial information (tidpunkt, berörda system, initial bedömning).
+
+3. Inneslutning (Containment)
+  - Kort sikt: Stoppa vidare spridning (t.ex. isolera maskin, blockera IP).
+  - Lång sikt: Förhindra återinträde (t.ex. patcha sårbarheter, ändra lösenord).
+
+4. Eliminering (Eradication and recovery)
+  - Ta bort skadlig kod, stäng obehöriga konton.
+  - Återställ system från säkra backuper.
+  - Identifiera och åtgärda grundorsaken.
+  - Verifiera att hotet är helt borttaget.
+
+5. Lärdomar och förbättring (Post incident activity)
+  - Dokumentera hela incidentförloppet och åtgärderna.
+  - Uppdatera playbooks och säkerhetspolicys baserat på erfarenheterna.
+  - Rapportera till ledning och, om nödvändigt, myndigheter.
+
+6. Coordination
+  - Intern samordning: alla interna team (SOC, IT-drift, juridik, HR, leding) är infirmerade.
+  - Extern samordning: kommunicera med externa leverantörer, partners, myndigheter vid behöv.
+  - Kommunikationsstrategi: Samordna vad som ska kommuniceras externt till media, kunder och allmänheten.
+  - Resurshantering: Säkerställ att rätt personal, verktyg och budget finns för incuidentåtgärder.
+  - Tids- och aktivitetsplanering: Fastställ deadlines och prioritera uppgifter baserat på incidentens allvar.
 
