@@ -1,3 +1,19 @@
 ** Connect and Protect: Networks and Network Security **
 
 Module 1
+Vad är nätverk?
+  Sammankopplade datorer, telefoner, serverar och andra IOT som utgör nätverk "internet".
+  LAN = Local Area Network, är ett localt nätverk som jobb, skola och hem.
+  WAN = Wide Area Network, sprider sig mycket större så som stad, state eller land.
+    Man kan säga att internet är som ett stort WAN.
+
+Vanliga tools som finns inom ett nätverk
+  Hub = Ett nätverksverktyg som utsänder information till alla enheter i nätverket. Som ett radio tower som sänder ut radio.
+  Switch = sänder endast information till en specifik motagare.
+  Router = Ansluter flera nätverk tillsammans.
+  Modem = Ansluter din router till internet, den ger internet till LAN.
+  Virtualization tools = delar av mjukvara som utför nätverks operationer så som Hub, Switch, Router, Modem kan göra. Erbjuds av cloud service providers.
+    Ger möjlighet att dra in på kostnader och större möjlighet för utökning.
+
+
+  
