@@ -15,5 +15,6 @@ Vanliga tools som finns inom ett nätverk
   Virtualization tools = delar av mjukvara som utför nätverks operationer så som Hub, Switch, Router, Modem kan göra. Erbjuds av cloud service providers.
     Ger möjlighet att dra in på kostnader och större möjlighet för utökning.
 
-
-  
+Cloud Computing = Använder remote servers, applikationer och annan nätverks service som är hostad på nätverket istället 
+  för att använda locala fysiska enheter.
+Cloud Network = Där serverar och datorers lagrar resurser och data remote som kan tillhandahållas via internet.
