@@ -202,15 +202,53 @@ WAP (wifi protected access) Finns WAP2, WAP3, är bara bättre kryptering.
 
 
 🔒 Firewalls 🔒
+  Den används för att övervaka trafrik från och till ditt närverk.
+  Firewall använder:
+    - Port filtering = blockar eller tillåter olika portnummer för att begränsa objudna kommunikationer.
+
+Hårdvara firewall = analuserar trafiken innan den kommer in på LAN
+Mjukvara firewall = Samma funktion men för en specifik dator eller server.
+Cloud-based firewalls = mjukvaru firewall com hostas av cloud service utgivare.
+
+    Statful-firewall
+      klassisk firewall som övervakar trafik som passerar och filtrerar bort alla hot.
+    Stateless-firewall
+      Fungerar baserat på fördefinierade regler som admin har satt och inte håller reda på information från datapaket.
+  Stateless anses vara mindre säkra.
+
+    NGFWs next gen firewalls
+      - Deep packets inspection
+      - Intrusion protection
+      - Threat intelligence
+
+
+🔒 VPN (Virtual Private Networksd)🔒
+  Skapar en säker krypterad "tunnel" mellan din enhet och annan nätverksresurs, ofta över internet.
+  Syftet är att skydda data, IP och gör en anslutning som du vore på plats på t.ex företagets LAN.
+  🔒Encapsulation🔒 är en viktig del av VPN som packeterar datat inuti ett annat paket som VPN-tunnel använder.
 
 
 
+🔒 Security zone 🔒
+Är avgränsat område inom ett nätverk eller ett system där specifika säkerhetsåtgärder och policyer gäller.
+Exempel ett företag som har ett guest network, som besökare kan ansluta sig till.
+🔒 Uncontrolled zone
+  - Är nätverk utanför organisationens nätverk.
+🔒 Controlled zone
+  - Subnet som säkerställer säkerhet från uncontrolled zone, som LAN i en organisation.
+  Inne i controlled zone finns:
+    - DMC (Demilitarized zone)
+    - Internal network
+    - Restricted zone
+
+CIDR (classless inter-domain Routning)
+  Är en metod för att tilldela och hantera IP-adresser på internet som är mer flexibel och effektiv än det äldre, klassbaserade systemet. 
+  Det gör det möjligt att dela upp IP-adressutrymmet i mindre block (subnet) och att slå samman (supernät) befintliga block, 
+  vilket minskar antalet poster i routingtabeller och bromsar uttömningen av IPv4-adresser. 
 
 
-
-
-
-
+Proxy Servers
+  
 
 
 
