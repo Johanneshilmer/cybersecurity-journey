@@ -143,3 +143,90 @@ För att besöka en hemsida så används TCP, ARP, HTTPS och DNS.
     Översätter domännamn (t.ex. example.com) till IP-adresser.
     Fungerar som internetets “telefonkatalog”.
     Använder oftast port 53 (UDP och ibland TCP).
+
+
+🛠Ytterligare nätverksprotokoll🛠
+  Nätverksprotokoll delas in i tre kategorier: kommunikationsprotokoll, hanteringsprotokoll och säkerhetsprotokoll. 
+  Vissa protokoll har standardiserade portnummer från IANA.
+
+Network Address Translation (NAT)
+    Gör att flera enheter i ett lokalt nätverk (med privata IP-adresser) kan dela på en offentlig IP-adress för kommunikation med internet.
+    Routern byter ut avsändarens privata IP mot sin offentliga IP vid utgående trafik och tvärtom vid inkommande.
+    Används på Internet- och Transportlagret i TCP/IP-modellen.
+
+Privata IP-adresser (unika endast inom LAN, kostnadsfria):
+    10.0.0.0 – 10.255.255.255
+    172.16.0.0 – 172.31.255.255
+    192.168.0.0 – 192.168.255.255
+Publika IP-adresser (unika globalt, kostar att hyra, tilldelas av ISP/IANA).
+
+DHCP (Dynamic Host Configuration Protocol)
+    Hanteringsprotokoll på applikationslagret.
+    Tilldelar automatiskt IP-adresser, DNS-servrar och standardgateway till enheter i nätverket.
+    Server: UDP port 67, klient: UDP port 68.
+
+ARP (Address Resolution Protocol)
+    Översätter IP-adresser till MAC-adresser i lokala nätverk.
+    Lagrar information i en ARP-cache.
+    Lager 2-protokoll (ingen port används).
+
+Telnet
+    Applikationslagerprotokoll för fjärranslutning via kommandorad.
+    All data skickas i klartext (osäkert).
+    TCP port 23.
+
+SSH (Secure Shell)
+    Säker version av fjärranslutning.
+    Krypterar inloggning och kommunikation.
+    TCP port 22.
+
+POP (Post Office Protocol)
+    Hämtar e-post från server till lokal enhet (vanligen POP3).
+    E-post lagras lokalt och kan raderas från servern.
+    Oskyddad: TCP/UDP port 110, krypterad (SSL/TLS): TCP/UDP port 995.
+
+IMAP (Internet Message Access Protocol)
+    Hämtar e-post och låter den ligga kvar på servern för synk mellan flera enheter.
+    Oskyddad: TCP port 143, krypterad (TLS): TCP port 993.
+
+SMTP (Simple Mail Transfer Protocol)
+    Skickar e-post mellan klienter och servrar.
+    Oskyddad: TCP/UDP port 25, krypterad (TLS): TCP/UDP port 587.
+    Hjälper till att hantera spam och begränsa massutskick.
+
+
+🛠 Wireless protocols 🛠
+IEEE 802.11 (Wifi) = Är standader som definierar kommunikation för trådlös LANs.
+WAP (wifi protected access) Finns WAP2, WAP3, är bara bättre kryptering.
+  Ett säkert protokoll för trådlösa enheter att connecta till internet.
+
+
+🔒 Firewalls 🔒
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
