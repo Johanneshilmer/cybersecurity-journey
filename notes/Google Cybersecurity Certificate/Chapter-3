@@ -87,9 +87,59 @@ IPv6 exemple (684D:1111:222:3333:4444:5555:6:77) 32 karaktärer
 
 
 Module 2
+Network Protocols
+  Regler som används av två eller med enheter som är anslutna till nätverket som beskriver ordningen av leverans och strukturen av data.
+
+ARP (Address Resolution Protocol)
+  Används för att översätta IP till MAC inom LAN
+    1.En enhet vill skicka data till en viss IP-adress i LAN:et.
+    2.Den skickar ut en ARP-broadcast: "Vem har IP 192.168.1.20? Svara med din MAC-adress."
+    3.Den enhet som har den IP-adressen svarar med sin MAC-adress.
+    4.Avsändaren sparar svaret i sin ARP-cache för att slippa fråga igen direkt.
+
+HTTPS (HyperText Transfer Protocol Secure)
+  Är ett protokoll som ger säkerhetsmetod av kommunikation mellan användare och webbserver.
+
+DNS (Domain Name System)
+  Översätter domain name (www.google.se) till IP adress.
+
+För att besöka en hemsida så används TCP, ARP, HTTPS och DNS.
 
 
+🔒 Security Protocols
+1. SFTP (Secure File Transfer Protocol)
+    Används för att överföra filer säkert över ett nätverk.
+    Krypterar både data och inloggningsuppgifter.
+    Bygger på SSH (Secure Shell), så det går ofta över port 22.
 
+2. HTTPS (Hypertext Transfer Protocol Secure)
+    Säker version av HTTP för webbsidor.
+    Krypterar trafiken mellan webbläsare och server med TLS/SSL.
+    Skyddar mot avlyssning och manipulation. Standardport: 443.
 
+🛠 Management Protocols
+1. SNMP (Simple Network Management Protocol)
+    Används för att övervaka och hantera nätverksenheter som routrar, switchar och servrar.
+    Kan läsa av status (t.ex. CPU-användning, nätverkstrafik) och skicka varningar.
+    Använder oftast port 161 (UDP).
 
+2. ICMP (Internet Control Message Protocol)
+    Används för felsökning och diagnostik i nätverk.
+    Skickar kontrollmeddelanden, t.ex. ping och traceroute.
+    Transporterar inte data mellan applikationer utan ger info om nätverksstatus.
 
+💬 Communication Protocols
+1. TCP (Transmission Control Protocol)
+    Tillförlitligt protokoll för dataöverföring.
+    Ser till att data kommer fram i rätt ordning och utan fel.
+    Används av t.ex. HTTP, FTP, SMTP.
+
+2. UDP (User Datagram Protocol)
+    Snabbare men opålitligt protokoll.
+    Ingen felkontroll eller ordningsgaranti, men låg fördröjning.
+    Används i streaming, onlinespel, VoIP.
+
+3. DNS (Domain Name System)
+    Översätter domännamn (t.ex. example.com) till IP-adresser.
+    Fungerar som internetets “telefonkatalog”.
+    Använder oftast port 53 (UDP och ibland TCP).
