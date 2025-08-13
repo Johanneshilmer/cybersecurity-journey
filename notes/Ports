@@ -1,0 +1,31 @@
++-----+--------------------------------------+-----------+---------+
+| Port| Protokoll                            | Typ       | Beskrivning
++-----+--------------------------------------+-----------+---------+
+|  20 | FTP (Data)                           | TCP       | Filöverföring (data)
+|  21 | FTP (Control)                        | TCP       | Filöverföring (kommandon)
+|  22 | SSH / SFTP                           | TCP       | Krypterad fjärranslutning och filöverföring
+|  23 | Telnet                               | TCP       | Fjärrterminal (okrypterad)
+|  25 | SMTP                                 | TCP       | Skicka e-post
+|  53 | DNS                                  | UDP/TCP   | Namnuppslag (domän → IP)
+|  67 | DHCP (Server)                        | UDP       | Tilldelar IP-adresser (server till klient)
+|  68 | DHCP (Client)                        | UDP       | Tar emot IP-adress (klient från server)
+|  69 | TFTP                                 | UDP       | Enkel filöverföring (okrypterad)
+|  80 | HTTP                                 | TCP       | Webbsidor (okrypterade)
+| 110 | POP3                                 | TCP       | Hämta e-post
+| 143 | IMAP                                 | TCP       | Hämta e-post (modernare än POP3)
+| 161 | SNMP                                 | UDP       | Nätverkshantering
+| 162 | SNMP Trap                            | UDP       | Larm från nätverksenheter
+| 389 | LDAP                                 | TCP/UDP   | Katalogtjänster (t.ex. Active Directory)
+| 443 | HTTPS                                | TCP       | Krypterade webbsidor
+| 445 | SMB                                  | TCP       | Delning av filer/printrar (Windows)
+| 514 | Syslog                               | UDP       | Logghantering
+| 636 | LDAPS                                | TCP       | Krypterad katalogtjänst
+| 993 | IMAPS                                | TCP       | Krypterad IMAP
+| 995 | POP3S                                | TCP       | Krypterad POP3
+| 1433| Microsoft SQL Server                 | TCP       | Databastjänst
+| 1521| Oracle Database                      | TCP       | Databastjänst
+| 3306| MySQL/MariaDB                        | TCP       | Databastjänst
+| 3389| RDP                                  | TCP       | Fjärrskrivbord (Remote Desktop Protocol)
+| 5060| SIP                                  | UDP/TCP   | VoIP-signalering
+| 8080| HTTP-alt                             | TCP       | Alternativ webserverport
++-----+--------------------------------------+-----------+---------+
