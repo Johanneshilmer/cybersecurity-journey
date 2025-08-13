@@ -248,10 +248,25 @@ CIDR (classless inter-domain Routning)
 
 
 Proxy Servers
+  En proxyserver är en mellanhand som agerar som en länk mellan din dator och internet. 
+  Den fungerar som en agent som tar emot dina webbförfrågningar och vidarebefordrar dem till den avsedda servern på internet, 
+  och sedan skickar tillbaka resultatet till dig. Proxyservrar kan användas för att öka säkerhet, förbättra prestanda, 
+  eller kringgå geografiska begränsningar. 
+
+  Säkerhet:
+   - Proxyservrar kan dölja din IP-adress och ge dig ett visst skydd mot spårning och övervakning. 
+  Prestanda:
+   - Genom att cachelagra (spara en kopia av) webbsidor kan en proxyserver göra att webbplatser laddas snabbare, särskilt för återkommande besök. 
+  Tillgång till blockerat innehåll:
+   - Proxyservrar kan användas för att kringgå geografiska begränsningar och få tillgång till innehåll som annars är blockerat i din region. 
+  Övervakning och filtrering:
+   - Företag och organisationer kan använda proxyservrar för att övervaka och filtrera internettrafik, 
+      till exempel för att blockera tillgång till vissa webbplatser eller för att se till att anställda inte slösar tid på olämpliga sidor. 
   
 
 
 
+Module 3
 
 
 
