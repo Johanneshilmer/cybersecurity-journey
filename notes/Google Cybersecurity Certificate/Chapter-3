@@ -18,3 +18,78 @@ Vanliga tools som finns inom ett nätverk
 Cloud Computing = Använder remote servers, applikationer och annan nätverks service som är hostad på nätverket istället 
   för att använda locala fysiska enheter.
 Cloud Network = Där serverar och datorers lagrar resurser och data remote som kan tillhandahållas via internet.
+  - On-demand storage = man betalar bara för den mängden data man har.
+  - Processing power = man betalar bara den processor som krävs för att hålla allt igång.
+  - Analytics = Erbjuder analys över hela networket.
+
+Data packet = är en data mängd som skickas från en användare till en annan genom nätverk.
+  Det innehåller, avsändaren, motagaren och själva innehållet.
+
+TCP (Transmission Control Protocol) = möjligör komminukations anslutning mellan två enheter för att steama datam mellan dem.
+
+IP (Internet Protocol) = används för adressering och routing av data när det skickas mellan enheter genom nätverket.
+
+Port = mjukvarabaserad enhet som organiserar utskick on inskick av data mellan enheter på nätet.
+  Lite som en brevbärare vet att paketet ska till ett lgh-hus och sedan vilken lgh.
+  - port 25 = email
+  - port 443 = Secure internet communication
+  - port 20 = stor mängd data transfers
+
+TCP/IP modellen har 4 olika lager.
+- Network Access Layer
+    Hanterar hur data fysiskt skickas över nätverket, inklusive nätverkskort, kablar, Wi-Fi och protokoll för lokala nätverk (t.ex. Ethernet). 
+    Det är här IP-paketen faktiskt skickas över den fysiska infrastrukturen.
+
+- Internet Layer
+    Ansvarar för adressering och dirigering av paket mellan olika nätverk. Här finns protokoll som IP (Internet Protocol), ICMP och ARP. 
+    Ser till att paketet hittar rätt väg till mottagaren, oavsett var i världen den är.
+
+- Transport Layer
+    Ser till att data levereras korrekt mellan två enheter. Här hittar vi protokoll som TCP (tillförlitlig, ordnad leverans) och UDP (snabb, 
+    men utan garanti för leverans). Hanterar portnummer och uppdelning/återuppbyggnad av data.
+
+- Application Layer (Organiserar filöverföring så som email och andra filer)
+    Det lager som applikationer och användare interagerar med. Här finns protokoll som HTTP, FTP, SMTP, DNS och liknande. 
+    Ansvarar för att presentera data i ett format som applikationen förstår.
+
+OSI-model = Är en modell som beskriver hur nätverkskommunikation delas upp i sju lager, från fysisk överföring till användarrens program.
+7 Application (Applikationslagret)
+    Det lager användaren interagerar med. Innehåller protokoll och gränssnitt som gör att program kan kommunicera över nätverk, t.ex. HTTP, FTP, SMTP, DNS.
+6 Presentation (Presentationslagret)
+    Ansvarar för att data är i rätt format, t.ex. kryptering, komprimering och översättning av dataformat.
+5 Session (Sessionslagret)
+    Hanterar kommunikationssessioner mellan två enheter, t.ex. inloggning, filöverföring eller fjärranslutning. 
+    Håller reda på start, underhåll och avslut av sessioner.
+4 Transport (Transportlagret)
+    Ser till att data överförs till rätt applikation och i rätt ordning. Hanterar TCP (pålitlig leverans) och UDP.
+3 Network (Nätverkslagret)
+    Bestämmer hur data ska routas mellan nätverk. Hanterar IP-adresser och levererar paket från sändare till mottagare. Exempel: IP, ICMP.
+2 Data Link (Datalänklagret)
+    Säkerställer att data skickas korrekt mellan två enheter på samma nätverk. Hanterar felkontroll, MAC-adresser och hur data paketeras i ramar (frames). 
+    Exempel: Ethernet, Wi-Fi (802.11).
+1 Physical (Fysiska lagret)
+    Hanterar den faktiska, fysiska överföringen av bitar (1:or och 0:or) via kablar, radio, fiber m.m. 
+    Inkluderar kontakter, kablar, signalstyrka och elektriska/optiska signaler.
+
+
+IPv4 exempel (19.117.63.126)
+  Användes förr och byttes sedan ut till IPv6 pga att det inte fanns några mer IPv4 adresser.
+IPv6 exemple (684D:1111:222:3333:4444:5555:6:77) 32 karaktärer
+
+  Från sin nätverksleverantör får man en public IPv6 adress till sin lgh som till exepmel en vanlig adress till en lgh för post. 
+  Inne i lgh får alla en unik ip adress för att identifiera vart data skickas från (privata IP).
+  IP-adress är alltså vem du skckar till, adresseringen och MAC-adress är vart i nätverket du finns.
+  Eftersom MAC är alltid samma men IP är olika för olika nätverk.
+  
+
+
+
+
+
+Module 2
+
+
+
+
+
+
