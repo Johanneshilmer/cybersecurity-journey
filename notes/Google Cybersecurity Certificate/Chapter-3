@@ -267,19 +267,79 @@ Proxy Servers
 
 
 Module 3
+Olika attacker
+  DOS (Denial of service attack)
+    - Overloadar organisationens system så det crashar eller inte har möjlighet att svara.
+  DDOS (Distributed denial of service attack)
+    - Anväder flera enheter för att DOS ett system.
+
+Olika DOS attacker
+  - SYN (synchronize) flood attack (kolla TCP connection, hur det fungerar)
+      Den simulerar en TCP connection och "floods" servern med SYN packet.
+  - ICMP (Internet COntrol Message Protocol) flood
+      Ett protocol som berättar för varandra att data sändningen har fått ett error genom nätverket. 
+      En sådan attack skickar massa ICMP så att systemet stängs ner eller inte kan svara.
+  - Ping of death
+      En typ av DOS där attackeraren pingar ett system med "oversized" ICMP packet som är större än 64KB.
+
+Läsa tcpdump logs.
+  Olika verkyt för att göra detta är SolarWinds NetFlow Traffic Analyzer, ManageEngine OpManager, Azure Network Watcher, Wireshark och tcpdump.
+
+  Utdata från tcpdump innehåller bland annat:
+    - Tidsstämpel (timme, minut, sekund och millisekund)
+    - Avsändarens IP och port
+    - Mottagarens IP och port.
+  Vanliga användningsområden för tcpdump och andra nätverksanalysatorer är att:
+  - Felsöka nätverksprestanda
+  - Skapa en baslinje för trafikmönster
+  - Upptäcka och identifiera skadlig trafik
+  - Skicka anpassade larm vid problem eller hot
+  - Hitta obehöriga IM-trafikflöden eller trådlösa accesspunkter
+  Det är dock viktigt att känna till att angripare också kan använda dessa verktyg för att stjäla känslig information, 
+  exempelvis användarnamn och lösenord.
+
+Packet sniffing kan användas både på ett legitimt och ett skadligt sätt:
+För gott (legitimt användande)
+- Nätverksövervakning och felsökning – IT-tekniker kan analysera trafiken för att hitta flaskhalsar, felkonfigurationer eller andra problem.
+- Säkerhetsanalys – Cybersäkerhetsteam kan upptäcka intrångsförsök, identifiera misstänkt trafik och analysera skadliga attacker.
+- Prestandamätning – Används för att skapa en baslinje över normal nätverkstrafik och upptäcka avvikelser.
+
+För ont (skadligt användande)
+- Datastöld – Angripare kan avlyssna och fånga upp känslig information, som användarnamn, lösenord eller kreditkortsuppgifter, om trafiken inte är krypterad.
+- Kartläggning av nätverk – Hackare kan identifiera aktiva enheter, öppna portar och tjänster som kan utnyttjas.
+- Förberedelse för attacker – Information från sniffad trafik kan användas för att planera DoS-attacker, MITM-attacker eller annan skadlig aktivitet.
+
+Passive packet sniffing
+ Är när attackeraren bara kollar igenom packeten
+Active packet sniffing
+  Är när attackeraren kollar igenom och ändrar information.
+
+IP-Spoofing
+  Är en teknik där attackeraren förfalskar avsändarens IP i nättrafiken så att det ser ut som om datapaket kommer från en annan källa.
+  Syfte med IP Spoofing:
+  - Dölja identiteten – Gör det svårare att spåra vem som skickade trafiken.
+  - Bli betrodd – Om ett system litar på vissa IP-adresser kan angriparen lura det att acceptera förbindelsen.
+  - Utföra attacker – Vanligt vid DoS- och DDoS-attacker, där spoofade IP-adresser används för att överbelasta målet.
+Hur det fungerar:
+  När ett datapaket skickas innehåller det både avsändarens och mottagarens IP-adress i headern. 
+  Vid spoofing manipulerar angriparen paketets avsändaradress innan det skickas ut. 
+  Mottagaren tror då att paketet kommer från den falska adressen.
+Exempel:
+  - En angripare skickar falska paket som ser ut att komma från en betrodd server för att få åtkomst till interna resurser.
+  - Vid DDoS-attacker används tusentals falska IP-adresser för att försvåra filtrering och spårning.
+
+  Olika typer av Spoofing
+  On-path attack (Man in the middle)
+    - Angriparen placerar sig mellan två kommunicerande parter och fångar upp, ändrar eller vidarebefordrar meddelanden utan att de märker det.
+  Exempel: Du skickar inloggningsuppgifter till en webbplats, angriparen fångar upp dem och skickar vidare en kopia till webbplatsen så att allt ser normalt ut.
+
+  Replay attack
+    - Angriparen spelar in legitim trafik (t.ex. en autentiseringsförfrågan) och skickar om den senare för att lura systemet.
+Exempel: Ett redan godkänt inloggningsmeddelande skickas igen för att få åtkomst utan att känna till lösenordet.
+ 
+  Smurf attack
+    - En typ av DDoS-attack där angriparen skickar ICMP Echo Requests (ping) till ett nätverks broadcast-adress, men med offrets IP som avsändare.
+  Resultatet blir att alla enheter i nätverket svarar på pinget och överbelastar offret med trafik.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Module 4
