@@ -343,3 +343,51 @@ Exempel: Ett redan godkänt inloggningsmeddelande skickas igen för att få åtk
 
 
 Module 4
+Security hardening
+💡 Kort sagt: Security hardening är att stänga alla onödiga dörrar innan någon försöker bryta sig in.
+Detta betyder att man förstärker säkerheten i system för att minska sårbarheter och begränsar attackyta.
+Det handlar om att konfiguera, uppdatera och skydda hårdvara, mjukvara, nätverk och användarkonton.
+🔹 Huvuddelar inom security hardening
+Operativsystemshärdning (OS hardening)
+  - Installera säkerhetsuppdateringar och patchar.
+  - Ta bort onödiga tjänster, funktioner och program.
+  - Aktivera brandvägg och säkerhetsloggning.
+
+Applikationshärdning
+  - Uppdatera applikationer regelbundet.
+  - Avaktivera eller ta bort oanvända plugin/moduler.
+  - Konfigurera applikationer med minsta möjliga behörigheter.
+
+Nätverkshärdning
+  - Segmentera nätverket och använda VLAN.
+  - Implementera brandväggar, IDS/IPS och VPN.
+  - Blockera onödiga portar och protokoll.
+
+Kontohärdning (User account hardening)
+  - Använd principen least privilege.
+  - Starka lösenordspolicys och multifaktorautentisering (MFA).
+  - Ta bort eller inaktivera gamla och oanvända konton.
+
+Databashärdning
+  - Begränsa åtkomst till databasen.
+  - Kryptera känslig data både i vila och under överföring.
+  - Övervaka queries och logga åtkomstförsök.
+
+Fysisk härdning
+  - Skydda servrar och nätverksutrustning från obehörig fysisk åtkomst.
+  - Säkerhetskameror, lås och tillträdeskontroller.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
