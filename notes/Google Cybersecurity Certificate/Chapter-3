@@ -389,7 +389,15 @@ Fysisk härdning
 Att kombinera dessa metoder med OS-härdning (operativsystemets säkerhetsförstärkning) 
 kan avsevärt minska risken för att brute force-attacker lyckas och därmed skydda nätverk och känslig information.
   
-
+🔹Network security Hardening🔹
+  - Port filtering
+  - Network access privilege
+  - Encryption
+Dessa inkluderar:
+  Firewall rules maintenance
+  Network log analysis
+  Patch updates
+  Server backups
 
 
 
