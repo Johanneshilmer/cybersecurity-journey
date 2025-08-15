@@ -377,7 +377,18 @@ Fysisk härdning
   - Skydda servrar och nätverksutrustning från obehörig fysisk åtkomst.
   - Säkerhetskameror, lås och tillträdeskontroller.
 
-
+🔹Brute force-attack
+  Är en method där attackeraren upprepar försök för att gissa inloggingsuppfigter. 
+  Antingen "kill gissa" vad det är för uppgifter eller använda så kallade "Dictionary-attack" där vanliga lösenord eller stulna uppgifter används.
+  
+  Vanliga förebyggande åtgärder mot brute force-attacker inkluderar:
+    - Salting och hashing av lösenord för att göra dem svårare att knäcka.
+    - Multifaktorautentisering (MFA) och tvåfaktorsautentisering (2FA) för extra säkerhetslager.
+    - CAPTCHA och reCAPTCHA för att skilja människor från automatiserade botförsök.
+    - Lösenordspolicys som reglerar komplexitet, giltighetstid och antal inloggningsförsök.
+Att kombinera dessa metoder med OS-härdning (operativsystemets säkerhetsförstärkning) 
+kan avsevärt minska risken för att brute force-attacker lyckas och därmed skydda nätverk och känslig information.
+  
 
 
 
