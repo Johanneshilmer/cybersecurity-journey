@@ -400,7 +400,17 @@ Dessa inkluderar:
   Server backups
 
 
-MORK
+Säkerhet i molnnätverk
+    Många organisationer använder molntjänster, vilket kräver att säkerhetsanalytiker skyddar både lokala och molnbaserade nätverk.
+    Molnnätverk består av servrar som lagrar resurser och data i en fjärrdatacenter, vilket kan nås via internet.
+
+Hårdning av molnservrar
+    Molnservrar kräver säkerhetsåtgärder, inklusive användning av en serverbaseline för att identifiera obehöriga förändringar.
+    Data och applikationer bör separeras baserat på deras tjänstekategorier för att öka säkerheten.
+
+Delat ansvar för säkerhet
+    Molnleverantörer och organisationer delar ansvaret för säkerhet, men organisationer måste vidta egna åtgärder för att skydda sina molnnätverk.
+    Precis som med traditionella nätverk är det viktigt att säkra operationer i molnet.
 
 
 
