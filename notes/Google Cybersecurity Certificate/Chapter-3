@@ -413,6 +413,63 @@ Delat ansvar för säkerhet
     Precis som med traditionella nätverk är det viktigt att säkra operationer i molnet.
 
 
+🔹Cloud computing🔹
+Innebär att man får tillgång till delade och konfigurerbara IT-resurser via nätet, som enkelt kan sättas upp eller tas bort med minimal hantering. 
+Precis som all annan IT-infrastruktur måste även molnet säkras. 
+Detta sker genom särskilda säkerhetsåtgärder och den så kallade delade ansvar-modellen.
+
+Viktiga säkerhetsaspekter i molnet
+  Identitets- och åtkomsthantering (IAM): 
+    Hantering av digitala identiteter och rättigheter. Felaktigt konfigurerade roller kan ge obehörig åtkomst.
+
+  Konfiguration: 
+    Molntjänster kräver noggrann och korrekt konfiguration. 
+    Felkonfigurationer är en vanlig orsak till säkerhetsincidenter, särskilt vid molnmigrering.
+
+  Angreppsyta: 
+    Fler tjänster och applikationer innebär fler potentiella sårbarheter. Säker design och rätt skyddsåtgärder behövs för att minska riskerna.
+
+  Zero-day-attacker: 
+    Angrepp på tidigare okända sårbarheter. Molnleverantörer kan ofta snabbt patcha och migrera system för att minimera påverkan.
+
+  Synlighet och spårbarhet: 
+    Molnet erbjuder loggar och övervakningsverktyg, men organisationer har inte full insyn i leverantörens infrastruktur. 
+    Revisioner och tredjepartsgranskningar används för att kontrollera säkerheten.
+
+  Snabba förändringar: 
+    Molntjänster utvecklas snabbt och kräver att organisationer anpassar sina processer för att följa med i förändringarna.
+
+Delade ansvar-modellen
+  Säkerhet i molnet bygger på ett delat ansvar:
+    - Molnleverantören (CSP): Ansvarar för infrastrukturen, fysiska datacenter, hypervisors och värd-OS.
+    - Organisationen (kunden): Ansvarar för sina egna data, applikationer och konfigurationer i molnet.
+  En vanlig fallgrop är att företag tror att leverantören tar ansvar för allt, när de själva måste säkra sina egna resurser och inställningar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
