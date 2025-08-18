@@ -24,3 +24,39 @@ Två olika interface som användaren kommer i kontakt med.
 
 
 Modul 2
+- Linux-arkitektur förklarad -
+Att förstå Linux-arkitekturen är viktigt för en säkerhetsanalytiker eftersom det gör det lättare att förstå hur systemet fungerar. 
+En uppgift i Linux passerar genom flera lager: användaren → applikationer → skalet → FHS (Filesystem Hierarchy Standard) → kärnan → hårdvaran.
+
+Användare: 
+  Den som interagerar med datorn. Linux är ett multi-user-system där flera kan använda resurser samtidigt.
+
+Applikationer: 
+  Program som utför specifika uppgifter. I Linux hanteras installation och uppdatering ofta via en pakethanterare.
+
+Shell (skal): 
+  Ett textbaserat gränssnitt där användaren skriver kommandon. Skalets roll är att översätta kommandon till kärnan.
+
+Filesystem Hierarchy Standard (FHS): 
+  Bestämmer hur filer och kataloger organiseras så att systemet vet var data lagras.
+
+Kärnan (kernel): 
+  Hanterar processer, minne och kommunikation mellan applikationer och hårdvara. Kärnan styr systemresurser och hårdvarans funktioner.
+
+Hårdvara: 
+  De fysiska komponenterna i datorn.
+
+Perifer utrustning: 
+  Externa enheter som tangentbord, mus, skärm och skrivare.
+
+Intern hårdvara: 
+  Komponenter som krävs för att datorn ska fungera, bl.a.
+
+CPU: 
+  Utför beräkningar och kör program.
+
+RAM: 
+  Temporärt minne som lagrar data under tiden en uppgift körs. Innehållet försvinner när datorn stängs av.
+
+Hårddisk: 
+  Långtidsminne där filer och program sparas permanent.
