@@ -1,1 +1,26 @@
+Tools of the Trade: Linux and SQL
 
+Modul 1
+OS (Operationsystem)
+Det är användargränsnittet mellan datorns hårdvara och användaren.
+OS kopplar samman användarem applikationer och hårdvara, detta gör att vi kan utföra uppfiter på datorn.
+  Fyra steg för att utföra en uppgift
+    - Användaren – initierar en uppgift (t.ex. vill spara en fil).
+    - Applikationen – programmet användaren interagerar med (t.ex. webbläsare eller kalkylator).
+    - Operativsystemet – tolkar begäran och skickar den vidare till rätt hårdvara.
+    - Hårdvaran – utför uppgiften (CPU beräknar, hårddisk lagrar, osv.) och skickar resultatet tillbaka via OS → applikation → användare.
+
+  Exempel – Ladda ner en fil
+    - Användaren klickar på ”Ladda ner” i webbläsaren.
+    - Webbläsaren skickar begäran till OS.
+    - OS skickar den vidare till hårdvaran.
+    - Hårdvaran laddar ner filen, OS skickar info tillbaka till webbläsaren som visar att nedladdningen är klar.
+
+Två olika interface som användaren kommer i kontakt med.
+  - GUI (Graphical User Interface)
+    Är det vanliga UI man ser vid applikationer, innehåller oftast start menu, task bar, desktop ikon.
+  - CLI (Command-Line Interface)
+    Är kommando fönstret som man ofta använder på linux, det är test baserat då man använder det genom att skriva olika kommandon.
+
+
+Modul 2
