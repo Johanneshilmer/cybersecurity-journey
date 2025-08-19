@@ -60,3 +60,63 @@ RAM:
 
 Hårddisk: 
   Långtidsminne där filer och program sparas permanent.
+
+
+Linux shell 
+  Shell är det som översätter vad du skriver i CLI till maskinen
+
+
+
+
+Modul 3
+Olika kommandon att använda.
+🔹 Kommando
+Ett kommando är själva programmet eller instruktionen du vill köra.
+Exempel:
+        ls
+Här är ls kommandot, som betyder "lista filer och mappar".
+
+🔹 Argument
+Ett argument är extra information du skickar till kommandot för att tala om hur det ska köras eller vilket objekt det ska köras på.
+Exempel:
+        ls Documents
+ls = kommandot
+Documents = argumentet (säger till ls vilken katalog som ska listas).
+
+🔹 Flaggor/optioner (en typ av argument)
+Argument kan också vara flaggor som ändrar beteendet på kommandot.
+Exempel:
+        ls -l
+ls = kommandot
+-l = ett argument (flagga) som säger: "visa detaljerad lista".
+
+👉 Så:
+Kommando = vad du vill göra
+Argument = på vad eller hur du vill göra det
+
+Olika användbara kommandon
+pwd = visar vilken directory vi är i.
+ls = lisar alla mappar och filer i de directory man är i.
+cd mapp-namn = för att "change directory" att man går in i den mappen.
+cd .. = får tillbaka en directory.
+cat fil-namn = visar filens innehåll.
+head fil-namn = visar 10 första raderna.
+tail fil-namn = visar 10 sista raderna.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
