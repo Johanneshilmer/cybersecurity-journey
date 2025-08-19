@@ -103,6 +103,29 @@ cat fil-namn = visar filens innehåll.
 head fil-namn = visar 10 första raderna.
 tail fil-namn = visar 10 sista raderna.
 
+Hitta och filtrera data
+grep namn fil-namn = söker efter allt som innehåller "namn" i filen fil-namn.
+piping "|" används för att sätta ihop flera kommandon, 
+Exempel:
+    ls /home/analyst/reports | grep users
+Detta söker bara i /home/analyst/reports directory och outputar allt som innehåller users.
+
+find
+Kommandot find används för att söka efter filer och kataloger baserat på olika kriterier, t.ex. namn, storlek eller senaste ändringsdatum.
+  -name: sök efter namn (skiftlägeskänsligt).
+  -iname: sök efter namn (inte skiftlägeskänsligt).
+  -mtime: sök efter filer ändrade inom en viss tidsram (baserat på dagar).
+  -mmin: samma som ovan men baserat på minuter.
+Exempel:
+        find /home/analyst/projects -iname "*log*"
+→ hittar alla filer i projects vars namn innehåller "log", oavsett stora eller små bokstäver.
+        find /home/analyst/projects -mtime -3
+→ listar filer/kataloger som ändrats de senaste 3 dagarna.
+
+
+
+
+
 
 
 
