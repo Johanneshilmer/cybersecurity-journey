@@ -122,7 +122,7 @@ Exempel:
         find /home/analyst/projects -mtime -3
 → listar filer/kataloger som ändrats de senaste 3 dagarna.
 
-
+NExt day
 
 
 
