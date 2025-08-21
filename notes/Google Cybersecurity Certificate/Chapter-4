@@ -122,8 +122,13 @@ Exempel:
         find /home/analyst/projects -mtime -3
 → listar filer/kataloger som ändrats de senaste 3 dagarna.
 
-NExt day
-
+Skapa och ta bort directory
+mkdir = skapar ett directory
+rmdir = tar bort ett directory
+touch = skapar fil
+rm = deletar en fil
+mv = flyttar en fil, exempel, mv test.txt /home/dokument/tester/ flyttar vu den till tester directory
+cp = copy en fil eller directory
 
 
 
