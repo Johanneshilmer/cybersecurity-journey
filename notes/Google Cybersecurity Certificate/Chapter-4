@@ -133,12 +133,32 @@ mv = flyttar en fil, exempel, mv test.txt /home/dokument/tester/ flyttar vu den 
 cp = copy en fil eller directory
 
 
-tomorrow
+Det finns tre olika permissions i linux
+  👉 Read
+  👉 Write
+  👉 Execute
 
+Def finns tr olika owners
+  👉 User = Ägaren av filen
+  👉 Group = Beståv av flera users
+  👉 Other = Alla andra användare
 
+Fil permissions prepresenteras med 10 figurer.
+  👉drwxrwxrwx = full permission för en fil.
+      d → det är en directory (mapp)
+      rwx (User) → ägaren kan läsa, skriva och gå in i mappen
+      rwx (Group) → gruppen kan läsa, skriva och gå in i mappen
+      rwx (Other) → alla andra kan läsa, skriva och gå in i mappen
 
+Att lista filer och permissions
+👉ls -l
+All list gömda filer
+👉ls -a
+Att lista gömda filer och permissions
+👉ls -la
 
-
+Hur man ändrar permissions 👉chmod
+chmod g+w, o-r access.txt = "G"roup kan "W"rite och tar bort "R"ead från "O"thers för filen med namn access.txt
 
 
 
