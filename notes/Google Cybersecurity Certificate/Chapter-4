@@ -199,39 +199,44 @@ Exempel:
 
 SQL (Structured Query Language)
 SQL är ett programeringsspråk som används för att arbeta med databaser. Det låter dig skapa, hämta, uppdatera och radera data.
+En Query är en instruktion till DB för att hämta eller bearbeta data, en Query är ett kommando som SELECT, INSERT, UPDATE eller DELETE.
 De vanligaste delarna är:
   CREATE – skapa tabeller och databaser.
-  ##INSERT – lägga till data.
+  INSERT – lägga till data.
   SELECT – hämta data.
   UPDATE – ändra data.
   DELETE – ta bort data.
 
-```
--- Skapa tabell
-CREATE TABLE Kunder (
-  kundID INT PRIMARY KEY,
-  namn VARCHAR(50),
-  stad VARCHAR(50)
-);
+Exemple:
+        -- Skapa tabell
+        CREATE TABLE Kunder (
+          kundID INT PRIMARY KEY,
+          namn VARCHAR(50),
+          stad VARCHAR(50)
+        );
+        
+        -- Lägg till kund
+        INSERT INTO Kunder (kundID, namn, stad)
+        VALUES (1, 'Anna', 'Uppsala');
+        
+        -- Hämta data
+        SELECT * FROM Kunder;
+        
+        -- Uppdatera data
+        UPDATE Kunder SET stad = 'Stockholm' WHERE kundID = 1;
+        
+        -- Ta bort data
+        DELETE FROM Kunder WHERE kundID = 1;
 
--- Lägg till kund
-INSERT INTO Kunder (kundID, namn, stad)
-VALUES (1, 'Anna', 'Uppsala');
-
--- Hämta data
-SELECT * FROM Kunder;
-
--- Uppdatera data
-UPDATE Kunder SET stad = 'Stockholm' WHERE kundID = 1;
-
--- Ta bort data
-DELETE FROM Kunder WHERE kundID = 1;
-
-
-```
-
-
-
+Filtrera data.
+  Operator är en symbol eller keyword som representerar en "operator", som att söka efter ett specifikt land exepmel: country="sweden"
+    SELECT * FROM LOGIN WHERE country="sweden";
+  Vill man specifisera börjav av en mening bara kan man använda "%" exemple:
+    SELECT * FROM LOGIN WHERE username LIKE "jo%"
+        Svar: johannes, johan, jonte ....
+  "%" kan också användas före och efter, vill man endast ha en bokstav till kan man använda "_" exemple:
+    SELECT * FROM LOGIN WHERE country LIKE "US_"
+        Svar: USA
 
 
 
