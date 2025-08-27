@@ -161,6 +161,49 @@ Hur man ändrar permissions 👉chmod
 chmod g+w, o-r access.txt = "G"roup kan "W"rite och tar bort "R"ead från "O"thers för filen med namn access.txt
 
 
+Add och Delete users
+  Root user (superuser) = Har kontroll över hela systemet och kan göra ändringar på det.
+  useradd namn = lägger till en användare i systemet.
+  userdel namn = tar bort en användare från systemet. Man får ett "fel" meddelande efter så man ska göra "groupdel" för att städa upp
+  groupdel namn
+  usermod -g team namn = Addar en user till ett team (grupp)
+  chown namn fil = ändrar ägarskap till en annan
+  usermod -a -G nyteam namn = lägger till user i en till grupp, -G = för att lägga till i en till grupp, -a = ansluter user till gruppen.
+
+Att få mer information om ett kommand kan man använda
+  man kommandonamnet exempel: man chmod
+Vill man få fram information om hur man kanske byter lösnord, kan man söka efter keywords och få fram information
+  apropos password
+Man kan också få in flera stringar i sökningen med 
+  apropos -a change password
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
