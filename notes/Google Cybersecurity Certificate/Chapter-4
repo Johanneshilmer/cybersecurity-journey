@@ -181,11 +181,54 @@ Man kan också få in flera stringar i sökningen med
 
 
 
+Modul 4
+Databaser
+En databas är ett organiserat system för att lagra, hantera och hämta data. 
+Den används för att strukturera information så att den kan sökas, uppdateras och analyseras på ett effektivt sätt.
+Primary key (primärnyckel)
+  En kolumn (eller kombination av kolumner) som unikt identifierar varje rad i en tabell.
+  Värdet kan inte vara tomt (NULL) och får inte upprepas.
+  Exempel: personnummer eller kundID.
+Foreign key (främmande nyckel)
+  En kolumn i en tabell som refererar till primary key i en annan tabell.
+  Skapar relationer mellan tabeller, t.ex. koppla en kund till sina ordrar.
+  Säkerställer referensintegritet (att relationer mellan tabeller är korrekta).
+Exempel:
+  Tabell Kunder: kundID (primary key).
+  Tabell Order: orderID (primary key), kundID (foreign key → kopplar ordern till en kund).
+
+SQL (Structured Query Language)
+SQL är ett programeringsspråk som används för att arbeta med databaser. Det låter dig skapa, hämta, uppdatera och radera data.
+De vanligaste delarna är:
+  CREATE – skapa tabeller och databaser.
+  INSERT – lägga till data.
+  SELECT – hämta data.
+  UPDATE – ändra data.
+  DELETE – ta bort data.
+
+```
+-- Skapa tabell
+CREATE TABLE Kunder (
+  kundID INT PRIMARY KEY,
+  namn VARCHAR(50),
+  stad VARCHAR(50)
+);
+
+-- Lägg till kund
+INSERT INTO Kunder (kundID, namn, stad)
+VALUES (1, 'Anna', 'Uppsala');
+
+-- Hämta data
+SELECT * FROM Kunder;
+
+-- Uppdatera data
+UPDATE Kunder SET stad = 'Stockholm' WHERE kundID = 1;
+
+-- Ta bort data
+DELETE FROM Kunder WHERE kundID = 1;
 
 
-
-
-
+```
 
 
 
