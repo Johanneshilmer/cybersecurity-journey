@@ -201,7 +201,7 @@ SQL (Structured Query Language)
 SQL är ett programeringsspråk som används för att arbeta med databaser. Det låter dig skapa, hämta, uppdatera och radera data.
 De vanligaste delarna är:
   CREATE – skapa tabeller och databaser.
-  INSERT – lägga till data.
+  ##INSERT – lägga till data.
   SELECT – hämta data.
   UPDATE – ändra data.
   DELETE – ta bort data.
