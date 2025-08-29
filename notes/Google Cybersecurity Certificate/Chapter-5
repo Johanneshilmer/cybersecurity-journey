@@ -3,3 +3,185 @@ Assets, Threats, and Vulnerabilities
 Modul 1
 Intro to Assets Security
 
+Säkerhetsrisk planering innefattar tre huvuddelar (security risk planning)
+  👉Assets (Tillgångar)
+  👉Threats (Hot)
+  👉Vulnerabilities (Sårbarheter)
+
+Tre grundläggande säkerhetstermer är:
+    👉Risk: Allt som kan påverka sekretess, integritet eller tillgänglighet för en tillgång.
+    👉Hot: Omständigheter eller händelser som kan påverka tillgångar negativt.
+    👉Sårbarhet: En svaghet som kan utnyttjas av ett hot.
+I säkerhet används dessa termer på ett specifikt sätt för att planera och reagera på incidenter.
+
+Asset Management
+    🔹Asset inventory
+    🔹Classify assets
+    🔹Assign risk scores
+    🔹Address vulnerabilities
+
+Säkerhetsrisk
+Risk definieras olika i olika organisationer, men handlar alltid om något som kan påverka en tillgångs konfidentialitet, integritet eller tillgänglighet. 
+Risk kan beräknas som:
+    👉Sannolikhet × Konsekvens = Risk
+Exempel: Risken att bli sen till jobbet ökar om du får punktering, och konsekvensen kan vara allvarlig. På samma sätt hanterar företag säkerhetsrisker för att:
+    👉Förebygga kostsamma och störande händelser
+    👉Identifiera förbättringar i system och processer
+    👉Avgöra vilka risker som kan tolereras
+    👉Prioritera kritiska tillgångar
+Som säkerhetsspecialist fokuserar du ofta på att minska sannolikheten för problem.
+
+Riskfaktorer
+Två huvudfaktorer påverkar risk:
+    👉Hot
+    👉Sårbarheter
+Risken att en tillgång skadas beror på om ett hot utnyttjar en sårbarhet. Exempel: En spik (hot) kan orsaka punktering (sårbarhet) på ett däck.
+
+Typer av hot
+Hot kan delas in i:
+    👉Avsiktliga: T.ex. en hackare som får åtkomst till känslig information.
+    👉Oavsiktliga: T.ex. en anställd som av misstag släpper in en obehörig person i en begränsad zon.
+
+Typer av sårbarheter
+Sårbarheter kan vara:
+    👉Tekniska: T.ex. felkonfigurerad programvara som ger obehörig åtkomst.
+    👉Mänskliga: T.ex. en anställd som tappar sitt passerkort.
+Både hot och sårbarheter bidrar till risknivån.
+
+Asset classification
+  Är hur man bedömmer vikten av saker, man vill ha mer säkerhet för sin plånbok än sin skor till exempel.
+  Olika levels av Asset classification
+    👉Public = Kan delas med alla
+    👉Internal-only = Kan delas med alla inom företaget med inte utanför
+    👉Confidential = kan delas med folk inom ett specifikt projekt
+    👉Restricted = Är väldigt säker och bara infom "need to know"
+
+InfoSec (Information security)
+  Är practice av att hålla data från obehöriga personer.
+
+Data kan vara i 3 olika tillstånd
+  👉rest = Den är i ett system som inte är igång, som en fil på din dator som är avstängd
+  👉transit = data som skickas mellan två eller fler enheter
+  👉use = Som att man öppnar ett dokument och gör ändring.
+
+Framväxten av molnsäkerhet
+
+Molntjänster har förändrat hur företag hanterar data och IT-infrastruktur. 
+Cloud computing definieras som en skalbar tjänst som är tillgänglig via internet och hostas på delad infrastruktur. 
+Tidigare behövde företag bygga och underhålla egna system, men molnet gör det enklare och billigare att starta och driva verksamheter online.
+
+Molnbaserade tjänster delas ofta in i tre kategorier:
+  👉SaaS (Software as a Service): Webbaserade applikationer som Gmail, Slack och Zoom.
+  👉PaaS (Platform as a Service): Verktyg för utveckling och drift av egna applikationer, t.ex. Google App Engine och Heroku.
+  👉IaaS (Infrastructure as a Service): Fjärråtkomst till servrar, lagring och nätverksresurser som hostas av leverantören, t.ex. Microsoft Azure och Google Cloud Platform.
+
+Molnsäkerhet fokuserar på att skydda data, applikationer och infrastruktur i molnet. 
+Till skillnad från traditionella IT-miljöer, där interna team ansvarade för allt, 
+gäller i molnet shared responsibility-modellen: kunden ansvarar för säkerheten inom sin kontroll (t.ex. användarhantering och data), 
+medan leverantören ansvarar för infrastrukturen.
+
+Utmaningar med molnsäkerhet inkluderar:
+  👉Felkonfiguration av tjänster, vilket ökar risken för intrång.
+  👉Svårigheter att övervaka åtkomst.
+  👉Att uppfylla regulatoriska krav som GDPR, HIPAA och PCI DSS.
+
+Efterfrågan på molnsäkerhetsexperter ökar, eftersom fler företag flyttar till molnet och nya risker uppstår.
+
+Element av en Security plan 
+  👉 Policies = Regler och mål (vad & varför)
+    🔹En policy är de övergripande riktlinjerna eller reglerna för säkerhet i en organisation.
+    🔹Den beskriver vad som ska skyddas och varför det är viktigt.
+    🔹Exempel: ”Alla anställda måste använda tvåfaktorsautentisering vid inloggning.”
+      👉 Policyer är alltså strategiska och styrande på en hög nivå.
+
+  👉 Standards = Tekniska krav och riktlinjer (hur)
+    🔹En standard beskriver hur policyer ska följas i praktiken, ofta med tekniska krav och detaljer.
+    🔹Den gör policyn mätbar och konsekvent.
+    🔹Exempel: ”Lösenord ska vara minst 12 tecken långa och innehålla både stora och små bokstäver, siffror och specialtecken.”
+    👉 Standarder är mer konkreta än policyer och säkerställer att alla följer samma riktlinjer.
+
+  👉 Procedures = Konkreta steg att följa (gör så här)
+    🔹En procedur är en steg-för-steg-beskrivning av vad som ska göras i specifika situationer.
+    🔹Den är praktisk och operativ.
+    🔹Exempel: ”Vid misstänkt intrång: 1) Koppla bort enheten från nätverket, 2) Kontakta IT-säkerhetsteamet, 3) Dokumentera händelsen i incidentloggen.”
+    👉 Procedurer är alltså handlingsplaner för medarbetarna.
+
+
+Vad är NIST Cybersecurity Framework?
+NIST CSF är en ramverk för cybersäkerhet utvecklad av National Institute of Standards and Technology (USA).
+
+Syftet är att hjälpa organisationer att:
+    🔹Identifiera och hantera cybersäkerhetsrisker
+    🔹Skydda sina system, nätverk och data
+    🔹Reagera på och återhämta sig från incidenter
+Det är inte en strikt standard, utan ett vägledande ramverk som kan anpassas till olika organisationer och branscher.
+
+Fem huvudfunktioner (Core Functions)
+Ramen består av fem huvudområden som alla organisationer bör arbeta med:
+
+  👉Identify (Identifiera)
+      🔹Förstå organisationens resurser och risker.
+      🔹Exempel: inventera hårdvara, mjukvara, data och kritiska processer.
+      🔹Syfte: veta vad som behöver skyddas.
+  
+  👉Protect (Skydda)
+      🔹Sätt upp åtgärder för att minska risker.
+      🔹Exempel: brandväggar, antivirus, säkerhetsutbildning för personal, åtkomstkontroller.
+      🔹Syfte: begränsa påverkan av potentiella attacker.
+  
+  👉Detect (Upptäcka)
+      🔹Identifiera säkerhetsincidenter i tid.
+      🔹Exempel: loggövervakning, intrångsdetektering, kontinuerlig övervakning av system.
+      🔹Syfte: snabbt upptäcka problem innan de sprider sig.
+  
+  👉Respond (Reagera)
+      🔹Hantera incidenter när de inträffar.
+      🔹Exempel: incidentresponsteam, kommunikationsplan, analys av attackvektorer.
+      🔹Syfte: minimera skada och återställa normal drift.
+  
+  👉Recover (Återhämta)
+      🔹Återställa system och processer efter en incident.
+      🔹Exempel: säkerhetskopior, återställningsplaner, uppföljning och förbättring.
+      🔹Syfte: minska påverkan och förbereda för framtida händelser.
+  
+  👉Varför använda NIST CSF?
+      🔹Hjälper organisationer att strukturera sitt cybersäkerhetsarbete.
+      🔹Anpassningsbart för olika storlekar och branscher.
+      🔹Integrerar med andra standarder (ISO 27001, COBIT, etc.).
+      🔹Fokuserar på riskhantering och kontinuerlig förbättring.
+
+Kort sagt: Identify → Protect → Detect → Respond → Recover 
+är en logisk kedja som tar en organisation från att förstå sina risker till att kunna återhämta sig efter incidenter.
+
+
+
+
+
+Modul 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
