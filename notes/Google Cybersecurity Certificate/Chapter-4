@@ -284,6 +284,66 @@ Att söka allt förutom med WHERE NOT
 
 
 
+--JOIN tables in SQL--
+🧩 Varför JOIN?
+Tabeller i en databas är ofta relaterade till varandra via en nyckel (t.ex. ett id).
+Exempel:
+  - Tabell employees: information om anställda.
+  - Tabell departments: information om avdelningar.
+    Varje anställd har en department_id som pekar på vilken avdelning personen tillhör.
+
+🔑 Vanliga typer av JOIN
+1. INNER JOIN (vanligast)
+  Hämtar bara de rader som matchar i båda tabellerna.
+      SELECT employees.name, departments.department_name
+      FROM employees
+      INNER JOIN departments 
+          ON employees.department_id = departments.id;
+  👉 Ger bara de anställda som har en avdelning.
+
+2. LEFT JOIN (eller LEFT OUTER JOIN)
+  Hämtar alla från vänstra tabellen, även om det inte finns någon match i den högra.
+      SELECT employees.name, departments.department_name
+      FROM employees
+      LEFT JOIN departments 
+          ON employees.department_id = departments.id;
+  👉 Alla anställda visas, men om de saknar avdelning blir det NULL i kolumnen department_name.
+
+3. RIGHT JOIN
+  Tvärtom mot LEFT JOIN – hämtar alla från högra tabellen, även om det inte finns någon match i vänstra.
+
+4. FULL OUTER JOIN
+  Hämtar allt från båda tabellerna, matchande eller inte. (OBS: alla databaser stöder inte detta, t.ex. MySQL gör det inte direkt).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
