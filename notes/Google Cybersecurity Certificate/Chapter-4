@@ -237,18 +237,50 @@ Filtrera data.
   "%" kan också användas före och efter, vill man endast ha en bokstav till kan man använda "_" exemple:
     SELECT * FROM LOGIN WHERE country LIKE "US_"
         Svar: USA
+""
+SELECT kolumn FROM table
+""
+
+Vi kan också använda oss av "less then", "greater then" samma som vi använder "=" som är "equal to".
+  Här har vi ett exempel på "greater then"  
+    SELECT firstname, lastname, birthdate
+    FROM employees
+    WHERE birthdate > '1970-01-01';
+
+              < less than
+              
+              > greater than
+              
+              = equal to
+              
+              <= less than or equal to
+              
+              >= greater than or equal to
+              
+              <> not equal to
+
+"BETWEEN AND" = vi kan också använda between och AND för att söka exempel mellan två datum.
+  Exemple:
+      SELECT firstname, lastname, hiredate
+      FROM employees
+      WHERE hiredate BETWEEN '2002-01-01' AND '2003-01-01';
+
+Att söka med flera saker med OR
+  Exemple:
+    SELECT firstname, lastname, country
+    FROM customers
+    WHERE country = "Argentina" OR country = "Brazil";
 
 
+Att söka allt förutom med WHERE NOT
+  Exemple:
+    SELECT *
+    FROM customers
+    WHERE NOT status = 'successful';
 
-
-
-
-
-
-
-
-
-
+    SELECT firstname, lastname, email, country
+    FROM customers
+    WHERE NOT country = 'Canada' AND NOT country = 'USA';
 
 
 
