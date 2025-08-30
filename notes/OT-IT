@@ -1,0 +1,85 @@
+Exempel på hur ett tillverkningsföretags infrastruktur kan se ut
+
+- Många maskiner (PLC:er, robotar, sensorer)
+- En huvuddator/SCADA som samlar data
+- Ett kontorsnätverk (IT) som ska vara separerat
+
+En huvuddator/SCADA som samlar data
+
+1. Zoner & Nivåer
+  Kontorsnät (IT)
+    Här ligger användarnas datorer, e-post, internet m.m.
+  
+  DMZ (Demilitarized Zone)
+    En buffertzon mellan IT och OT, ofta en server eller databas för att dela produktionsdata.
+  
+  Produktionsnät (OT)
+    Här ligger maskiner, PLC:er och huvuddatorn (MES/SCADA).
+  
+  Fältnivå
+    Enskilda maskiner, robotar, sensorer.
+
+2. Hårdvarukomponenter
+  Brandvägg 1 (mellan IT och DMZ)
+    Tillåter endast specifik trafik från kontorssystem (t.ex. SQL, web) in i DMZ.
+  
+  Brandvägg 2 (mellan DMZ och OT)
+    Strikt styrning så att OT är skyddat – bara dataöverföring från SCADA/huvuddator till DMZ.
+  
+  Industriella switchar i OT-nätet
+    Robust utrustning (t.ex. Hirschmann, Cisco IE, Moxa) som stöder VLAN, redundans och ACL.
+  
+  VPN Gateway om fjärrsupport behövs.
+
+
+3. Trafikflöde (exempel)
+
+[Kontorsnät IT]
+     |
+     |  Brandvägg 1
+     v
+[DMZ]  <-- Historian/Databassserver
+     |
+     |  Brandvägg 2
+     v
+[OT Produktionsnät]
+     |
+     +--> Huvuddator (SCADA/MES)
+     |
+     +--> PLC / Maskiner / Robotar
+
+4. Säkerhetsåtgärder
+  VLAN i OT-nätet: Ex. maskiner i ett VLAN, SCADA i ett annat → segmentering internt.
+  
+  Access Control Lists (ACLs): Endast SCADA får prata med maskinerna.
+  
+  Protokollval: Använd OPC UA om möjligt, annars gateways för äldre protokoll (Modbus, Profinet).
+  
+  Loggning: Brandväggar skickar loggar till SIEM eller loggserver i DMZ.
+  
+  Nätövervakning: IDS/IPS (t.ex. Snort, Suricata) på DMZ för att upptäcka intrångsförsök.
+
+
+5. Konkreta exempel på produkter
+  Brandväggar:
+    Fortinet FortiGate (bra industriell segmentering)
+    Palo Alto (mer avancerad)
+    pfSense (om man vill bygga själv, lämpligt i testmiljö)
+  
+  Switchar (industriella):
+    Cisco Industrial Ethernet 3000/4000
+    Hirschmann RSP/RS
+    Moxa EDS-serien
+
+
+6. Steg-för-steg implementation
+
+  1. Kartlägg alla maskiner och deras kommunikationsbehov (vilka protokoll, IP, portar).
+  2. Bygg separat OT-nät med egna switchar.
+  3. Placera SCADA/huvuddator i OT-nätet som central punkt.
+  4. Sätt upp DMZ-server (historian, databasspegel eller rapportserver).
+  5. Installera brandväggar mellan IT–DMZ och DMZ–OT.
+  6. Konfigurera brandväggsregler: tillåt bara nödvändig trafik.
+  7. Testa redundans och fallback (t.ex. om en länk eller switch dör).
+
+
