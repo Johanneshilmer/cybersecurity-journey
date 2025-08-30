@@ -161,27 +161,77 @@ Modul 2
 PoLP (Principle of Least Privilege) eller Lest privilege
 En säkerhetsprincip: användare, system och applikationer ska bara ha den åtkomst som krävs för att utföra sina uppgifter – inte mer.
 
+Tre olika security controls
+  🔹Technical = Kryptering, autentiering och annat tekniskt
+  🔹Operatiopnal = Detta är dag till dag kontroll, lite mer observations träning för anställda.
+  🔹Managerial = Är hur de andra två ska behandlas, med policys standader och kontroller.
+
+Fördelar med PoLP
+  🔹Begränsar åtkomst till känslig information.
+  🔹Minskar risken för datamanipulation, förlust eller missbruk.
+  🔹Underlättar systemövervakning och administration.
+PoLP är nära kopplat till separation of duties, som delar upp ansvar mellan olika användare för att förhindra att en individ får full kontroll.
+
+Användarkonton & åtkomst
+  För att implementera PoLP krävs att man först fastställer:
+  🔹Vem är användaren? (person, enhet eller programvara)
+  🔹Hur mycket åtkomst behöver de?
+
+Vanliga kontotyper:
+    🔹Gästkonto – extern åtkomst för kunder, partners, etc.
+    🔹Användarkonto – för anställda baserat på arbetsuppgifter.
+    🔹Servicekonto – för applikationer som interagerar med andra system.
+    🔹Privilegierat konto – administratörs- eller systemåtkomst.
+  Åtkomst ska vara dynamisk och endast aktiv när den behövs, samt kombineras med starka lösenord.
 
 
+Data Lifecycle 
+
+  Datalivscykeln beskriver hur information hanteras i en organisation från det att den skapas tills den inte längre är användbar. Den delas ofta in i fem steg:
+    1. Insamling (Collect)
+    2. Lagring (Store)
+    3. Användning (Use)
+    4. Arkivering (Archive)
+    5. Förstöring (Destroy)
+  Varje steg kräver säkerhetskontroller för att skydda informationens konfidentialitet, integritet och tillgänglighet (CIA-triaden).
 
 
+Datastyrning (Data Governance)
+
+  För att hantera stora mängder data på ett säkert sätt används datastyrning, som innebär processer och policys för att hålla informationen privat, 
+  korrekt, tillgänglig och säker.
+  Roller inom datastyrning:
+    🔹Data Owner – bestämmer vem som får åtkomst, redigera, använda eller radera data.
+    🔹Data Custodian – ansvarar för säker hantering, transport och lagring.
+    🔹Data Steward – implementerar och upprätthåller organisationens policyer.
 
 
+Skydd av känslig information
+  Data kan representera personliga handlingar, medicinska beslut eller ekonomisk information. Därför finns lagar och regler som specificerar vilken information som måste skyddas, till exempel:
+  🔹PII (Personally Identifiable Information) – personuppgifter som kan identifiera en individ.
+  🔹PHI (Protected Health Information) – känslig hälsodata (regleras av HIPAA i USA och GDPR i EU).
+  🔹SPII (Sensitive PII) – extra känslig information, t.ex. bankuppgifter eller inloggningsuppgifter, som endast får hanteras med strikt behovsprincip.
 
 
+Informations­integritet: Reglering och efterlevnad
+  Några av de mest inflytelserika regleringarna är:
+    🔹GDPR (EU) – ger individer full kontroll över sina personuppgifter.
+    🔹PCI DSS – säkerhetsstandarder för betalningskort mot bedrägeri och datastöld.
+    🔹HIPAA (USA) – skyddar känslig patientinformation.
+  Organisationer måste följa dessa och andra lagar beroende på bransch och region. Efterlevnad säkerställs genom säkerhetsrevisioner (audits), 
+  som kontrollerar att policyer och åtgärder uppfyller kraven, och säkerhetsbedömningar (assessments), som testar hur robusta skydden är mot hot.
 
 
+Kryptering
+  Kryptering är när man gör vanlig text till oläsbar och behöver en nyckel för att göra detta läsbar igen.
+  Kryptering går genom tre steg:
+    🔹Encryption = Det blir krypteras
+    🔹Ciphertext = Den krypterade texten, som skickas
+    🔹Decryption = När man får det tillbaka till den vanliga texten igen
 
-
-
-
-
-
-
-
-
-
-
-
+En Algoritm är en sekvens av väldefinierade steg eller instruktioner för att lösa ett problem eller utföra en uppgift.
+Inom kryptering är Cipher en algoritm som krypterar en text, en gammal metod som använder tre steg fram i alfabetet.
+  Så "Hello" blir alltså "Khoor".
+En Cryptographic key är funktionen för att dekryptera texten man har fått.
 
 
