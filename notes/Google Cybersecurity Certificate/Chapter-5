@@ -234,4 +234,61 @@ Inom kryptering är Cipher en algoritm som krypterar en text, en gammal metod so
   Så "Hello" blir alltså "Khoor".
 En Cryptographic key är funktionen för att dekryptera texten man har fått.
 
+PKI (Public Key Infrastructure)
+  Ett dekrypterings framwork som säkerställer säkerhet av informations byte online.
+  PKI använder båda Asymmetric och Symmetric encryption, det beror på vad man ska prioritera.
+
+Asymmetric encryption
+  Använder man public och private key par för att kryptera och dekryptera.
+  Där public key delas med alla för att adda information, men för att öppna den så är det privet key som behövs, och det har bara ägaren.
+
+Symmetric encryption 
+  Använder en key för båda lägga till data och öppna data.
+  Gör det snabbt att dela information men är mindre säkerhet.
+
+Digital certificate
+  En fil some verifierar identiteten av public key holder.
+  
+Hash function
+  Är en algoritm som producerar en kod som "inte" kan bli dekrypterat.
+  Använder "hash value", för en string kan bara ha ett value blir stringen ändrad på nått vis så blir det ett helt nytt "hash value".
+  Detta används ofta för att spara lösenord, ist för att spara sjävla lösenordet i "plane text" så sparar man "hash value".
+    Så när man skriver in lösenordet så gör man om det till ett "hash value" så då ska det matcha med det ursprungs "hash value"
+
+
+Access controls och authentication system
+  AAA framework
+    🔹Authentication
+      1. Knowledge: Nått som användaren vet, så som lösernord, eller svar till ett säkerhetsfråga.
+      2. Ownership: Nått som användaren tillhandahåller så som engångskod "OTP".
+      3. Characteristic: Nått som användaren är, så som finger scan eller ansiktsscan.
+    🔹Authorization
+    🔹Accounting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
