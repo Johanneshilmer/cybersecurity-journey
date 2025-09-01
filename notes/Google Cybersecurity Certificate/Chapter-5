@@ -265,6 +265,50 @@ Access controls och authentication system
     🔹Authorization
     🔹Accounting
 
+  MFA (Multi-factor authentication)
+    MFA stärker säkerheten genom att kräva flera verifieringsfaktorer, till exempel:
+      🔹Något användaren vet (lösenord)
+      🔹Något användaren har (engångskod via SMS eller app)
+      🔹Något användaren är (biometri, t.ex. fingeravtryck eller ansiktsigenkänning)
+    Genom att kombinera två eller fler faktorer (2FA/3FA) blir det betydligt svårare för angripare att få obehörig åtkomst, särskilt i molnmiljöer.
+
+
+  Single Sign-On (SSO)
+    SSO gör det möjligt för en användare att logga in en gång och få tillgång till flera system eller tjänster. Fördelarna är:
+      🔹Färre lösenord att komma ihåg (bättre användarupplevelse)
+      🔹Lägre kostnader för företag genom enklare hantering
+      🔹Ökad säkerhet genom färre inloggningspunkter att attackera
+    SSO fungerar genom att en betrodd tredje part (en identitetsleverantör) verifierar användaren och skickar krypterade åtkomsttoken till tjänsteleverantören. 
+    Vanliga protokoll är LDAP (för lokala system) och SAML (för molntjänster). En nackdel är dock att om lösenordet komprometteras kan flera tjänster bli utsatta samtidigt.
+
+  OAuth
+    Använder API tokens för att logga in på ett system, tillexempel logga in på github kan du använda google för att logga in på systemet.
+
+
+
+  IAM (Identity and Access Management)
+    Säkerhet handlar inte bara om att kombinera processer och teknologier, utan om att skapa en trygg miljö som stödjer en försvarsstrategi. 
+    Två grundläggande principer för att begränsa åtkomst är:
+      🔹Principen om minsta privilegium – användare får endast den åtkomst som krävs för att utföra sina uppgifter.
+      🔹Separation of duties (SoD) – ansvar delas upp så att ingen enskild person får för mycket kontroll.
+    Traditionellt har AAA-modellen (Authentication, Authorization, Accounting) använts för att implementera dessa principer. 
+    Ett annat centralt ramverk är Identity and Access Management (IAM), 
+    som hanterar digitala identiteter och kontrollerar att rätt användare får tillgång till rätt resurser vid rätt tidpunkt.
+
+  Autentisering sker genom faktorer som något användaren vet (lösenord), har (engångskod) eller är (biometri). 
+  Vanliga tekniker är Single Sign-On (SSO) och Multi-Factor Authentication (MFA).
+
+  User provisioning innebär att skapa, underhålla och avlägsna digitala identiteter, till exempel när en anställd börjar eller slutar.
+
+  Auktorisering hanteras främst genom tre modeller:
+    🔹MAC (Mandatory Access Control): strikt behovsprincip, vanligt inom militär och myndigheter.
+    🔹DAC (Discretionary Access Control): dataägaren bestämmer åtkomstnivåer.
+    🔹RBAC (Role-Based Access Control): rättigheter tilldelas baserat på användarens roll i organisationen.
+    För att detta ska fungera används accesskontrollteknologier som samverkar och automatiserar åtkomsthantering. 
+    Organisationer kan bygga egna lösningar men ofta används tredjepartssystem.
+
+    Slutsats: IAM och AAA är viktiga ramverk som hjälper företag att implementera minsta privilegium och separation of duties. 
+    De säkerställer att endast rätt användare får tillgång till rätt resurser vid rätt tidpunkt och av rätt skäl.
 
 
 
@@ -272,15 +316,173 @@ Access controls och authentication system
 
 
 
+Modul 3
+Vulnerability management
+  1. Identify vulnerabilites
+  2. Consider potential exploits
+  3. Prepare defenses against threats
+  4. Evaluate those defenses
+
+CI/CD (Continuous Integration, Continuous Delivery/Deployment)
+  CI/CD pipelines effektiviserar mjukvaruutveckling genom att automatisera bygg, test och leverans. Men utan rätt säkerhet kan de bli en stor riskfaktor.
+
+Varför säkerhet i CI/CD är viktigt:
+  🔹Automatisering minskar manuella fel men kan sprida sårbarheter i stor skala om den är osäker.
+  🔹Inbyggda säkerhetstester förbättrar kodkvaliteten och minskar buggar.
+  🔹Snabba releaser gör det möjligt att snabbt leverera säkerhetsuppdateringar.
+  🔹Samarbete mellan utveckling, test, drift och säkerhet minskar risken för oupptäckta brister.
+  🔹Mindre, frekventa releaser minskar konsekvenserna om sårbarheter uppstår.
+
+Vanliga sårbarheter i CI/CD:
+  🔹Osäkra beroenden: tredjepartsbibliotek med kända brister (CVEs).
+  🔹Felkonfigurerade behörigheter: svaga åtkomstkontroller i repos och pipelineverktyg.
+  🔹Avsaknad av automatiserade säkerhetstester: leder till att sårbarheter slinker igenom.
+  🔹Exponerade hemligheter: hårdkodade API-nycklar, lösenord eller tokens.
+  🔹Osäkrade byggmiljöer: pipeline-servrar som kan manipuleras eller utnyttjas.
+
+Bästa praxis för säker CI/CD:
+  🔹Integrera säkerhet från start (DevSecOps).
+  🔹Använd starka åtkomstkontroller (principen om minsta privilegium, MFA, RBAC).
+  🔹Automatisera säkerhetstester (SAST, DAST, SCA).
+  🔹Håll beroenden och plugins uppdaterade.
+  🔹Hantera hemligheter säkert via vaults och dedikerade verktyg.
+
+Slutsats:
+  En osäker CI/CD-pipeline kan snabbt bli en inkörsport för attacker. 
+  Genom att bygga in säkerhet i varje steg och följa best practices kan företag både minska riskerna och stärka sin övergripande cybersäkerhet.
+
+Defense in depth strategy
+  Är en säkerhetsstrategi där man bygger flera lager av skydd för att minska risken för attacker. Om ett lager bryts finns det andra som fortfarande kan stoppa hotet.
+  De 5 vanligaste stegen/lagren brukar beskrivas så här:
+    1. Perimeter layer (Perimetersäkerhet) – brandväggar, IDS/IPS, nätverkssegmentering som stoppar hot utifrån.
+    2. Network layer (Nätverkssäkerhet) – säkra interna nätverk, VPN, zero trust och trafikövervakning.
+    3. Endpoint layer (Endpunktssäkerhet) – antivirus, EDR, patchhantering och härdning av klienter/servrar.
+    4. Application layer (Applikationssäkerhet) – säker kodning, sårbarhetstester, WAF (Web Application Firewall).
+    5. Data layer (Dataskydd) – kryptering, åtkomstkontroller, backup och DLP (Data Loss Prevention).
+
+
+OWASP Top 10 (Open Worldwide Application Security Project)
+  Är en ideell organisation som arbetar för att förbättra mjukvarusäkerheten. 
+  Ett av deras mest kända verktyg är OWASP Top 10, en lista över de tio mest kritiska säkerhetsbristerna i webbapplikationer. 
+  Listan uppdateras regelbundet och används av företag vid utveckling av ny mjukvara för att undvika vanliga misstag.
+
+  Vanliga sårbarheter i OWASP Top 10:
+  1. Broken access control – Bristande åtkomstkontroller som kan ge obehörig åtkomst eller manipulation.
+  2. Cryptographic failures – Otillräcklig kryptering som utsätter känslig information för risk.
+  3. Injection – Angrepp där skadlig kod injiceras i applikationer, t.ex. via formulär.
+  4. Insecure design – Bristfällig design som saknar eller implementerar säkerhetskontroller dåligt.
+  5. Security misconfiguration – Felkonfigurerade system, t.ex. standardinställningar på servrar.
+  6. Vulnerable and outdated components – Sårbara tredjepartskomponenter som inte uppdaterats.
+  7. Identification and authentication failures – Brister i att korrekt identifiera och autentisera användare.
+  8. Software and data integrity failures – Otillräcklig kontroll av uppdateringar och patchar, risk för supply chain-attacker.
+  9. Security logging and monitoring failures – Avsaknad av effektiv loggning och övervakning, vilket försvårar incidentrespons.
+  10 Server-side request forgery (SSRF) – Angrepp som manipulerar serverns normala operationer för att få åtkomst till data.
+
+  Syfte: OWASP Top 10 hjälper företag att förstå och prioritera vanliga säkerhetsrisker, förbättra utvecklingspraxis och stärka applikationssäkerheten.
+
+
+Open Source Intelligence (OSINT)
+  OSINT är insamling och analys av information från offentligt tillgängliga källor för att skapa användbar underrättelse. 
+  Inom cybersäkerhet används OSINT för att identifiera potentiella hot och sårbarheter.
+
+  Information vs intelligence:
+    🔹Information: rådata eller fakta om ett ämne.
+    🔹Intelligence (underrättelse): analyserad information som ger insikter och underlag för beslut.
+    Exempel: Information om ett nytt OS-uppdatering kan analyseras för att avgöra om den medför nya cyberhot.
+
+  Syfte med OSINT: 
+    🔹Ge insikter om cyberattacker.
+    🔹Upptäcka potentiella dataläckor.
+    🔹Utvärdera befintliga försvar.
+    🔹Identifiera okända sårbarheter.
+
+  Användning i cybersäkerhet:
+    OSINT hjälper säkerhetsteam att övervaka forum, sociala medier och hackercommunities för nya sårbarheter, prioritera patchning och förbättra försvar. 
+    Det kan också ingå som en del i sårbarhetshantering och riskbedömning
+
+  Exempel på OSINT-verktyg:
+    🔹VirusTotal – analysera filer, domäner, URL:er och IP-adresser.
+    🔹MITRE ATT&CK® – databas över motståndares taktiker och tekniker.
+    🔹OSINT Framework – samling verktyg för olika informationskällor.
+    🔹Have I Been Pwned – kontrollera om e-postkonton har blivit utsatta för intrång.
+
+  Slutsats: OSINT är ett kraftfullt verktyg för att omvandla offentligt tillgänglig information till underrättelse som stödjer beslut och förbättrar cybersäkerheten.
+
+
+Vulnerability assessment process
+  Är en metod för att identifiera, analysera och åtgärda säkerhetssårbarheter i system och nätverk. Syftet är att minska risken för attacker.
+  De fyra stegen:
+    1. Identification (Identifiering) – Hitta potentiella sårbarheter i system, nätverk, applikationer eller processer. 
+        Detta kan göras med scanningverktyg, loggar eller manuella kontroller.
+    2. Classification (Klassificering) – Bedöm och kategorisera sårbarheterna efter risknivå, påverkan och prioritet. Exempelvis hög, medium eller låg risk.
+    3. Remediation (Åtgärd) – Planera och genomför åtgärder för att minska eller eliminera sårbarheter, t.ex. patchning, konfigurationsändringar eller uppdateringar.
+    4. Reporting (Rapportering) – Dokumentera resultatet, risknivåer och åtgärder som vidtagits. Rapporten används för uppföljning och förbättring av säkerheten.
+
+
+Attack surface
+  Är potentiella området i systemet som attackeraren kan attackera.
+
+
+Approach cybersecurity with an attacker mindset
+  Inom cybersäkerhet är det viktigt att tänka som en angripare för att bättre kunna skydda system. 
+  Genom att analysera sårbarheter ur en angripares perspektiv kan säkerhetsteam förutse risker och planera åtgärder.
+  Att tänka som en angripare:
+    🔹Liknar ett kontrollerat experiment: man testar svagheter och analyserar resultaten för att få insikter.
+    🔹Hjälper till att utveckla säkerhetsplaner och förbättra befintliga försvar.
+
+  Hot-simuleringar:
+    🔹Proaktiva simuleringar (Red Team): agerar som angripare, utnyttjar sårbarheter, testar systemens motståndskraft.
+    🔹Reaktiva simuleringar (Blue Team): agerar som försvarare, analyserar tillgångar och använder sårbarhetsscanning för att identifiera och åtgärda problem.
+
+  Sårbarhetsscanning:
+    🔹Skannar nätverk och system mot kända sårbarheter.
+    🔹Följer stegen i en sårbarhetsbedömning:
+        1. Identifiering – hitta sårbara servrar eller system.
+        2. Analys – undersök sårbarheterna.
+        3. Riskbedömning – utvärdera konsekvenserna.
+        4. Åtgärd – implementera lösningar för att minska risker.
+
+  Slutsats:
+  Att tänka som en angripare hjälper säkerhetsteam att hitta innovativa lösningar och hålla sig uppdaterade om nya hot. 
+  Verktyg som NIST National Vulnerability Database (NVD) är användbara för att följa vanliga sårbarheter och trender.
 
 
 
 
+Types of Threat Actors
+  Är personer eller grupper som utgör en säkerhetsrisk, både inom och utanför en organisation. De kan vara både avsiktliga eller oavsiktliga hot.
+  Fem huvudkategorier av threat actors:
+    1. Konkurrenter – Rivaliserande företag som kan dra nytta av läckt information.
+    2. Statliga aktörer – Regeringars underrättelsetjänster.
+    3. Kriminella syndikat – Organiserade grupper som tjänar pengar på brottslighet.
+    4. Insider threats – Anställda eller tidigare anställda som medvetet eller oavsiktligt äventyrar resurser.
+    5. Shadow IT – Användare som använder teknik utan formell IT-styrning, t.ex. privat e-post för arbetsrelaterad kommunikation.
+
+  Typer av hackers:
+    🔹Unauthorized hackers (malicious) – Hackar olagligt med avsikt att skada. Inkluderar även “script kiddies”.
+    🔹Authorized hackers (ethical) – Etiska hackare som testar och förbättrar säkerheten, t.ex. bug bounty-program.
+    🔹Semi-authorized hackers – Kan bryta mot etiska regler utan skadlig avsikt, t.ex. hacktivister.
+
+  Advanced Persistent Threats (APT):
+    🔹Hotaktörer som upprätthåller obehörig åtkomst under lång tid.
+    🔹Vanligtvis statligt sponsrade, men kan även påverka privata företag.
+    🔹Fokus på övervakning och informationsinsamling.
+
+  Access points / attackvektorer:
+  Hotaktörer utnyttjar olika ingångar för att nå system:
+    🔹Direkt fysisk åtkomst
+    🔹Flyttbar media (USB, externa hårddiskar)
+    🔹Sociala medier
+    🔹E-postkonton
+    🔹Trådlösa nätverk
+    🔹Molntjänster (t.ex. från tredjepartsleverantörer)
+    🔹Leverantörskedjor/supply chains
+  Att förstå hotaktörernas motiv och möjliga attackvektorer hjälper säkerhetsteam att prioritera skydd och förebygga intrång.
 
 
 
 
-
+Modul 4
 
 
 
