@@ -482,39 +482,94 @@ Types of Threat Actors
 
 
 
+
+
+
+
+
+
+
+
 Modul 4
 
+Social engineering
+  Är en metod där angripare manipulerar människor för att få tillgång till information, system eller pengar, ofta enklare än att utnyttja tekniska sårbarheter. 
+  Vanliga tekniker inkluderar:
+    🔹Baiting – lockar någon att kompromettera sin säkerhet (t.ex. infekterad USB).
+    🔹Phishing – digitala meddelanden som lurar användare att lämna känslig information.
+    🔹Quid pro quo – lovar belöning i utbyte mot information.
+    🔹Tailgating/piggybacking – följer efter en behörig person in i ett skyddat område.
+    🔹Watering hole – infekterar webbplatser som ofta besöks av målguppen.
+
+Phishing
+  Är en vanlig form av social engineering där angripare lurar människor att avslöja känslig information eller installera skadlig programvara. 
+  Det började på 1990-talet med massutskick via e-post, exempelvis mot AOL-användare, och har sedan utvecklats med e-handel och sociala medier. 
+  Vanliga typer idag är:
+    🔹Email phishing – falska mejl från betrodda källor.
+    🔹Smishing – phishing via SMS eller chattmeddelanden.
+    🔹Vishing – phishing via telefonsamtal.
+    🔹Spear phishing – riktad mot specifika individer.
+    🔹Whaling – riktad mot högre chefer.
+  Senare har angripare börjat använda mer riktade tekniker, 
+  som angler phishing, där man utger sig för att vara kundtjänst på sociala medier och utnyttjar kunders klagomål för att få information.
+
+
+Malware
+  Är skadlig programvara som skadar datorer eller nätverk. 
+  Vanliga typer inkluderar:
+    🔹Virus – kräver användarinstallation och sprids ofta via phishing.
+    🔹Worms – sprider sig självständigt över nätverk.
+    🔹Trojans – ser ut som legitima filer men ger angripare åtkomst.
+    🔹Adware/PUA – visar oönskade annonser eller installerar annan programvara.
+    🔹Spyware – samlar information utan samtycke.
+    🔹Scareware – skrämmer användare att infektera sina egna enheter.
+    🔹Fileless malware – infekterar minnet utan att använda filer.
+    🔹Rootkits – ger administrativ fjärråtkomst och möjliggör andra attacker.
+    🔹Botnets – nätverk av infekterade datorer under angripares kontroll.
+    🔹Ransomware – krypterar data och kräver betalning för återställning.
+
+
+XSS (Cross-Site Scripting)
+  Är en typ av webbsäkerhetsattack där angripare injicerar skadlig kod (oftast JavaScript) i en webbsida som sedan körs i andra användares webbläsare. 
+  Målet är ofta att stjäla känslig information, såsom cookies, sessionstokens eller användardata, eller att manipulera sidan för phishing eller andra attacker.
+  Det finns tre huvudtyper av XSS:
+    1. Reflected XSS – koden skickas via en länk eller formulär och reflekteras direkt i serverns svar.
+    2. Stored XSS – koden lagras permanent på servern, t.ex. i en databas, och påverkar alla användare som besöker sidan.
+    3. DOM-based XSS – koden körs på klientens sida i webbläsaren via manipulering av DOM, utan att servern direkt returnerar skadlig kod.
+  Förebyggande åtgärder inkluderar inputvalidering, escaping av användardata, och användning av Content Security Policy (CSP).
+
+
+SQL-injektion
+  Är en attack där angripare utnyttjar sårbara inmatningsfält för att köra skadliga databasanrop och stjäla, ändra eller ta kontroll över information. 
+  De tre huvudtyperna är: 
+    🔹in-band (attack och resultat på samma kanal)
+    🔹out-of-band (olika kanaler)
+    🔹inferential (tolkar systemets beteende utan direkt resultat). 
+  För att förebygga attacker används prepared statements, input-sanitization och input-validation, vilket begränsar skadlig kod från att köras.
+
+
+Threat modeling
+  Är en systematisk metod för att identifiera, förstå och prioritera säkerhetshot mot ett system, en applikation eller en organisation. 
+  Målet är att analysera hur angripare kan utnyttja sårbarheter och planera åtgärder för att minska riskerna innan en attack inträffar.
+  Det brukar innefatta tre huvudsteg:
+    1. Identifiera tillgångar och resurser – vad som är viktigt att skydda, t.ex. data, system eller användarinformation.
+    2. Identifiera hot och sårbarheter – vilka attacker som kan riktas mot dessa tillgångar, och vilka svagheter som finns.
+    3. Prioritera och åtgärda risker – bedöma vilka hot som är mest kritiska och planera motåtgärder.
+  En populär metodik inom threat modeling är STRIDE, som kategoriserar hot i: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Attack tree
+  Är en visuell representation av alla möjliga sätt en angripare kan kompromettera ett system eller nå ett specifikt mål. 
+  Det fungerar som ett “träd” där målet står som roten och de olika attackvägarna som grenar.
+  Delar av ett attack tree:
+    1. Root (Roten): Det övergripande målet för attacken, t.ex. “Stjäla användardata”.
+    2. Branches (Grener): De olika strategier eller metoder som kan användas för att nå målet.
+    3. Leaf nodes (Blad): De konkreta steg eller handlingar som krävs för att utföra varje gren.
+    4. Logical operators:
+      🔹AND – alla underliggande steg måste lyckas för att uppnå målet.
+      🔹OR – endast ett av de underliggande stegen behöver lyckas.
+  Attackträd används ofta i threat modeling för att analysera säkerhetsrisker och planera motåtgärder.
 
 
 
