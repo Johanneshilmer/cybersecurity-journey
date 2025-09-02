@@ -1,2 +1,34 @@
-
+Sound the alarm: Detection and response
 Module 1
+The 5 W's of an incident
+  Who triggered the incident
+  What happened
+  When the incident took place
+  Where the incident tooke place
+  Why the incident occurred
+
+NIST Incident Response Lifecycle
+  Innefattar 4 olika steg
+    1. Preparation (Förbered)
+      👉Utveckla policies och rutiner för incidenthantering.
+      👉Träna personalen och skapa incident response team (IRT).
+      👉Förbereda verktyg, loggning, övervakning och system för att kunna upptäcka incidenter.
+      👉Säkerställa att det finns kommunikationsplaner (vem kontaktas och hur).
+      Syftet: Att organisationen ska vara redo att agera snabbt och effektivt när en incident inträffar.
+    2. Detection and analysis (Upptäck och analysera.)
+      👉Upptäcka avvikande beteenden via loggar, SIEM, IDS/IPS, antivirus, användarrapporter osv.
+      👉Analysera indikatorer på kompromettering (IOCs).
+      👉Avgöra om det faktiskt är en säkerhetsincident, vilken typ och hur allvarlig den är.
+      👉Dokumentera händelsen.
+      Syftet: Att snabbt upptäcka och förstå incidentens omfattning för att kunna agera rätt.
+    3. Containment, Eradication and Recovery (Begränsa, rensa och återställ.)
+      👉Containment: Begränsa skadan och stoppa spridning (t.ex. isolera nätverk, blockera konton).
+      👉Eradication: Ta bort själva orsaken (t.ex. rensa malware, patcha sårbarheter, stänga bakdörrar).
+      👉Recovery: Återställa system till normal drift, kontrollera att hotet är borta och att det inte finns risk för återinfektion.
+      Syftet: Att minimera skada, återställa verksamheten och eliminera hotet.
+    4. Post-Incident activity (Lär dig av incidenten.)
+      👉Utvärdera vad som gick bra och vad som kan förbättras.
+      👉Dokumentera incidenten och lärdomar.
+      👉Uppdatera policies, rutiner, och utbildningar.
+      👉Dela erfarenheter med relevanta parter (internt och ibland externt).
+      Syftet: Att bli bättre förberedd inför nästa incident och minska risken för upprepning.
