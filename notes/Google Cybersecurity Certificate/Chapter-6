@@ -1,5 +1,6 @@
 Sound the alarm: Detection and response
 Module 1
+
 The 5 W's of an incident
   Who triggered the incident
   What happened
@@ -7,7 +8,9 @@ The 5 W's of an incident
   Where the incident tooke place
   Why the incident occurred
 
+
 NIST Incident Response Lifecycle
+  För hur organisationer bör hantera IT-incidenter, särskilt inom cybersäkerhet. Den består av fyra steg som tillsammans bildar en cyklisk process:
   Innefattar 4 olika steg
     1. Preparation (Förbered)
       👉Utveckla policies och rutiner för incidenthantering.
@@ -32,3 +35,52 @@ NIST Incident Response Lifecycle
       👉Uppdatera policies, rutiner, och utbildningar.
       👉Dela erfarenheter med relevanta parter (internt och ibland externt).
       Syftet: Att bli bättre förberedd inför nästa incident och minska risken för upprepning.
+
+
+CSIRT (Computer security incident response teams)
+  Är ett specialiserat team inom en organisaton som ansvarar för att hantera och svara på IT-säkerhetsincidenter
+  Olika roller:
+    Security analyst – övervakar system, analyserar och eskalerar hot.
+    Technical lead – hanterar tekniska åtgärder som patchning, containment och recovery.
+    Incident coordinator – koordinerar med andra avdelningar (HR, juridik, PR, IT, m.fl.).
+  Huvuduppgifter för ett CSIRT:
+    1. Incidenthantering – ta emot rapporter, analysera incidenter, och koordinera responsen.
+    2. Kommunikation – fungera som central kontaktpunkt för incidentrapportering, både internt (anställda, IT-avdelning) och externt (andra organisationer, myndigheter).
+    3. Samordning – koordinera arbetet mellan olika tekniska och organisatoriska grupper vid incidenter.
+    4. Förebyggande arbete – analysera hotbilder, sprida information om sårbarheter, och föreslå förbättringar av säkerhetsrutiner.
+    5. Kunskapsöverföring – utbilda personal och öka medvetenheten om IT-säkerhet.
+
+SOC (Security Operations Center)
+  Ett SOC är en organisatorisk enhet (ofta separat, men ibland inom CSIRT) som ansvarar för övervakning, analys och respons på hot.
+  Struktur och roller:
+    Tier 1 SOC Analyst (L1) – minst erfarna, övervakar, prioriterar och eskalerar larm.
+    Tier 2 SOC Analyst (L2) – mer erfarna, gör djupare undersökningar och justerar säkerhetsverktyg.
+    Tier 3 SOC Lead (L3) – avancerade experter, leder teamet och utför avancerad analys (t.ex. forensik, malware-analys).
+    SOC Manager – leder hela SOC, ansvarar för rekrytering, rapportering och kommunikation med ledningen.
+  Specialistroller i SOC:
+    Forensic investigators – samlar och analyserar digitala bevis.
+    Threat hunters – söker efter avancerade hot och nya attackmetoder.
+
+👉 Kort sagt:
+  CSIRT är incidentresponsteamet som samordnar insatser när något händer.
+  SOC är övervaknings- och analysenheten som kontinuerligt letar efter hot och hanterar incidenter i realtid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
