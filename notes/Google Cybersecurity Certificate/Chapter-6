@@ -66,14 +66,66 @@ SOC (Security Operations Center)
   SOC är övervaknings- och analysenheten som kontinuerligt letar efter hot och hanterar incidenter i realtid.
 
 
+Incident response tools
 
-Tools
+  Typer av dokumentation
+    👉Playbooks
+      En manual som ger information om åtgärder för olika actions.
+        Dokumentation tools: Google Docs, OneNote, Evernote, Notepad++
+        Ticketing system: Jira
+    👉Incident handler's journals
+    👉Ploicies
+    👉Plans
+    👉Final reports
+
+  Intrusion detection system (IDS)
+    System som övervakar system / network aktivitet och utger alerts på möjliga intrång.
+  Intrusion prevention system (IPS)
+    System som övervakar system / network aktivitet och sedan gör "action" för att stoppa möjliga intrång.
+  IDS/IPS tools
+    👉Snort
+    👉Zeek
+    👉Kismet
+    👉Sagan
+    👉Suricata
+  Endpoint Detection and Response (EDR)
+    Till skillnad från IDS/IPS så kan EDR analysera och svara på hot med hjälp av beteendeanalys, AI och automatisering. Detta gör de själv.
+    Open EDR
+    Bitdefender
+    FortiEDR
+
+👉 Kort sagt: IDS upptäcker, IPS upptäcker och stoppar, medan EDR ger mer avancerad analys och automatiserade svar på hot direkt på enheterna.
+
+Dessutom finns fyra centrala detektionskategorier:
+  True positive: Rätt identifierat hot.
+  True negative: Inget hot och ingen varning.
+  False positive: Falsk varning, inget verkligt hot.
+  False negative: Missat hot, farligt eftersom attacken förblir oupptäckt.
 
 
+Security Information and Event Management (SIEM)
+  Är verktyg som samlar in, lagrar och analyserar loggdata för att upptäcka, undersöka och hantera säkerhetsincidenter.
+  Fördelar med SIEM:
+    - Ger tillgång till händelsedata i realtid från många olika system och enheter.
+    - Övervakar, upptäcker och skickar varningar vid misstänkt aktivitet.
+    - Lagrar loggar för både historisk analys och krav på datalagring.
 
+  SIEM-processen består av tre steg:
+    1. Insamling och aggregering – loggar från t.ex. brandväggar, servrar och routrar samlas i en central plats. Data parsas för att bli mer läsbar.
+    2. Normalisering – data omvandlas till ett standardiserat, strukturerat format för att kunna bearbetas och sökas effektivt.
+    3. Analys – med hjälp av regler, villkor och korrelation mellan händelser identifieras mönster som tyder på hot, vilket genererar varningar.
 
+Exempel på SIEM-verktyg: AlienVault OSSIM, Chronicle, Elastic, Exabeam, IBM QRadar, LogRhythm och Splunk.
 
+👉 Kort sagt: SIEM centraliserar och strukturerar loggdata från många källor för att ge säkerhetsteam möjlighet att effektivt upptäcka, analysera och hantera potentiella hot.
 
+Exempel på en logg:
+  👉April 3 11:01:21 server sshd[1088]: Failed password for user nuhara from 218.124.14.105 port 5023
+      host = server
+      process = sshd
+      source_user = nuhara
+      source ip = 218.124.14.105
+      source port = 5023
 
 
 
