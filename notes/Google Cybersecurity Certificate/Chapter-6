@@ -127,6 +127,40 @@ Exempel på en logg:
       source ip = 218.124.14.105
       source port = 5023
 
+Security Orchestration, Automation, and Response (SOAR)
+  Samling av applikationer och värktyg samt workflows som använder automation till att aggera mot säkerhets event.
+
+
+
+
+
+
+
+
+Module 2
+Network monitoring and analysis
+
+Indicators of compromise (IOC)
+  Observerbara bevis som tyder på tecken på en potentiell säkerhetsincident.
+  Data exfiltration: Obehörig överföring av data från ett system till ett annat så som username, password som attackerare gör.
+
+Nätverksövervakning är avgörande för att upptäcka avvikelser och misstänkt aktivitet i nätverkstrafiken. 
+Genom att samla in och analysera data från nätverkskommunikation kan säkerhetsteam skapa en baseline (normal beteendenivå) och jämföra mot den för att identifiera avvikelser.
+
+Metoder för nätverksövervakning:
+  Flödesanalys: undersöker protokoll, portar och paketflöden. Avvikelser, som felaktiga port-protokoll-kombinationer, kan indikera attacker (t.ex. C2-kommunikation).
+  Paketinnehåll (payload): analyserar datan i nätverkspaketen, ofta för att hitta misstänkt trafik som kan tyda på dataläckage.
+  Tidsmönster: avvikelser i när trafiken sker (t.ex. stora datamängder utanför normala arbetstider) kan signalera intrång.
+
+Skydd och roller:
+  SOC (Security Operations Center): fokuserar på säkerhet, upptäckt och respons på hot.
+  NOC (Network Operations Center): fokuserar på nätverkets prestanda, tillgänglighet och driftstörningar.
+
+Verktyg för nätverksövervakning:
+  IDS (Intrusion Detection Systems): övervakar och varnar vid intrångsförsök.
+  Protokollanalysatorer / Packet sniffers (t.ex. Wireshark, tcpdump): fångar och analyserar nätverkstrafik i detalj.
+
+👉 Kort sagt: Genom att känna sitt nätverk, fastställa en baseline och använda övervakningsverktyg kan organisationer snabbt upptäcka intrång och skydda sina system.
 
 
 
