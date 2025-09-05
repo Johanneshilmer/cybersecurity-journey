@@ -164,6 +164,50 @@ Verktyg för nätverksövervakning:
 
 
 
+Inom TCP/IP modellen som består av 
+  - Application
+  - Transport
+  - Internet
+  - Network Access
+Är alltså "Internet" där alla packets och kommunikationen sker.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
