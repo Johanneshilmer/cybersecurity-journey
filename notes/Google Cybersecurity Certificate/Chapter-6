@@ -163,7 +163,6 @@ Verktyg för nätverksövervakning:
 👉 Kort sagt: Genom att känna sitt nätverk, fastställa en baseline och använda övervakningsverktyg kan organisationer snabbt upptäcka intrång och skydda sina system.
 
 
-
 Inom TCP/IP modellen som består av 
   - Application
   - Transport
@@ -217,7 +216,6 @@ en HTTP-förfrågan och dess svar.
 👉 Kort sagt: Wireshark låter dig filtrera och analysera nätverkstrafik på ett effektivt sätt genom att använda filter för protokoll, adresser, portar och strömmar.
 
 
-
 TCP dump
   Är ett kraftfullt kommandoradsverktyg för att analysera nätverkstrafik i realtid. 
   Det används ofta av nätverksadministratörer och säkerhetsexperter för felsökning, övervakning och insamling av data.
@@ -246,10 +244,58 @@ Mer Exempel
 
 
 
-
-
-
 Module 3
+Detection & Analysis Phase: 
+  Säkerhetsteam använder verktyg som IDS och SIEM för att upptäcka och analysera incidenter. En utmaning är att dessa verktyg bara kan upptäcka det de är konfigurerade för.
+Threat hunting: 
+  Proaktiv metod där säkerhetsexperter aktivt letar efter hot som automatiserade verktyg missar, t.ex. svårupptäckt fil-lös malware. Kombinerar mänsklig analys med teknik.
+Threat intelligence: 
+  Information om hot från källor som branschrapporter, myndighetsvarningar och hotdatastreams (t.ex. IP-adresser, domäner, fil-hashar). 
+  Kan centraliseras via en Threat Intelligence Platform (TIP) för att förbättra detektion och prioritering.
+Cyber deception: 
+  Tekniker som avsiktligt lurar angripare. Exempel: honeypots, dvs. falska resurser eller filer som angripare lockas till. När de försöker få åtkomst triggas en varning.
+
+👉 Kort sagt: Utöver traditionella verktyg stärker organisationer sin detektion med proaktiv threat hunting, 
+  hotinformation och cyber deception för att upptäcka hot som annars kan förbli dolda.
+
+
+CI/CD
+CI/CD-pipelines gör mjukvaruutveckling snabbare men öppnar också för nya sårbarheter. 
+Därför är kontinuerlig övervakning viktig för att automatiskt upptäcka ovanlig aktivitet och Indicators of Compromise (IoCs).
+Vanliga IoCs i CI/CD:
+  - Obehöriga kodändringar: misstänkta commits från fel användare, tider eller platser.
+  - Avvikande deployment-mönster: distributioner vid ovanliga tidpunkter, till fel system eller från fel konton.
+  - Komprometterade beroenden: kända sårbarheter (CVEs), oväntade nya beroenden, nedladdningar från osäkra källor.
+  - Ovanlig pipeline-körning: steg som misslyckas, tar längre tid än normalt, eller körs i fel ordning.
+  - Försök till sekretsexponering: obehörig åtkomst till hemligheter eller hårdkodade hemligheter i kod.
+
+Metoder för att hitta hot:
+  - Omfattande loggning: analysera körningsloggar, kodcommits, åtkomstloggar och deployment-loggar med automatiska baselines för att upptäcka avvikelser.
+  - SIEM-integration: koppla CI/CD-loggar till ett SIEM för att upptäcka anomalier, matcha kända IoCs (t.ex. skadliga filhashar, C2-anslutningar) och trigga regler.
+  - Realtidsvarningar: notifiera omedelbart om misstänkta händelser (t.ex. kodförändringar, misslyckade builds, ovanlig nätverkstrafik).
+  - Prestandaövervakning: upptäcka ovanlig resursanvändning eller långsamma pipelines som kan indikera attacker.
+  - Kontinuerlig sårbarhetsskanning: hitta och patcha svagheter i CI/CD-verktyg, plugins och containers.
+
+Fördelar med proaktiv övervakning:
+  - Snabb respons → stoppa attacker innan de orsakar skada.
+  - Minskad påverkan → begränsa angriparnas tid i systemet.
+  - Bättre hotförståelse → lärdomar om angripares metoder stärker framtida säkerhet.
+
+👉 Kort sagt: Automatiserad övervakning av CI/CD med loggning, SIEM, varningar, prestandaövervakning och sårbarhetsskanning gör det möjligt att upptäcka IoCs tidigt, 
+  svara snabbt och skydda mjukvaruförsörjningskedjan.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
