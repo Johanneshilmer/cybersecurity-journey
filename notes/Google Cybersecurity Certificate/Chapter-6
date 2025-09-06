@@ -172,6 +172,73 @@ Inom TCP/IP modellen som består av
 Är alltså "Internet" där alla packets och kommunikationen sker.
 
 
+IPv4 och IPv6 är uppbyggda på olika sätt som gör att Header för dessa ser olika ut.
+
+IPv4: Är mest använd verisionen av IP, det finns 13 fält i det "header":
+  - Version: Detta fält anger IP-version. För en IPv4-header används IPv4.
+  - Internet Header Length (IHL): Detta fält anger längden på IPv4-headern, inklusive eventuella alternativ (Options).
+  - Type of Service (ToS): Detta fält innehåller information om paketets prioritet för leverans.
+  - Total Length: Detta fält anger den totala längden på hela IP-paketet, inklusive headern och datan.
+  - Identification: Paket som är för stora för att skickas delas upp i fragment. Detta fält anger en unik identifierare för fragmenten av det ursprungliga IP-paketet, så att de kan sättas ihop igen vid mottagaren.
+  - Flags: Detta fält innehåller information om fragmentering, t.ex. om paketet har delats upp och om det finns fler fragment på väg.
+  - Fragment Offset: Detta fält används för att placera fragmenten i rätt ordning när paketet sätts ihop igen.
+  - Time to Live (TTL): Detta fält begränsar hur länge ett paket kan cirkulera i nätverket och förhindrar att det skickas runt mellan routrar oändligt.
+  - Protocol: Detta fält anger vilket protokoll som används för datapaketets innehåll.
+  - Header Checksum: Detta fält innehåller ett checksummevärde som används för att kontrollera om headern har några fel.
+  - Source Address: Detta fält anger avsändarens IP-adress.
+  - Destination Address: Detta fält anger mottagarens IP-adress.
+  - Options: Detta fält är valfritt och kan användas för att tillämpa exempelvis säkerhetsinställningar för paketet.
+  
+IPv6: Har ökat pga dess stora adressutrymme. Det finns åtta fält i "header"
+  - Version: Detta fält anger IP-version. För en IPv6-header används IPv6.
+  - Traffic Class: Detta fält motsvarar ungefär Type of Service i IPv4. Det anger paketets prioritet eller klass för att underlätta leverans.
+  - Flow Label: Detta fält identifierar paket som tillhör samma flöde. Ett flöde är en följd av paket som skickas från en specifik källa.
+  - Payload Length: Detta fält anger längden på datapaketets innehåll (dvs. datadelen).
+  - Next Header: Detta fält anger vilken typ av header som följer efter IPv6-headern, t.ex. TCP.
+  - Hop Limit: Detta fält fungerar som Time to Live (TTL) i IPv4. Det begränsar hur länge ett paket får färdas i nätverket innan det kastas bort.
+  - Source Address: Detta fält anger avsändarens IP-adress.
+  - Destination Address: Detta fält anger mottagarens IP-adress.
+
+
+Wireshark
+  Är ett öppet verktyg för nätverksanalys som använder ett grafiskt gränssnitt för att visualisera och analysera nätverkstrafik.
+    - Display filters: Gör det möjligt att filtrera på protokoll, IP-adresser, portar och andra fält.
+    - Jämförelseoperatorer: Används för att specificera värden (t.ex. ==, !=, >, < eller motsvarande förkortningar). De kan kombineras med logiska operatorer som and och or.
+    - Contains: Filtrerar paket som innehåller en specifik textsträng.
+    - Matches: Filtrerar paket med hjälp av reguljära uttryck (regex).
+    - Filter toolbar: Här skriver man in filter, exempelvis dns för att bara visa DNS-paket. Wireshark använder även färger för olika protokoll.
+      Filtreringstyper:
+        Protokoll: Exempelvis dns, http, ftp, ssh, arp, telnet, icmp.
+        IP-adress: ip.addr == 172.21.224.2, ip.src (källa), ip.dst (destination).
+        MAC-adress: eth.addr == 00:70:f4:23:18:c4.
+        Portar: udp.port == 53, tcp.port == 25.
+Follow streams: Gör det möjligt att följa en konversation (stream) mellan två enheter och återställa kommunikationen i ett mer läsbart format, t.ex. 
+en HTTP-förfrågan och dess svar.
+👉 Kort sagt: Wireshark låter dig filtrera och analysera nätverkstrafik på ett effektivt sätt genom att använda filter för protokoll, adresser, portar och strömmar.
+
+
+
+TCP dump
+  Är ett kraftfullt kommandoradsverktyg för att analysera nätverkstrafik i realtid. 
+  Det används ofta av nätverksadministratörer och säkerhetsexperter för felsökning, övervakning och insamling av data.
+Huvudpunkter om TCPdump:
+  Funktion: fångar upp nätverkspaket som passerar ett nätverksgränssnitt (t.ex. eth0) Kan visa paketen direkt i terminalen eller spara ner i en fil (.pcap -format) för senare.
+  Protokollstöd: stödjer dem flesta så som TCP, UPD, ICMP, ARP och IPv4/IPv6.
+  Filter: Precis som wireshark kan det filtrera på protokoll, IP, portar m.m. Exempel: 
+    - tcpdump port 80 => Visar trafik på port 80
+    - tcpdump host 8.8.8.8 => visar trafik till eller från 8.8.8.8
+    - tcpdump src 192.168.1.10 => visar trafik från en viss källa.
+    - tcp dst port 22 => visar trafik till port 22 (SSH)
+Mer Exempel
+    - sudo tcpdump -i eth0 => Fångar all trafik nätverksgränssnittet eth0
+    - sudo tcpdump -i eth0 -w capture.pcap => sparar all fångad trafik i fil capture.pcap
+👉 Kort sagt: TCPdump är Wireshark fast i terminalen – snabbare, mer resurssnålt, men mindre användarvänligt för nybörjare.
+  olika options och dess betydelse
+  -i => Interface, Anger vilket nätverksgränssnitt som ska användas för att snappa upp trafik.
+  -v => Verbose, Gör utskriften mer detaljerad. Kan upprepas (-vv eller -vvv) för ännu mer information om paketen.
+  -D => List Devices, Visar en lista över alla tillgängliga nätverksgränssnitt som tcpdump kan lyssna på.
+  -c 2 (eller nått annat nummer) Count, Anger hur många paket som ska fångas innan tcpdump avslutas.
+  -w => Låter oss spara nätverkspaket till en fil för senare analys.
 
 
 
@@ -182,23 +249,7 @@ Inom TCP/IP modellen som består av
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Module 3
 
 
 
