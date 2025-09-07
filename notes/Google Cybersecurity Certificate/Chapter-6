@@ -336,6 +336,99 @@ Sammanfattning:
   Genom att använda verktyg som VirusTotal, Jotti, Urlscan.io och MalwareBazaar kan säkerhetsteam effektivare upptäcka, analysera och stoppa attacker.
 
 
+Effektiv dokumentation inom säkerhet
+  Syfte:
+    Dokumentation är nedtecknad information som används för ett specifikt ändamål. 
+    Inom IT-säkerhet är den avgörande för att stödja utredningar, utföra arbetsuppgifter och kommunicera resultat.
+  Fördelar med dokumentation:
+    1. Transparency (Transparens) – säkerställer spårbarhet, regelefterlevnad och juridisk hållbarhet. Exempel: chain of custody som visar vem som haft kontroll över bevis under en incident.
+    2. Standardization (Standardisering) – skapar konsekvens och möjliggör kunskapsöverföring. Exempel: en incidenthanteringsplan som tydliggör steg-för-steg-processer.
+    3. Clarity (Tydlighet) – gör det enkelt för mottagare att förstå och agera på information. Exempel: analytiker dokumenterar varför ett larm eskalerats eller stängts.
+  Bästa praxis:
+    👉Känn din målgrupp – anpassa språket och detaljeringsnivån (t.ex. tekniskt för SOC-chef, mer övergripande för VD).
+    👉Var koncis – börja med syftet, använd sammanfattningar som snabbt visar kärnresultat.
+    👉Uppdatera regelbundet – dokumentation måste hållas aktuell i takt med nya hot och erfarenheter från incidenter.
+
+Chain of custody (Beviskedja)
+    Det handlar om att kunna visa exakt vem som haft tillgång till ett bevismaterial, när, hur och under vilka omständigheter, 
+    från det att materialet samlas in tills det eventuellt presenteras i en rättegång eller används i en utredning.
+  
+  Kärnan i chain of custody
+    1. Spårbarhet: Varje steg i hanteringen av beviset dokumenteras noggrant.
+    2. Integritet: Det ska gå att bevisa att beviset inte har ändrats eller manipulerats.
+    3. Ansvar: Vid varje överlämning av materialet måste det framgå vem som är ansvarig för det.
+    4. Tillförlitlighet: När beviset presenteras i en juridisk process ska det vara trovärdigt och rättssäkert.
+  
+  Exempel inom digital forensik
+    - När en hårddisk beslagtas i en cyberbrottsutredning ska det dokumenteras:
+        👉När och var den togs.
+        👉Av vem den togs.
+        👉Hur den transporterades.
+        👉Vilka personer som haft tillgång till den därefter.
+    - Oftast används hashvärden (t.ex. SHA-256) för att säkerställa att datan är oförändrad. Om hashvärdet är detsamma vid varje kontroll, kan man bevisa att ingen manipulation skett.
+  Varför är det viktigt?
+    👉Utan en obruten och korrekt dokumenterad chain of custody kan beviset ogiltigförklaras i domstol.
+    👉Det skyddar både utredare och organisationer från misstankar om bevisförfalskning.
+    👉Det är en grundpelare i all professionell incidenthantering och rättsprocess kopplad till IT.
+
+Regler angående "Triage in incident response"
+  Inom incident response (IR) är triage en av de första och viktigaste faserna. Den handlar om att snabbt bedöma, 
+  kategorisera och prioritera inkommande incidenter för att kunna avgöra vilka som kräver omedelbar åtgärd och vilka som kan hanteras senare. 
+  Det är lite som en akutmottagning: man måste skilja på vad som är kritiskt och vad som kan vänta.
+
+Regler och principer för triage i incident response
+
+1. Identifiera incidenten
+  Allt börjar med att upptäcka och bekräfta en möjlig incident (via SIEM-larm, IDS/IPS, användarrapporter, loggar osv).
+  Frågor som ställs:
+    👉Är detta en verklig incident eller ett falskt positivt larm?
+    👉Vilken typ av incident är det (t.ex. malware, nätverksintrång, insider threat, dataläckage)?
+
+2. Klassificera incidenten
+  Incidenter delas ofta in i kategorier som:
+    👉Informationssäkerhet (dataintrång, ransomware, phishing).
+    👉Tillgänglighet (DoS/DDoS, driftstopp).
+    👉Integritet (datamanipulation, obehöriga ändringar).
+    👉Konfidentialitet (läckor, obehörig åtkomst).
+  Detta gör att rätt team eller process kan kopplas in direkt.
+
+3. Bedöm allvarlighetsgrad (severity)
+  Här används ofta en prioriteringsmatris som kombinerar:
+    👉Påverkan (hur kritiskt är systemet som drabbats, påverkas affärskritiska tjänster, kunder eller känsliga data?).
+    👉Omfattning (är det en enskild klient, en hel server, eller ett helt nätverk?).
+    👉Tidsaspekt (hur snabbt kan incidenten sprida sig eller orsaka skada?).
+  Exempel:
+    👉Hög: Pågående dataläckage av kundinformation.
+    👉Medel: Misstänkt skadlig fil isolerad innan körning.
+    👉Låg: Brute force-försök som stoppats automatiskt av brandvägg.
+
+4. Prioritera åtgärder
+  👉Kritiska incidenter hanteras först, ofta med containment (begränsa skadan).
+  👉Mindre allvarliga incidenter dokumenteras och kan hanteras enligt rutin längre fram.
+  👉Viktigt att dokumentera varför prioriteringen gjordes – detta är en del av accountability.
+
+5. Följ policy och standarder
+  Triage måste ske enligt etablerade regler, t.ex.:
+    👉NIST SP 800-61 (Computer Security Incident Handling Guide).
+    👉ISO/IEC 27035 (Information security incident management).
+    👉Organisationens egna incident response playbooks.
+  Det säkerställer att prioriteringen inte blir godtycklig utan följer samma mönster oavsett analytiker.
+
+
+Business Continuity Planning (BCP)
+  Är en plan som säkerställer att en organisation kan fortsätta sina verksamhetskritiska funktioner vid större störningar, som exempelvis säkerhetsincidenter. 
+  Till skillnad från en Disaster Recovery Plan (DRP), som fokuserar på att återställa IT-system efter katastrofer, handlar BCP om att upprätthålla verksamheten under pågående störningar.
+  - Varför viktigt?
+    👉Säkerhetsincidenter (t.ex. ransomware) kan orsaka stora juridiska, ekonomiska och ryktemässiga skador.
+    👉I kritiska verksamheter, som sjukvård, kan ransomware hindra åtkomst till patientjournaler och därmed hota människors liv och nationell säkerhet.
+    👉BCP hjälper organisationer att minimera avbrott och säkerställa fortsatt tillgång till viktiga tjänster.
+
+  - Återställningsstrategier i BCP:
+    👉Resiliens = förmågan att förbereda sig, svara och återhämta sig från störningar.
+    👉Site resilience innebär att ha alternativa driftställen vid avbrott:
+      Hot site: Fullt fungerande och direkt redo att ta över.
+      Warm site: Nästan klar, kan snabbt bli operativ.
+      Cold site: Endast grundläggande infrastruktur, kräver mer arbete för att bli användbar.
 
 
 
@@ -344,10 +437,7 @@ Sammanfattning:
 
 
 
-
-
-
-
+Module 4
 
 
 
