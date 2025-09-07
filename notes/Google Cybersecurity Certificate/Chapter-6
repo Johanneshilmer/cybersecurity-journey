@@ -287,6 +287,63 @@ Fördelar med proaktiv övervakning:
 
 
 Indicators of Compromise (IoCs)
+  IoC är ett spår som visar tecken på att en IT-miljö kan ha blivit angirpen eller komprometterad.
+  Det är alltså bevis eller indikatorer som hjälpersäkerhetsanalytiker att upptäcka och undersöka potentiella attacker.
+
+  Exempel på IoCs
+    - Nätverksbaserade IoCs
+        👉IP-adresser, domäner eller URL:er som är kända för att vara skadliga.
+        👉Onormal nätverkstrafik, exempelvis anslutningar till ovanliga länder eller portar.
+    - Filbaserade IoCs
+        👉Hashvärden (MD5, SHA1, SHA256) för kända skadeprogram.
+        👉Okända eller ovanliga filer som plötsligt dyker upp på system.
+        👉Skadliga körbara filer eller skript (.exe, .js, .vbs etc.).
+    - Systembaserade IoCs
+        👉Ovanliga processer som körs i bakgrunden.
+        👉Ändringar i registret (Windows) eller konfigurationsfiler.
+        👉Nya användarkonton eller förändrade behörigheter.
+    - Beteendebaserade IoCs
+        👉Försök till lateral rörelse i nätverket.
+        👉Verktyg för credential dumping eller privilege escalation.
+        👉Kommunikation med Command and Control (C2)-servrar.
+
+Pyramid of Pain (svårighetsgrad för angripare att byta IoC)
+  IoCs kan vara olika svåra för angripare att ändra:
+    👉Hashar – lätta att byta (räcker att kompilera om en fil).
+    👉IP-adresser & domäner – något svårare, men fortfarande relativt enkelt.
+    👉Nätverkstrafikmönster & verktyg – mer komplext att ändra.
+    👉Taktiker, tekniker och procedurer (TTPs) – svårast att byta, eftersom det handlar om angriparnas arbetsmetodik.
+
+Crowdsourcing och hotunderrättelser:
+  Traditionellt arbetade organisationer isolerat, men genom crowdsourcing kan information delas globalt mellan säkerhetsexperter, leverantörer och myndigheter. 
+  Exempel på detta är ISACs och OSINT. 
+  Genom att dela data om attacker, som skadliga filer eller IP-adresser, kan verktyg som VirusTotal användas för att skydda fler organisationer.
+
+VirusTotal:
+  En kostnadsfri tjänst som analyserar filer, IP-adresser, domäner och URL:er. Rapporterna innehåller flera flikar, bland annat:
+    👉Detection – säkerhetsleverantörers bedömningar.
+    👉Details – tekniska detaljer om artefakten.
+    👉Relations – kopplingar till andra IoCs.
+    👉Behavior – beteenden i en kontrollerad miljö.
+    👉Community – kommentarer och insikter från användare.
+  Andra verktyg:
+    👉Jotti malware scan – gratis filanalys med flera antivirusmotorer.
+    👉Urlscan.io – analyserar URL:er och ger rapporter.
+    👉MalwareBazaar – ett öppet arkiv för skadeprogram som kan användas i forskning.
+
+Sammanfattning:
+  IoCs blir mer värdefulla när de sätts i ett större sammanhang med hjälp av hotunderrättelser och crowdsourcing. 
+  Genom att använda verktyg som VirusTotal, Jotti, Urlscan.io och MalwareBazaar kan säkerhetsteam effektivare upptäcka, analysera och stoppa attacker.
+
+
+
+
+
+
+
+
+
+
 
 
 
