@@ -1,5 +1,6 @@
 Automate Cybersecurity Task with Python
-Module 1
+
+Module 1 Intro till Python
 
 Python och programmering:
   Programmering innebär att ge datorer instruktioner för att utföra uppgifter. Datorer kommunicerar egentligen i binärkod (0 och 1), 
@@ -66,6 +67,10 @@ Data typer:
     3: "North",
     4: "South" }
 
+  Att se vilken type en variable har använder vi type()
+  username = "johannes"
+  print(type(username))
+  output => <class 'str'> "alltså string"
 
 Assign och reassign variables i Python
   # Assign "username"
@@ -85,10 +90,97 @@ For loop nummer
   for i in range(11):
     print(i)
 
+  for i in range(0, 5):
+    print(i)
+
+
 For loop lista
   list = ["banan", "äpple", "mango"]
   for x in list:
     print(x)
+
+While loops
+
+  i = 0
+  while i < 5:
+      print(i)
+      i += 1
+
+Kontrollera loop-exekvering
+  👉break: avbryter loopen helt när ett villkor uppfylls.
+  👉continue: hoppar över den aktuella iterationen och fortsätter med nästa.
+
+Kort sagt:
+  👉for → iterera genom en sekvens.
+  👉while → upprepa baserat på ett villkor.
+  👉break/continue → styra exekveringen.
+  👉Undvik oändliga loopar om du inte vill att koden ska köra för evigt.
+
+Olika operator och dess mening
+> greater than
+
+< less than
+
+>= greater than or equal to
+
+<= less than or equal to
+
+== equal to
+
+!= not equal to
+
+
+
+if statements
+Ett if-statement används för att låta datorn fatta beslut. Det kontrollerar om ett villkor är sant eller falskt och kör kod endast om villkoret är sant.
+  Här har vi olika if statements med if, if else, if else elif, if and, if not
+
+  if status == 200:
+      print("OK")
+
+
+  if status == 200:
+      print("OK")
+  else:
+      print("check other status")
+  
+  
+  
+  if status == 200:
+      print("OK")
+  elif status == 400:
+      print("Bad Request")
+  elif status == 500:
+      print("Internal Server Error") 
+  
+  
+  if status == 200:
+      print("OK")
+  elif status == 400:
+      print("Bad Request")
+  elif status == 500:
+      print("Internal Server Error")
+  else:
+      print("check other status")
+  
+  
+  if status >= 200 and status <= 226:
+      print("successful response")
+  
+  
+  if not(status >= 200 and status <= 226):
+      print("check status")
+
+
+
+
+
+
+Module 2 Write effective Python code
+
+
+
+
 
 
 
