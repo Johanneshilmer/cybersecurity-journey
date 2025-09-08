@@ -438,28 +438,159 @@ Business Continuity Planning (BCP)
 
 
 Module 4
+  Loggar är register över händelser i system och används inte bara för felsökning utan även för säkerhetsanalys. 
+  De hjälper säkerhetsteam att förstå incidenter genom att besvara de fem W: vem, vad, när, var och varför. 
+  Vanliga loggtyper är nätverk, system, applikation, säkerhet och autentisering.
+
 Log typer:
-  Network =>
-  System => 
-  Application => 
+  Network => Skapas av enheter så som proxies, routers, switches och firewalls.
+  System => Skapas av OS 
+  Application => Skapas av mjukvara applikationer.
+  Security => Skapas av säkerhets verktyg så som IDE eller IPS.
+  Authentication => Skapas av inloggnings försök.
+
+  Loggar innehåller
+    👉Timestamps => Vilken dag och tid det skädde
+    👉System characteristics => Så som IP Adresser 
+    👉Action => Vad och vem som gjorde det.
+
+Exempel på Network log:
+  [ALLOW:google.com] Source: 192.167.1.1 Friday, 10 june 2022 12:10:45
+Exempel Authentication log:
+  Login Event [05:45:15] User1 Authenticated successfully
+
+Olika logg formater och exempel:
+
+  - Syslog => Innehåller tre sektioner header, strukturerad data och meddelande.
+
+      <236>1 2022-03-21T01:11:11.003Z virtual.machine.com evntslog - ID01 [user@32473 
+      iut="1" eventSource="Application" eventID="9999"] 
+      This is a log entry!
+
+      👉Hostname: virtual.machine.com 
+      👉Application: evntslog 
+      👉Message ID: ID01
 
 
+  - JSON (JavaScript Object Notation) => Använder "key": value,
+
+      { 
+          "id": "1234", 
+          "name": "user",
+          "role": "engineer"
+      }
 
 
+  - XML (eXtensible Markup Language => Använder "tags" som ser lika ut som HTML.
+
+      <EventData>
+          <Data Name='SubjectUserSid'>S-2-3-11-160321</Data>
+          <Data Name='SubjectUserName'>JSMITH</Data>
+          <Data Name='SubjectDomainName'>ADCOMP</Data>
+          <Data Name='SubjectLogonId'>0x1cf1c12</Data>
+          <Data Name='NewProcessId'>0x1404</Data>
+      </EventData>
 
 
+  - CSV (Comma Separated Value) => Använder "," som separerar allt, svårt att läsa.
+
+      2009-11-24T21:27:09.534255,ALERT,192.168.2.7, 1041,x.x.250.50,80,TCP,ALLOWED,1:2001999:9,"ET MALWARE BTGrab.com Spyware Downloading Ads",1
 
 
+  - CEF (Common Event Format) => Använder key value par för att strukturera datat,
+
+      Sep 29 08:26:10 host CEF:1|Security|threatmanager|1.0|100|worm successfully stopped|10|src=10.0.0.2 dst=2.1.2.2 spt=1232
+      
+      👉Syslog Timestamp: Sep 29 08:26:10
+      👉Syslog Hostname: host
+      👉Version:  CEF:1
+      👉Device Vendor: Security
+      👉Device Product: threatmanager
+      👉Device Version: 1.0
+      👉Signature ID: 100
+      👉Name: worm successfully stopped
+      👉Severity: 10
 
 
+Intrusion Detection Systems (IDS) övervakar system och nätverk för att upptäcka intrång och skicka larm. Det finns två huvudtyper:
+👉HIDS (Host-based IDS): Installieras på enskilda datorer/servrar för att övervaka lokal aktivitet som filer, resurser, användarbeteende och trafik.
+👉NIDS (Network-based IDS): Installeras i nätverket för att analysera trafik mellan flera enheter och upptäcka skadlig kommunikation.
+    En kombination av HIDS och NIDS ger en mer heltäckande övervakning.
+
+IDS använder två huvudsakliga detektionstekniker:
+  1. Signaturbaserad analys
+    👉Jämför aktivitet med kända mönster (signaturer) för hot.
+    👉Fördelar: Effektiv mot kända hot, få falsklarm.
+    👉Nackdelar: Kräver kontinuerliga uppdateringar, kan kringgås med modifierade attacker, upptäcker inte okända hot (t.ex. zero-day).
+
+  2. Anomali-baserad analys
+    👉Skapar en baslinje för normalt beteende och larmar vid avvikelser.
+    👉Fördelar: Kan upptäcka nya och okända hot.
+    👉Nackdelar: Ger ofta många falsklarm, och om attacker sker under träningsfasen kan de bli en del av baslinjen och förbises.
 
 
+Suricata
+  Är ett open-source verktyg som fungerar som IDS (Intrusion Detection System), IPS (Intrusion Prevention System) och för nätverksanalys (NSM). 
+  Det kan övervaka både enskilda värdar och nätverk, samt blockera skadlig trafik i IPS-läge. 
+  Suricata kan även analysera live-trafik, paketfiler och skapa loggar för incidentrespons och forensik.
+
+  Regler (signaturer):
+    👉Byggs av tre delar: Action (ex. alert, drop), Header (IP, portar, protokoll, riktning) och Rule options (detaljerade villkor).
+    👉Regler används för att upptäcka mönster i nätverkstrafik som kan tyda på skadlig aktivitet.
+    👉Suricata bearbetar regler i en viss ordning: pass → drop → reject → alert.
+    👉Anpassade regler är viktiga för att minska falska larm och möta organisationens specifika behov.
+
+  Exempel på en signatur:
+    alert tcp 10.120.170.17 any => 133.113.202.181 80 (msg: "Hello"; sid:1234; rev:1;)
+
+    Action: alert
+    Header: tcp 10.120.170.17 any => 133.113.202.181 80
+    Rule option: (msg: "Hello"; sid:1234; rev:1;)
+
+  Konfiguration:
+    👉Styrs via suricata.yaml, en konfigurationsfil i YAML-format där inställningar anpassas för miljön.
+
+  Loggar:
+    👉eve.json: Huvudlogg i JSON-format med detaljerad information, bra för analys och SIEM.
+    👉fast.log: Enkel logg med grundläggande information (IP/port), främst för snabb översikt, men inte lämpad för djupare analys.
 
 
+Log ingestion
+  Är processen där loggdata från olika källor samlas in och importeras till ett SIEM-verktyg. 
+  Detta gör det möjligt för säkerhetsanalytiker att analysera och korrelera data centralt för att upptäcka misstänkt aktivitet.
+
+  SIEM-processen består av tre steg:
+    1. Samla in och aggregera data från loggkällor (t.ex. servrar, nätverk, autentisering).
+    2. Normalisera data till ett standardformat för enklare sökning och analys.
+    3. Analysera data för att identifiera mönster och potentiella hot.
+
+Log forwarders:
+  Är vanliga verktyg som automatiserar insamlingen och vidarebefordringen av loggar till SIEM. De kan vara inbyggda i operativsystem eller tredjepartsprogram. 
+  SIEM-leverantörer erbjuder ofta egna log forwarders, men även open-source-lösningar kan användas beroende på organisationens behov och infrastruktur.
+
+👉 Kort sagt: Log ingestion säkerställer att SIEM får rätt data, i rätt format, från rätt källor – vilket är grunden för effektiv hotdetektion och incidenthantering.
 
 
+Splunk
+  👉Använder SPL (Search Processing Language) för att söka i index.
+  👉Pipes (|): Kopplar ihop kommandon så att resultatet från ett används i nästa.
+  👉Wildcards (*): Söker efter flera varianter av ett ord (ex. fail* → failed, failure).
+  👉Exakta fraser: Används med citattecken ("login failure").
+    Exemepl på en sökning:
+      index=main fail
 
+Google SecOps (Google Security Operations) Förr kallades detta Chronicle.
+  Två söktyper:
+    1. UDM (Undified Data Model)
+      Standard, söker i strukturerad och normaliserad data → snabbare.
+      Viktiga fält: Entities (enheter, användare, processer), Event metadata (tid, typ), Network metadata (protokoll, nätverksinfo), 
+      Security results (utfall, t.ex. virus upptäckt).
+    2. Raw Log Search med YARA-L:
+      Söker i råa, icke-normaliserade loggar → långsammare men mer detaljerat. Stödjer regex för mönstersökning.
+      Exemepl på en sökning:
+        metadata.event_type = “USER_LOGIN”
 
+👉 Kort sagt: Splunk bygger på sitt eget sökspråk (SPL), medan Google SecOps erbjuder både snabb normaliserad sökning (UDM) och mer flexibel men långsammare råloggsökning.
 
 
 
