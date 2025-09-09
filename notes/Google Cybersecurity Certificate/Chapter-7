@@ -261,12 +261,53 @@ Python standard modules and libraries
 👉 Kort sagt: Standardbiblioteket ger färdig kod direkt i Python, medan externa bibliotek måste installeras. Import görs antingen av hela moduler eller av enskilda funktioner.
 
 
+För att skriva läsbar och korrekt Python-kod är det viktigt att följa PEP 8-stilguiden.
+  Kommentarer:
+    👉Förklara vad koden gör, både i början och i mer komplexa delar.
+    👉Enradiga kommentarer börjar med # och bör hållas under 79 tecken.
+    👉Fleradiga kommentarer kan skrivas med flera #-rader eller som docstrings (""" ... """).
+  Indentering:
+    👉Python kräver indentering för funktioner, loopar och villkor.
+    👉PEP 8 rekommenderar fyra mellanslag per nivå.
+    👉Exempel: en if inuti en while får totalt åtta mellanslag.
+  Syntax:
+    👉Vanliga fel gäller datatyper, rubriker och kolon.
+    👉Strängar ska ha citattecken, siffror och boolska värden ska inte.
+    👉Listor skrivs inom hakparenteser med komma mellan elementen.
+    👉Funktioner, loopar och villkor måste avslutas med kolon (:).
+👉 Kort sagt: Följ PEP 8, kommentera tydligt, använd korrekt indentering och var noga med syntaxen för att undvika fel och göra koden lättare att förstå.
 
 
 
 
 
 
+
+
+Module 3 Work with strings and lists
+
+I cybersäkerhet är strings en av de vanligaste datatyperna i Python, eftersom de används för data som IP-adresser, användarnamn, URL:er och ID:n.
+  Index och bracket notation:
+    👉Varje tecken i en string har ett index (0-baserat, kan vara negativt från slutet).
+    👉[] används för att extrahera tecken eller delar av en string (slicing).
+    👉Exempel: "h32rb17"[0] → "h", "h32rb17"[0:3] → "h32".
+  Stringfunktioner och metoder:
+    👉str() → konverterar värden till string.
+    👉len() → returnerar antal tecken i string.
+    👉.upper() / .lower() → returnerar en kopia av strings i stora respektive små bokstäver.
+    👉.index() → returnerar index för första förekomsten av ett tecken eller substring; ger fel om det inte finns.
+  Praktisk användning i cybersäkerhet:
+    👉Extrahera delar av IP-adresser eller ID:n.
+    👉Verifiera att användarnamn eller enheter uppfyller kriterier.
+    👉Hitta substrings för att analysera loggar eller aktivitet.
+👉Kort sagt: Kunskap om strings, indexering, slicing och metoder som .upper(), .lower() och .index() är viktiga verktyg för en säkerhetsanalytiker.
+
+
+
+
+
+
+Module 4 Python in practice
 
 
 
