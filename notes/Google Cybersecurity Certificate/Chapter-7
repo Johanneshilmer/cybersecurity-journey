@@ -176,25 +176,55 @@ Ett if-statement används för att låta datorn fatta beslut. Det kontrollerar o
 
 
 
+
+
+
+
 Module 2 Write effective Python code
 
 Basic python functions
+  Python-funktioner används för att återanvända kod och effektivisera repetitiva uppgifter, 
+  vilket är särskilt användbart i cybersäkerhet där man ofta behöver analysera loggar och upptäcka mönster som misstänkta inloggningsförsök.
+
+
+Built in function
+  Är funktioner som kommer som default i python som tillexempel print()
+
+User-defined functions
+  Är funtioner som användaren själv har designat.
+
+
+👉Exempel på en funktion
+def greet_employee():
+  print("Welcome! You're inlogged in.")
+
+👉Kallar vi på vår funtion
+greet_employee()
+
+
+Argument
+  Är data som tillsätts till en funktion när funktionen kallas.
+
+👉Exempel på en funktion med parametrar
+def greet_employee(name):
+  print("Welcome!", name)
+
+👉Kallar vi på vår funtion med ett argument
+greet_employee("Johannes")
 
 
 
+Return statement
+  Är statement som exekverar inom en funktion och som skickar ut infromationen när funktionen kallas.
 
+👉Exempel på en funktion med statement
+def calculate_fails(total_attempts, failed_attemts):
+  fail_percentage = failed_attemts / total_attempts
+  return fail_percentage
 
-
-
-
-
-
-
-
-
-
-
-
+👉Kallar vi på vår funtion med statements
+calculate_fails(4,2)
+output => 0.5
 
 
 
