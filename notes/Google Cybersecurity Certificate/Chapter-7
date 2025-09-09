@@ -188,7 +188,7 @@ Basic python functions
 
 
 Built in function
-  Är funktioner som kommer som default i python som tillexempel print()
+  Är funktioner som kommer som default i python som tillexempel print(), type(), sorted() och max()
 
 User-defined functions
   Är funtioner som användaren själv har designat.
@@ -225,6 +225,43 @@ def calculate_fails(total_attempts, failed_attemts):
 👉Kallar vi på vår funtion med statements
 calculate_fails(4,2)
 output => 0.5
+
+👉Vi kan också spara output i en variable som detta exempel:
+percentage = calculate_fails(4,2)
+
+
+I Python används parametrar (variabler i funktionsdefinitionen) och argument (värden som skickas in vid funktionsanrop) för att arbeta med data i funktioner. 
+För att returnera resultat används return-satser, vilket gör det möjligt att lagra och återanvända värden i andra delar av koden.
+
+Variabler i funktioner kan vara:
+  👉Globala variabler – definieras utanför funktioner och kan nås i hela programmet.
+  👉Lokala variabler – skapas inuti funktioner och existerar bara medan funktionen körs.
+
+Parametrar och andra variabler i en funktion är alltid lokala. Om en lokal variabel har samma namn som en global, kommer funktionen att använda den lokala versionen, 
+vilket kan skapa förvirring.
+👉Bästa praxis: undvik att blanda globala och lokala variabler. Använd parametrar för att skicka in data i funktioner i stället för globala variabler.
+
+
+Python standard modules and libraries
+  En modules är en Python-fil som innehåller ytterligare funktioner, variabler och andra typer av körbar kod. Ett Python-libraries är en samling moduler.
+  I Python kan du använda moduler (enskilda filer med funktioner, variabler och klasser) och bibliotek (samlingar av moduler) för att återanvända färdig kod.
+  Python Standard Library innehåller många färdiga moduler, t.ex.
+    👉re för mönstersökning i loggar
+    👉csv för arbete med CSV-filer
+    👉glob och os för kommandoradsinteraktion
+    👉time och datetime för tidsdata
+    👉statistics för beräkningar som medelvärde (mean()) och median (median())
+  Importera moduler:
+    👉import modulnamn – importerar hela modulen (t.ex. import statistics → använd statistics.mean())
+    👉from modulnamn import funktion – importerar en specifik funktion (t.ex. from statistics import mean, median → använd mean() direkt)
+  Externa bibliotek: Måste installeras innan de kan importeras. Exempel:
+    👉BeautifulSoup för HTML-parsning
+    👉NumPy för matematiska beräkningar och arrayer
+    👉Installering görs via t.ex. %pip install numpy, därefter kan man importera med import numpy.
+👉 Kort sagt: Standardbiblioteket ger färdig kod direkt i Python, medan externa bibliotek måste installeras. Import görs antingen av hela moduler eller av enskilda funktioner.
+
+
+
 
 
 
