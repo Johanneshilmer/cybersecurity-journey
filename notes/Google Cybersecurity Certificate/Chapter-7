@@ -303,11 +303,253 @@ I cybersäkerhet är strings en av de vanligaste datatyperna i Python, eftersom 
 👉Kort sagt: Kunskap om strings, indexering, slicing och metoder som .upper(), .lower() och .index() är viktiga verktyg för en säkerhetsanalytiker.
 
 
+Som säkerhetsanalytiker använder man ofta listor i Python för att lagra data som exempelvis användarnamn, IP-adresser, URL:er och enhets-ID:n. 
+Listor kan innehålla olika datatyper och gör det möjligt att arbeta med flera element i en och samma variabel.
+  👉Indexering: Varje element i en lista har ett index som börjar på 0. Man kan använda hakparenteser för att hämta, ändra eller skapa delmängder (slices) av listan. Till skillnad från strängar kan listor ändras.
+  👉Ändra element: Genom att använda hakparenteser kan man byta ut ett specifikt element i listan.
+  Metoder:
+    .insert() – lägger till ett element på en specifik plats.
+    .remove() – tar bort den första förekomsten av ett element.
+    .append() – lägger till ett element i slutet av listan, ofta användbart i loopar.
+    .index() – returnerar index för den första förekomsten av ett element.
+👉Sammanfattningsvis är listor flexibla datatyper som gör det möjligt att strukturera och bearbeta data effektivt, vilket är särskilt användbart i ett säkerhetsanalytikers arbete.
+
+
+
+Reguljära uttryck (regex) i Python används för att söka efter mönster i text, exempelvis IP-adresser, e-postadresser eller enhets-ID:n. 
+För att använda dem importeras re-modulen, där funktionen re.findall() returnerar en lista med alla matchningar för ett givet mönster.
+  Teckentyper:
+    \w – alfanumeriska tecken (inklusive _)
+    \d – siffror [0–9]
+    \s – mellanslag
+    . – alla tecken
+    \. – punkttecknet
+  Exempel:
+    re.findall(r"\d", "h32rb17") output => ['3', '2', '1', '7']
+
+  Men ibland vill du matcha flera siffror i rad, inte bara en. Där kommer + och * in.
+    \d+ → matchar en eller fler siffror i rad
+    Exempel:
+      re.findall(r"\d+", "h32rb17") output => ['32', '17']
+
+    \d* → matchar noll eller fler siffror (alltså även tomma strängar där inga siffror finns)
+    Exempel:
+      re.findall(r"\d*", "h32rb17") output => ['32', '', '', '17', '']
+
+  🔑 Skillnaden:
+    + betyder minst en gång (1 eller fler).
+    * betyder noll eller fler gånger (0, 1 eller fler).
+
+    Kan också använda steps för att få ihop större sifferor, exempel:
+      re.findall("\d{2}", "h32rb17 k825t0m c2994eh") output => ['32', '17', '82', '29', '94']
+      re.findall("\d{1,3}", "h32rb17 k825t0m c2994eh") output => ['32', '17', '825', '0', '299', '4']
+
+    När du skriver flera regex-delar i samma pattern så betyder det helt enkelt att Python ska matcha den exakta följden av delmönster.
+      Exempel: \w+:\s\d+
+        👉 Det betyder:
+            \w+ → ett eller flera bokstäver/siffror/underscore (t.ex. ett användarnamn)
+            : → ett kolon
+            \s → ett mellanslag
+            \d+ → en eller flera siffror
+
+    I ett exempel:
+
+      text = "1001 bmoreno: 12 Marketing 1002 tshah: 7 HR 1003 sgilmore: 5 Finance"
+      matches = re.findall(r"\w+:\s\d+", text)
+      print(matches) output => ['bmoreno: 12', 'tshah: 7', 'sgilmore: 5']
+
+
+
 
 
 
 
 Module 4 Python in practice
+
+Automatisering av säkerhet i CI/CD med Python
+  Genom att använda Python i CI/CD-pipelines kan säkerhet byggas in direkt i utvecklings- och leveransprocessen, vilket kallas DevSecOps. 
+  Målet är att göra säkerhet till en delad ansvarspunkt och automatisera kontroller i varje steg.
+
+  Fördelar med att använda Python i CI/CD:
+    👉Snabbare och mer effektiv utveckling
+    👉Upptäcker problem tidigt och minskar kostnader
+    👉Säkerställer konsekventa kontroller
+    👉Minskar säkerhetsteamets arbetsbörda
+    👉Stärker en säkerhetskultur i organisationen
+
+  Exempel på uppgifter som kan automatiseras med Python:
+    Säkerhetstester:
+      👉SAST (granska källkod innan bygge)
+      👉DAST (testa körande program i testmiljö)
+      👉SCA (kontrollera beroenden och tredjepartskod
+    Sårbarhetsskanning: av containerbilder, infrastruktur och pipelines
+    Efterlevnadskontroller: jämföra mot säkerhetsregler och standarder
+    Hantering av hemligheter: undvika hårdkodade lösenord, integrera med verktyg som Vault
+    Policy enforcement: stoppa releaser som bryter mot definierade säkerhetspolicys
+
+  Integration med CI/CD-verktyg:
+  Python kan enkelt användas i Jenkins, GitLab CI och CircleCI genom att:
+    👉Köra skript som pipeline-steg
+    👉Anropa API:er för att starta jobb och analysera resultat
+    👉Utnyttja add-ons/extensioner som stödjer Python
+
+  Andra användningsområden:
+    Automatisera säkra miljöer (staging/produktion)
+    Kontrollera kodkvalitet (linters, kodstandarder)
+    Hantera säkra releaser
+
+  Slutsats:
+    Python är en stark partner i CI/CD-säkerhet. Det gör det möjligt att hitta problem tidigt, minska manuella uppgifter, 
+    säkerställa efterlevnad och bygga en DevSecOps-kultur där säkerhet är inbyggd i hela utvecklingsprocessen.
+
+
+
+Grundläggande Python-komponenter för automation
+  Automation innebär att minska manuellt arbete genom att låta tekniken utföra repetitiva uppgifter. Som säkerhetsanalytiker används 
+  Python för att automatisera uppgifter som att undersöka inloggningar, hantera åtkomst och uppdatera enheter.
+
+  De viktigaste komponenterna för automation i Python är:
+    👉Variabler – lagrar data som används i automatiserade processer.
+    👉Villkorssatser (if) – kontrollerar om vissa villkor uppfylls innan en åtgärd utförs.
+    👉Iterativa satser (loopar) – upprepar kod flera gånger:
+    👉for-loopar itererar över en sekvens.
+    👉while-loopar upprepar baserat på ett villkor.
+    👉Funktioner – gör koden återanvändbar och strukturerad.
+    👉Stränghantering – metoder och funktioner som len(), .index() och hakparenteser för att extrahera och bearbeta text.
+    👉Listor – vanliga datastrukturer i säkerhetsautomation, med metoder som .append(), .remove(), .insert(), och .index().
+
+  Exempel: Vid analys av en flaggad användare kan man räkna antalet inloggningar genom att:
+    1. Iterera över en lista med användarnamn.
+    2. Kontrollera om varje användarnamn matchar den flaggade användaren.
+    3. Öka en räknare vid varje träff.
+    4. Packa koden i en funktion för återanvändning.
+
+  Filer i Python:
+    En central del av säkerhetsautomation är att arbeta med loggfiler (.txt och .csv).
+      👉.txt – innehåller text utan fast struktur.
+      👉.csv – innehåller data separerad med kommatecken.
+  Python kan importera, läsa, skriva och strukturera data från dessa filer, vilket är viktigt för logghantering och analys.
+
+
+
+Importera och arbeta med filer i Python
+  För säkerhetsanalytiker är filer – särskilt loggfiler – centrala vid analys av systemhändelser, inloggningsförsök och programvaruproblem. 
+  Python kan öppna, läsa och skriva filer, vilket gör filhantering till en viktig del av automation inom cybersäkerhet.
+
+  Öppna filer
+    Syntax:
+      with open("filnamn.txt", "r") as file:
+
+    with => ser till att filen stängs korrekt.
+    open() => tar två argument: filnamn/filväg och läge:
+      "r" → läsa (read)
+      "w" → skriva (write, skriver över innehållet eller skapar ny fil)
+      "a" → lägga till (append, skriver till slutet av filen)
+    as => används för att tilldela en variabel som representerar filen under blocket.
+
+  Filvägar
+    Om filen ligger i samma katalog räcker filnamnet.
+    Om filen ligger i en annan katalog krävs en absolut sökväg.
+    Filvägar och filnamn skrivs som strängar i citattecken.
+
+
+  Läsa filer
+    .read() → konverterar innehållet till en sträng.
+    Syntax:
+      with open("update_log.txt", "r") as file:
+          updates = file.read()
+      print(updates)
+
+    När filen är läst kan man använda vanliga strängmetoder, t.ex. .index() eller len().
+    Skriva och uppdatera filer
+      "w" → skapar eller skriver över fil.
+      "a" → lägger till information längst ned i filen.
+      .write() => används för att skriva strängar till filen.
+    Syntax:
+      line = "user,192.168.1.1,10:45:00,True"
+      with open("access_log.txt", "a") as file:
+          file.write(line)
+
+  Sammanfattning:
+    👉.Läsning (r) används för att analysera loggar.
+    👉.Skrivning (w) används för att skapa nya eller ersätta filer.
+    👉.Tillägg (a) används för att lägga till data utan att ta bort befintligt innehåll.
+    👉.with open() är den säkraste metoden eftersom filen stängs automatiskt.
+
+
+
+Arbeta med filer i Python – parsing, .split() och .join()
+  När man arbetar med filer i Python behöver innehållet ibland struktureras om. Parsing innebär att göra data mer läsbar eller användbar, 
+  antingen för Python-kod eller för människor. Två centrala metoder för detta är .split() och .join().
+
+  .join()
+  Gör det motsatta: slår ihop en lista till en sträng, med en vald separator.
+    Exempel:
+      ",".join(['anna', 'bob', 'carl']) => "anna,bob,carl"
+      "\n".join(['anna', 'bob', 'carl']) => radseparerad text
+    Nödvändigt om man vill skriva tillbaka en lista till en fil med .write(), eftersom .write() bara hanterar strängar.
+    Tillämpning på filer
+    1. Läs filinnehåll:
+      with open("update_log.txt", "r") as file:
+      updates = file.read().split() => filens innehåll blir en lista.
+    2. Bearbeta listan (t.ex. lägga till/ta bort element).
+    3. Skriv tillbaka:
+      with open("update_log.txt", "w") as file:
+      file.write(" ".join(updates)) → listan konverteras till en sträng och sparas i filen.
+
+  👉 Kort sagt:
+    .split() = sträng → lista (bra för analys & iteration).
+    .join() = lista → sträng (bra för att skriva till filer).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
