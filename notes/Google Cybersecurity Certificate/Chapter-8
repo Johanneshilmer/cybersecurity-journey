@@ -1,2 +1,57 @@
 
 Module 1 Protact data and communicate incidents
+Data- och tillgångsklassificering
+  Syftet med klassificering är att skydda organisationens tillgångar och affärsverksamhet från säkerhetshot och risker.
+  Dataklasser:
+    1. Public data
+      Offentligt tillgänglig information.
+      Låg risk men bör ändå skyddas mot attacker.
+      Exempel: pressmeddelanden, jobbannonser, marknadsföringsmaterial.
+    2. Private data
+      Information som inte bör vara offentlig.
+      Om obehöriga får tillgång kan det innebära allvarliga risker.
+      Exempel: företagsmejl, anställdas ID-nummer, forskningsdata.
+    3. Sensitive data
+      Kräver strikt skydd mot obehöriga.
+      Obehörig åtkomst kan skada ekonomi och rykte.
+      Exempel: PII, SPII, PHI, bankkontonummer, lösenord, personnummer, passnummer, medicinsk info.
+    4. Confidential data
+      Viktig för företagets verksamhet, begränsad åtkomst.
+      Ofta skyddad med NDA (sekretessavtal).
+      Exempel: affärshemligheter, finansiella rapporter, känslig myndighetsdata.
+
+  Tillgångsklassificering
+    Tillgångar märks efter känslighet och betydelse.
+    Lågnivåtillgångar: offentlig data, exempel: företagswebbplats.
+    Högnivåtillgångar: känslig eller konfidentiell data, exempel: intern e-post om affärshemligheter.
+    Högnivåtillgångar kan ge stora negativa konsekvenser vid läckage, såsom förlorad konkurrensfördel, rykte och kundförtroende.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
