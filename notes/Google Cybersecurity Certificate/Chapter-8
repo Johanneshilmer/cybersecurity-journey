@@ -27,6 +27,28 @@ Data- och tillgångsklassificering
     Högnivåtillgångar kan ge stora negativa konsekvenser vid läckage, såsom förlorad konkurrensfördel, rykte och kundförtroende.
 
 
+Disaster recovery och business continuity
+  Säkerhetsincidenter kan orsaka stora konsekvenser, som ekonomiska förluster och skadat förtroende. För att minska skadan behöver organisationer business continuity plans 
+  (BCP) och disaster recovery plans (DRP). Dessa skapas tillsammans och är sista steget i en fyrdelad säkerhetsprocess:
+    1. Identifiera skyddsvärda tillgångar.
+    2. Bedöm möjliga hot.
+    3. Implementera verktyg och processer för att upptäcka hot.
+    4. Skapa BCP och DRP för att minimera konsekvenserna av incidenter.
+
+Business Continuity Plan (BCP)
+  Ett BCP är en plan för att hålla verksamheten igång under och efter avbrott. Viktiga steg:
+    👉Göra en business impact analysis (bedöma effekterna av avbrott).
+    👉Identifiera och dokumentera återställningssteg för kritiska processer.
+    👉Sätta ihop ett tvärfunktionellt team (cybersecurity, IT, HR, kommunikation, drift).
+    👉Genomföra träning och övningar för riskscenarier.
+
+Disaster Recovery Plan (DRP)
+  Ett DRP fokuserar på att återställa IT och data efter en incident, t.ex. ransomware. Viktiga steg:
+    👉Strategier för att återställa mjukvara.
+    👉Strategier för att återställa hårdvara.
+    👉Identifiera vilka applikationer och data som påverkas.
+
+👉 Kort sagt: BCP = hålla verksamheten igång under/efter avbrott, DRP = återställa system och data efter en incident.
 
 
 
@@ -34,6 +56,37 @@ Data- och tillgångsklassificering
 
 
 
+
+
+Module 2 Escalate incidents
+
+Escalate with a purpose
+  Incidenteskalering innebär att upptäcka potentiella säkerhetsincidenter och överföra dem till mer erfarna teammedlemmar eller avdelningar. 
+  Som säkerhetsanalytiker ska man känna igen risker, t.ex. upprepade felaktiga inloggningsförsök, och rapportera enligt organisationens rutiner.
+  Viktiga punkter:
+    👉Breach notification laws: Många länder kräver att företag meddelar individer om dataintrång som rör PII (personligt identifierbar information). 
+      Analytiker behöver vara uppdaterade om dessa lagar.
+    👉Lågnivåproblem: Små risker, som enstaka misslyckade inloggningar eller nedladdning av otillåten mjukvara. Dessa är inte alltid hot, 
+      men kan dölja större problem (t.ex. brute-force-attacker eller malware).
+    👉Varför eskalera: Att inte eskalera i tid kan leda till ekonomiska förluster och skadat rykte.
+    👉Eskalationsprocess: Varje företag har egna rutiner och policies för vem som kontaktas, i vilken ordning, och via vilket system (IT-desk, incidentverktyg, direkt kommunikation).
+
+  👉 Kort sagt: Även små incidenter måste följas upp, och tydliga eskaleringsrutiner säkerställer att hot hanteras snabbt och effektivt.
+
+Recognize roles and responsibilities during escalation
+  Vid incidenteskalering finns olika roller med specifika ansvarsområden:
+
+    Data owners: Bestämmer vem som får åtkomst, ändra, använda eller ta bort data. Ansvarar för klassificering, skydd och användning. Får eskalerade ärenden om obehörig åtkomst.
+    
+    Data controllers: Avgör syfte och procedurer för databehandling, särskilt kunddata. Ser till att regler och lagar följs. Får eskalerade ärenden vid risk för känslig kundinformation.
+    
+    Data processors: Hanterar data för data controllers, ofta tredjepartsleverantörer. Installerar säkerhetsåtgärder. Incidenter eskaleras till den som övervakar leverantören.
+    
+    Data custodians: Hanterar åtkomst till system och implementerar säkerhetskontroller. Ansvarar för policyer, hotbedömningar och övervakning. Eskaleras vid behov av starkare kontroller.
+    
+    Data protection officers (DPOs): Säkerställer efterlevnad av dataskyddsregler internt, ger rådgivning och gör bedömningar. Eskaleras vid brott mot standarder och protokoll.
+
+👉 Kort sagt: Vid eskalering är det viktigt att veta vilken roll som ansvarar för vilket område för att incidenter ska hanteras korrekt och effektivt.
 
 
 
