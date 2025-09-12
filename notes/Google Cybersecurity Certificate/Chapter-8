@@ -110,6 +110,102 @@ Incidenter som påverkar affärskritiska system ska alltid ha högsta prioritet,
 
 
 Module 3 Communicate effectively to influence stakeholders
+
+The purpose and impact of stakeholders
+  En stakeholder är en individ eller grupp som har intresse i en organisations beslut eller aktiviteter. 
+  Som säkerhetsanalytiker rapporterar du till olika stakeholders om säkerhetsincidenter.
+  Olika nivåer av stakeholders:
+    👉Cybersecurity risk manager – leder arbetet med att identifiera och hantera säkerhetsrisker.
+    👉Operations manager – ansvarar för dagliga säkerhetsoperationer och åtgärder.
+    👉CEO och CFO – högsta ledningen, fokuserar på det stora perspektivet, särskilt finansiella konsekvenser.
+    👉CISO – högsta säkerhetsansvariga, sätter strategin för organisationens cybersäkerhet.
+Som entry-level analytiker kommunicerar du främst med operations managers och risk managers. Din roll är att tydligt rapportera säkerhetsproblem 
+(t.ex. upprepade misslyckade inloggningsförsök) så att de kan avgöra nästa steg, samordna åtgärder och minimera påverkan på verksamheten.
+
+Informationsflöde:
+  Du rapporterar till mellannivå-stakeholders (operations managers, risk managers) → de rapporterar vidare till högsta ledningen (CISO, CFO, CEO). 
+  På så vis når även ditt arbete indirekt organisationens högsta nivåer.
+👉 Kort sagt: Entry-level analytiker rapporterar främst till mellannivå-stakeholders, men deras arbete bidrar till besluten som fattas på högsta nivå.
+
+
+Communicate effectively with stakeholders
+  Effektiv kommunikation med stakeholders är avgörande för att de ska förstå säkerhetsfrågor och kunna agera snabbt.
+    👉Var tydlig och direkt: Fokusera på vad mottagaren behöver veta, varför det är viktigt, när åtgärd krävs och förklara utan tekniska termer.
+    👉Följ etablerade protokoll: Lär dig organisationens rutiner och godkända kanaler (möten, mejl, chatt, videokonferens osv.).
+    👉Anpassa kommunikationen:
+      - Operations managers och risk managers – intresserade av dagliga frågor, t.ex. avvikelser i loggar.
+      - Högre nivåer – mer intresserade av risker och finansiella konsekvenser.
+    👉Välj rätt kanal:
+      - Snabb info → chatt eller telefonsamtal.
+      - Komplexa frågor → mejl eller möte.
+      - Mycket data → grafer, kalkylblad eller presentationer.
+
+👉 Kort sagt: Kommunicera kortfattat, följ rätt rutiner, anpassa budskapet till mottagaren och välj rätt kanal för situationen.
+
+
+Create visual dashboards for impactful cybersecurity communications
+  👉Visuell kommunikation är effektiv: Stakeholders är ofta upptagna, och visuella verktyg (diagram, grafer, dashboards) gör det lättare för dem att snabbt förstå säkerhetsrisker och fatta beslut.
+  👉Dashboards: Samlar och presenterar data på ett överskådligt sätt. De kan vara enkla (ett diagram) eller komplexa (flera grafer och tabeller). Noggrannhet och tydlighet är alltid viktigt.
+  👉Verktyg: Exempelvis Google Sheets och Apache OpenOffice kan användas för att skapa dashboards.
+  👉När använda visuella hjälpmedel:
+    - E-post eller telefonsamtal räcker för enkel information.
+    - Visualiseringar passar bäst när data är omfattande eller jämförande, t.ex. resultat från interna säkerhetsrevisioner.
+
+👉 Kort sagt: Visualisering gör det lättare att kommunicera komplexa säkerhetsdata tydligt och snabbt till stakeholders.
+
+
+
+
+
+
+Module 4 Engage with the cybersecurity community
+
+Strategier för att engagera sig i cybersäkerhetscommunityt
+  Cybersäkerhet utvecklas snabbt, därför är det viktigt att hålla sig uppdaterad. Efter utbildningen kan du fortsätta engagera dig genom att delta i organisationer, 
+  konferenser, sociala medier och mailinglistor.
+    👉Organisationer & konferenser: Ger möjlighet att lära sig från erfarna experter. Val av organisation beror på intresseområde (t.ex. incidenthantering, forensik, datalogging, CISO-ambitioner).
+    👉Sökning: Använd webbsökningar för att hitta relevanta konferenser och organisationer inom ditt område.
+    👉Sociala medier: Plattformar som LinkedIn kan användas för att hitta grupper och nätverk. Samtidigt gäller det att vara vaksam mot social engineering, t.ex. okända länkar eller bilagor.
+    👉Mailinglistor: Ett annat sätt att hålla sig uppdaterad. Exempel är CISA:s mailinglistor som delar information om hot, bästa praxis, analyser samt veckosammanfattningar av nya sårbarheter.
+
+
+Att nätverka med cybersäkerhetsproffs
+  Cybersäkerhet utvecklas ständigt, därför är det viktigt att fortsätta lära sig och knyta kontakter i branschen.
+    👉Följ CISOs på LinkedIn®: De delar aktuell information, tips och trender som kan stärka din cybersäkerhetskunskap och utveckla ditt säkerhetstänkande.
+    👉Anslut till andra yrkespersoner: LinkedIn® är en bra plattform för att bygga nätverk med både nybörjare och erfarna experter.
+    👉Skicka professionella meddelanden: Använd en vänlig ton, var tydlig med varför du vill connecta, och undvik stavfel. Exempel: presentera dig, nämn din bakgrund (t.ex. utbildning), och visa intresse för att lära dig av mottagaren.
+
+
+
+
+
+
+
+
+Module 5 Use AI to optimize workflows
+
+Prepare for technical interviews
+  Tekniska intervjuer skiljer sig från andra intervjuer genom att de fokuserar på kunskap om specifika verktyg och säkerhetskoncept. 
+  Som kandidat kan du behöva visa grundläggande kunskaper i Python, som ofta används inom säkerhet för automatisering, och kunna förklara dess användningsområden.
   
+  Du kan också få frågor om säkerhetsramverk (t.ex. NIST Cybersecurity Framework), nätverkssäkerhet, och andra tekniska begrepp. 
+  Ett tips är att skriva ner hela frågan innan du svarar, så att du täcker alla delar strukturerat.
+
+Exempel på frågor i en teknisk intervju:
+  👉Vad är TCP/IP-modellen?
+  👉Vad är OSI-modellen?
+  👉Vad är SIEM-verktyg och hur används de?
+
+👉 Förbered dig genom att repetera tekniska koncept, öva på att förklara dem tydligt och koppla dina kunskaper till praktiska exempel.
+
+
+
+
+
+
+
+
+
+
 
 
