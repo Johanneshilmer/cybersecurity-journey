@@ -90,6 +90,18 @@ Recognize roles and responsibilities during escalation
 
 
 
+Escalation timing
+  Som säkerhetsanalytiker spelar du en central roll i att skydda en organisations data och system genom att avgöra vilka incidenter som ska eskaleras och när.
+    👉Dina beslut är viktiga: Du behöver fatta snabba och korrekta beslut för att hindra små incidenter från att utvecklas till stora säkerhetsproblem.
+    👉Självförtroende och frågor: Lär dig organisationens eskaleringspolicy för att bygga självförtroende, men ställ frågor när du är osäker – det visar vilja att lära.
+    👉Alla incidenter är inte lika: Förstå vilka tillgångar och data som är mest kritiska för verksamheten. Det hjälper dig prioritera incidenter rätt.
+
+  Exempel på incidenttyper:
+    👉Malware infections – skadlig kod som stör system.
+    👉Unauthorized access – obehörig åtkomst till system eller data.
+    👉Improper usage – brott mot organisationens användningspolicy.
+Incidenter som påverkar affärskritiska system ska alltid ha högsta prioritet, t.ex. obehörig åtkomst till en produktionsapplikation går före ett virus i ett gammalt system som inte används i verksamheten.
+👉 Kort sagt: En säkerhetsanalytikers förmåga att prioritera och eskalera incidenter snabbt och korrekt är avgörande för att minimera risker.
 
 
 
@@ -97,14 +109,7 @@ Recognize roles and responsibilities during escalation
 
 
 
-
-
-
-
-
-
-
-
-
+Module 3 Communicate effectively to influence stakeholders
+  
 
 
