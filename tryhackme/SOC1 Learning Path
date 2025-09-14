@@ -40,3 +40,37 @@ TTPs står för Tactics, Techniques & Procedures.
 
 
 Cyber Kill Chain
+  Är en modell som utvecklades av Lockheed Martin och används för att beskriva de olika stegen i en cyberattack. 
+  Syftet är att förstå angriparens metodik och därmed kunna upptäcka och stoppa attacker i ett tidigt skede. Här är en beskrivning av varje steg:
+
+1. Reconnaissance (Spaning)
+  I detta inledande steg samlar angriparen information om målet. Det kan handla om att kartlägga nätverk, identifiera sårbara system, 
+  eller samla in data om anställda genom sociala medier.
+  Exempel: Använda verktyg som Nmap för portskanning eller OSINT för att hitta e-postadresser.
+
+2. Weaponization (Beväpning)
+  Här förbereder angriparen sitt verktyg för attacken. Vanligtvis kombineras ett exploateringsverktyg med en skadlig nyttolast (payload).
+  Exempel: Skapa ett Word-dokument med inbäddad makro-malware eller bygga en trojan som kan köras när offret öppnar filen.
+
+3. Delivery (Leverans)
+  Attackverktyget levereras till målet. Detta kan ske på flera sätt – via e-post (phishing), USB-enheter, skadliga länkar, eller utnyttjande av osäkra tjänster.
+  Exempel: Skicka ett e-postmeddelande med en bifogad infekterad fil.
+
+4. Exploitation (Utnyttjande)
+  När målet interagerar med den levererade attacken utnyttjas en sårbarhet. Här får angriparen tillgång till systemet.
+  Exempel: Ett klick på en länk som aktiverar en sårbarhet i webbläsaren, eller att öppna ett dokument som kör skadlig kod.
+
+5. Installation (Installation)
+  Efter att sårbarheten utnyttjats installeras skadlig kod, ofta i form av en trojan eller ett bakdörrsprogram, för att behålla åtkomst till systemet.
+  Exempel: En keylogger eller ett RAT (Remote Access Trojan) installeras på den infekterade datorn.
+
+6. Command & Control (C2 / Kommando & Kontroll)
+  Angriparen etablerar en kommunikationskanal mellan det infekterade systemet och sin egen server. Detta gör att angriparen kan skicka instruktioner och ta emot data.
+  Exempel: Malware kommunicerar med angriparens C2-server via HTTP/HTTPS eller DNS-tunnling.
+
+7. Actions on Objectives (Genomförande av mål)
+  Slutligen utför angriparen sina mål. Detta kan vara datastöld, spionage, sabotage, kryptering av filer (ransomware) eller att sprida sig vidare i nätverket.
+  Exempel: Exfiltrering av känsliga filer, kryptering av databaser, eller att sabotera produktion.
+
+👉 Poängen med Cyber Kill Chain 
+  Är att en försvarare inte nödvändigtvis måste stoppa angriparen i alla steg – det räcker att upptäcka och blockera attacken i ett av stegen för att förhindra att målet uppnås.
