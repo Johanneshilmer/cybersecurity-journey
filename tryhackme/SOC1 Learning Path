@@ -1,3 +1,42 @@
 
 Pyramid of Pain
 
+"Pyramid of Pain" är ett begrepp inom cybersäkerhet som skapades av David Bianco. 
+Det är en modell som visar hur svårt det är för en angripare att fortsätta sina attacker när du som försvarare stoppar eller stör deras olika indikatorer.
+Modellen är formad som en pyramid med olika nivåer:
+1. Hash values
+  Exempel: MD5/SHA1/SHA256-hashar av skadlig kod.
+  Enkla att byta för angriparen (bara kompilera om eller ändra filen).
+  Ger liten smärta.
+
+2. IP addresses
+  Angriparens C2- eller botnet-servrar.
+  Lätta att byta, de kan hyra nya servrar eller använda proxy/botnät.
+
+3. Domain names
+  Angriparens domäner som används för C2 eller phishing.
+  Lite svårare och dyrare att ersätta än IP-adresser, men fortfarande relativt enkelt.
+
+4. Network/Host Artifacts
+  T.ex. registernycklar, filer på systemet, ovanliga processer.
+  Kräver mer arbete för angriparen att ändra eftersom det är kopplat till deras verktyg.
+
+5. Tools
+  Malware, skript, exploits som angriparen använder.
+  Om du kan upptäcka och blockera deras verktyg blir det riktigt jobbigt för dem – de måste utveckla eller skaffa nya.
+
+6. Tactics, Techniques, and Procedures (TTPs)
+  Angriparens arbetsmetoder och beteendemönster (hur de rör sig i nätverket, hur de sprider sig, hur de stjäl data).
+  Svårast att ändra för angriparen eftersom det bygger på deras kunskap, träning och resurser.
+  Ger störst "pain" om du upptäcker och stoppar dem här.
+
+👉 Poängen: Ju högre upp i pyramiden du kan försvara dig, desto svårare och dyrare blir det för angriparen att fortsätta attacken.
+
+TTPs står för Tactics, Techniques & Procedures.
+  Innefattar MITRE ATTACK Matrix som menas alla steg som behöver tas för att nå sitt mål, startar med phishing försök för att nå en startpunkt.
+
+
+
+
+
+Cyber Kill Chain
