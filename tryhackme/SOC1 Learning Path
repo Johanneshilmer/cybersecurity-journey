@@ -81,16 +81,48 @@ Cyber Kill Chain
 
 
 Unified Kill Chain
+  Den Unified Kill Chain är ett koncept inom cybersäkerhet som används för att beskriva och analysera hur cyberattacker genomförs steg för steg. 
+  Det är en vidareutveckling och sammanslagning av olika “kill chain”-modeller, 
+  såsom Lockheed Martins kill chain och MITRE ATT&CK-ramverket, för att ge en mer komplett bild av en attack.
+
+  Vad är en kill chain?
+    En kill chain beskriver de olika steg en angripare tar för att lyckas med en attack. Genom att förstå dessa steg kan försvarare identifiera var de kan stoppa attacken.
+
+  Unified Kill Chain
+    Syfte: Att skapa en mer holistisk modell som täcker alla faser av en attack – från initial rekognosering till efterattack-aktiviteter.
+    Fördel: Ger ett gemensamt språk och struktur för både detektion och respons.
+    Innehåll: Kombinerar ofta steg från olika modeller (Lockheed Martin, MITRE ATT&CK) till en enhetlig kedja.
+
+  Varför är Unified Kill Chain viktig?
+    Hjälper säkerhetsteam att förstå attacker som helhet.
+    Gör det lättare att planera förebyggande åtgärder.
+    Integrerar olika ramverk för mer effektiv detektion och respons.
 
 
+Threat modelling
+ Är en metod för att identifiera, förstå och hantera möjliga hot mot ett system. Här är en detaljerad förklaring:
 
+  Definition
+    Threat modeling är processen där man systematiskt analyserar ett system för att upptäcka potentiella säkerhetshot, sårbarheter och angripares möjliga angreppsmetoder. 
+    Målet är att designa systemet så att riskerna minimeras.
 
-
-
-
-
-
-
-
+  Grundläggande steg i threat modeling
+    1. Identifiera tillgångar (Assets)
+      - Vilka data, system eller resurser är värdefulla?
+    
+    2. Skapa en arkitekturöversikt (Architecture Overview)
+      - Rita upp systemets komponenter, datalagring, kommunikationsflöden etc.
+    
+    3. Identifiera hot (Threat Identification)
+      - Använd ramverk som STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) för att lista möjliga attacker.
+    
+    4. Identifiera sårbarheter (Vulnerability Analysis)
+      - Se vilka delar av systemet som är svaga eller kan utnyttjas.
+    
+    5. Prioritera risker (Risk Prioritization)
+      - Bedöm sannolikhet och påverkan av olika hot för att fokusera på de viktigaste.
+    
+    6. Föreslå motåtgärder (Mitigation)
+      - Designa säkerhetsåtgärder som minskar eller eliminerar hoten.
 
 
