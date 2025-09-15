@@ -126,3 +126,7 @@ Threat modelling
       - Designa säkerhetsåtgärder som minskar eller eliminerar hoten.
 
 
+  Varför threat modeling är viktigt
+    - Gör säkerhet proaktiv istället för reaktiv.
+    - Hjälper utvecklare att bygga säkrare system från början.
+    - Integreras ofta i DevSecOps och säker mjukvaruutveckling.
