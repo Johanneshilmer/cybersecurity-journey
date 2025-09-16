@@ -130,3 +130,71 @@ Threat modelling
     - Gör säkerhet proaktiv istället för reaktiv.
     - Hjälper utvecklare att bygga säkrare system från början.
     - Integreras ofta i DevSecOps och säker mjukvaruutveckling.
+
+
+
+
+Diamond Model
+  Är en analysmodell inom cyber security som används för att strukturera och förstå cyberattacker. 
+  Den introducerades av Caltagirone, Pendergast och Betz 2013 och används ofta inom threat intelligence och incidentanalys.
+
+  Idén är att varje intrång eller händelse kan beskrivas genom fyra centrala element i en diamantformad modell:
+    1. Adversary – angriparen eller gruppen bakom attacken. Attackerare kallas Adversary Operator.
+    2. Capability – de verktyg, metoder och tekniker som angriparen använder.
+    3. Infrastructure – den infrastruktur som möjliggör attacken, till exempel servrar, domäner, nätverk eller malware-distribution.
+    4. Victim – den organisation, individ eller system som attacken riktas mot. Kallas Victim Personae
+📌 Mitten av diamanten representerar ”Event”, alltså själva händelsen som kopplar samman alla fyra hörn.
+
+Exempel
+  - Adversary: En APT-grupp från en viss region.
+  - Capability: En zero-day exploit och ett RAT (Remote Access Trojan).
+  - Infrastructure: Command & Control-servrar, phishing-domäner.
+  - Victim: Ett företag i finanssektorn.
+
+Syfte
+  - Ge en systematisk analys av attacker.
+  - Hjälpa att identifiera mönster och samband mellan olika attacker.
+  - Underlätta threat hunting och attribution (vem ligger bakom attacken).
+  - Stötta utvecklingen av defensiva åtgärder.
+
+Diamond-modellen kan kompletteras med sex valfria meta-features som ger extra kontext och underrättelsevärde för varje händelse:
+  1. Timestamp – datum/tid för händelsen (start/stop). Viktigt för att hitta tidsmönster och indikera tidzoner eller arbetstider.
+  2. Phase – vilken fas i attackkedjan händelsen tillhör (t.ex. Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, Actions on Objective). 
+      Visar att attacker ofta är flera följdskeden.
+  3. Result – utfall eller efter-tillstånd (t.ex. success, failure, unknown) och koppling till CIA-triaden 
+      (konfidentialitet, integritet, tillgänglighet) eller konkreta följder (t.ex. exfiltration av lösenord).
+  4. Direction – riktningen för aktiviteten mellan parter (t.ex. Victim→Infrastructure, Infrastructure→Victim, Adversary→Infrastructure, 
+      Bidirectional, Unknown). Hjälper särskilja host- vs nätverkshändelser.
+  5. Methodology – generell klassificering av intrånget (t.ex. phishing, DDoS, breach, port scan).
+  6. Resources – externa resurser som möjliggjorde attacken (mjukvara, kunskap, information, hårdvara, pengar, anläggningar, nätaccess etc.).
+
+Kort sagt: meta-features är inte obligatoriska, men de ger viktigt tids-, fas-, riktnings-, utfalls- och resurs-kontext som förbättrar analys, korrelation och förståelse av intrång.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
