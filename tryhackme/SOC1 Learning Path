@@ -176,17 +176,24 @@ Kort sagt: meta-features är inte obligatoriska, men de ger viktigt tids-, fas-,
 
 
 
+🔹MITRE Corporation
+  Det är en amerikansk icke-vinstdrivande organisation som arbetar med forskning och utveckling för bland annat försvar, flyg, sjukvård och cybersäkerhet.
 
+🔹 MITRE ATT&CK
+  Inom cybersäkerhet är MITRE mest känt för ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge).
+  Det är en globalt tillgänglig kunskapsbas som beskriver angripares beteenden, alltså vilka taktiker, tekniker och procedurer TTPs (Tactics, Techniques, and Procedures)  
+  de använder i verkliga attacker.
 
+  Ramverket används av:
+    👉SOC-analytiker → för att förstå och upptäcka attacker.
+    👉Red team & blue team → för att simulera attacker respektive försvara sig mot dem.
+    👉Threat intelligence → för att kartlägga och analysera hotaktörer.
+    👉Säkerhetslösningar → för att mäta täckning och effektivitet av detektionssystem.
 
+  📌 Exempel:
+    Om en angripare försöker få tag på administratörsrättigheter kan deras metod beskrivas i MITRE ATT&CK under tekniken “Privilege Escalation”.
 
-
-
-
-
-
-
-
+👉 Så när man pratar om MITRE inom cybersäkerhet menar man nästan alltid MITRE ATT&CK-ramverket, som är ett centralt verktyg för att förstå, analysera och försvara mot cyberattacker.
 
 
 
