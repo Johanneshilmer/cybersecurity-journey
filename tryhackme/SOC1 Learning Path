@@ -198,6 +198,86 @@ Kort sagt: meta-features är inte obligatoriska, men de ger viktigt tids-, fas-,
 
 
 
+MITRE CAR (Cyber Analytics Repository)
+  Vad det är:
+    🔹MITRE CAR är en samling av analysrecept (”analytics”) som beskriver hur man kan upptäcka angripares beteenden i loggar och telemetri, ofta kopplade direkt till MITRE ATT&CK-tekniker.
+  Syfte:
+    🔹Medan ATT&CK beskriver vad angriparna gör, så beskriver CAR hur man kan upptäcka det i praktiken. Det fungerar som en brygga mellan teori och verklig SOC/blue team-analys.
+
+  Exempel:
+    🔹ATT&CK säger att angripare kan använda PowerShell för att exekvera kod (T1059.001).
+    🔹CAR kan då ha en analys som: “Leta efter ovanliga PowerShell-kommandon i processloggar, särskilt de som innehåller Base64-kodning.”
+
+  Användningsområden:
+    🔹SOC-analytiker kan använda CAR som mallar för att skapa detektionsregler i SIEM/XDR.
+    🔹Säkerhetsteam kan kartlägga sina gap i detektion.
+    🔹Ger en praktisk koppling mellan hotintelligens och loggdata.
+
+👉 Man kan alltså säga:
+  🔹MITRE ATT&CK = angriparens karta (vad de gör)
+  🔹MITRE CAR = analytikerns verktygslåda (hur man hittar det i loggarna)
+
+
+
+MITRE ENGAGE
+  Vad det är:
+    🔹MITRE ENGAGE är ett ramverk för aktiva försvarsstrategier och motåtgärder mot cyberangripare.
+      Det är i praktiken en guide för deception, störning och fördröjning av angripare när de väl är inne i systemet.
+  Syfte:
+    Till skillnad från ATT&CK (som beskriver angriparnas beteenden) och CAR (som beskriver hur man upptäcker dem), så handlar ENGAGE om:
+      🔹Hur man kan agera aktivt för att försvåra för angripare.
+      🔹Hur man lurar eller vilseleder angripare (exempelvis med honeypots, falska filer, vilseledande konton).
+      🔹Hur man samlar in information om angriparen under pågående intrång.
+
+  Exempel på tekniker inom ENGAGE:
+  🔹Placera ut decoy credentials (falska lösenord eller konton) som avslöjar angriparen när de används.
+  🔹Bygga honeynets/honeypots för att attrahera angripare.
+  🔹Använda falska systemkonfigurationer för att slösa angriparens tid.
+  🔹Aktivt manipulera angriparens uppfattning om nätverket.
+
+  Jämförelse:
+  🔹ATT&CK → Vad angripare gör.
+  🔹CAR → Hur vi kan upptäcka dem.
+  🔹ENGAGE → Hur vi kan aktivt störa, lura eller påverka angriparna.
+
+📌 Det är alltså ett ramverk för defense-in-depth med fokus på deception och proaktivt försvar – något som används i avancerade SOC-miljöer och militär cybersäkerhet.
+
+
+
+
+MITRE D3FEND
+  Är ett systerramverk till ATT&CK, men istället för att beskriva angriparens beteenden så beskriver det försvarstekniker.
+  Vad det är:
+    🔹D3FEND är en taxonomi över cyberförsvarstekniker.
+    🔹Bygger på samma struktur som ATT&CK (taktiker → tekniker).
+    🔹Kopplar angreppstekniker (ATT&CK) till försvarsmekanismer (D3FEND).
+
+  Syfte:
+    🔹Hjälpa säkerhetsteam att förstå vilka defensiva åtgärder som motverkar specifika attacker.
+    🔹Ge en gemensam terminologi för försvar, precis som ATT&CK ger för attacker.
+    🔹Stödja SOC, red/blue/purple teaming och arkitekter i att designa robusta försvar.
+
+  Exempel:
+    🔹ATT&CK: Angriparen använder Credential Dumping (T1003) för att komma åt lösenord.
+    🔹D3FEND: Föreslår försvarstekniker som Credential Hardening, Credential Monitoring eller Process Isolation.
+
+  Hur det hänger ihop med de andra:
+    🔹ATT&CK → kartlägger angriparnas angreppstekniker.
+    🔹CAR → visar hur vi kan upptäcka dessa i loggar och analys.
+    🔹ENGAGE → ger aktiva försvarsstrategier för att störa angriparen.
+    🔹D3FEND → definierar vilka försvarstekniker som stoppar eller försvårar ATT&CK-teknikerna.
+
+👉 Man kan alltså säga att:
+  🔹ATT&CK är angriparens lexikon.
+  🔹D3FEND är försvararens lexikon.
+  🔹CAR är detektorns manual.
+  🔹ENGAGE är stridsplanen för att förvirra fienden.
+
+
+
+
+
+
 
 
 
