@@ -326,9 +326,16 @@ Cyber Threat Intelligence (CTI) – Livscykel i sex steg
 
 
 
+CVEs, CVSS och NVD
+  👉CVE (Common Vulnerabilities and Exposures) — tilldelar ett katalognummer för upptäckta sårbarheter, t.ex. CVE-2023-4863.
+  👉CVSS (Common Vulnerability Scoring System) — en allvarlighetsskala från 0–10 med tidsmässiga och miljömässiga modifierare för sårbarheter.
+  👉NVD (National Vulnerability Database) — den officiella databasen som kopplar CVE-nummer till CVSS-poäng, exploits och berörda produkter.
 
-
-
+Sharing and Processing Intel
+  🔹En SOC-analytiker måste förstå hantering av sårbarheter.
+  🔹CVE ger ett unikt ID för varje sårbarhet.
+  🔹CVSS bedömer allvarlighetsgraden på en skala 0–10.
+  🔹NVD är den officiella databasen som kopplar CVE:er till CVSS-poäng, exploits och berörda produkter.
 
 
 
