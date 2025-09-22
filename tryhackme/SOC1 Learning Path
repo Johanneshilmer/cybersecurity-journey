@@ -294,6 +294,46 @@ Threat intelligence handlar om att förstå relationen mellan organisationens op
       Konkreta indikatorer och artefakter, t.ex. IP-adresser eller filhashar som används i attacker.
 
 
+Cyber Threat Intelligence (CTI) – Livscykel i sex steg
+  CTI omvandlar rådata till kontextualiserade och handlingsbara insikter för att hantera säkerhetsincidenter. 
+  I exemplet följer vi SOC-analytikern Alex, som har i uppdrag att skydda TryHatMe:s produktionsdatabas.
+
+  1. Riktning (Direction)
+      Tillsammans med ledning och tekniker definieras uppdraget: skydda PostgreSQL-databasen mot dataintrång och malware. 
+      Två frågor styr arbetet: vilka IP/domäner attackerar PostgreSQL och vilka malwarefamiljer är aktiva mot databasen?
+
+  2. Insamling (Collection)
+      Alex hämtar data från kommersiella flöden, öppna källor (t.ex. AbuseIPDB), interna plattformar (MISP) och leverantörsrapporter. All data lagras strukturerat i STIX/CSV-format.
+
+  3. Bearbetning (Processing)
+      Rådata normaliseras och korreleras för att undvika dubbletter och motsägelser. Indikatorerna märks med källa, datum och TLP-nivå. 
+      Resultatet omvandlas till praktiska filer: en blocklista för brandväggen och YARA-regler för EDR.
+
+  4. Analys (Analysis)
+      Indikatorer granskas för relevans och prioriteras efter källor och lokala observationer. Exempel: vissa IP:n har försökt nå databasen, ett hashvärde kopplas till malware som angriper företagets drivrutiner. 
+      Indikatorerna graderas i hög, medel eller låg tillförlitlighet.
+
+  5. Spridning (Dissemination)
+      Informationen delas målgruppsanpassat: brandväggsteamet får en CSV, endpoint-teamet YARA-regler, CTI-plattformen fullständiga objekt, och ledningen en kort rapport.
+
+  6. Återkoppling (Feedback)
+      Två veckor senare visar mätningar att attackförsök blockeras direkt (från 48 h ned till 0 h) och inga falska positiva rapporter förekommer. 
+      Processen anses framgångsrik och utökas till fler hotparametrar.
+
+Övriga nyckelbegrepp
+  - Traffic Light Protocol (TLP): reglerar hur hotinformation får delas (Clear, Green, Amber, Red).
+  - Format: STIX används för att standardisera hotdata.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
