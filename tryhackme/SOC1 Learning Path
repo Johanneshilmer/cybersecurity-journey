@@ -276,7 +276,22 @@ MITRE D3FEND
 
 
 
+Cyber Threat Intel
+  
+  CTI = (Cyber Threat Intelligence)
+  IOC = (Indicator of Compromise)
+  IOA = (Indicator of Attack)
+  TTP = (Tactics, Techniques, and Procedures)
 
+Threat intelligence handlar om att förstå relationen mellan organisationens operativa miljö och dess motståndare. Det kan delas in i följande kategorier:
+  🔹Strategisk intel: 
+      Övergripande analys av hotlandskapet, trender och mönster som kan påverka affärsbeslut. Exempel: en årlig rapport om ransomware som förutspår nya angreppsmetoder.
+  🔹Taktisk intel: 
+      Bedömning av angripares beteenden genom analys av TTP:er (taktiker, tekniker och procedurer). Exempel: varningsnotiser om nya sätt att missbruka Visual Basic i malspam.
+  🔹Operationell intel: 
+      Information om specifika kampanjer, angriparens motiv och intentioner. Hjälper till att identifiera vilka tillgångar (personer, processer, teknologier) som kan vara måltavlor.
+  🔹Teknisk intel: 
+      Konkreta indikatorer och artefakter, t.ex. IP-adresser eller filhashar som används i attacker.
 
 
 
