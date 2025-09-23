@@ -342,6 +342,53 @@ Sharing and Processing Intel
 
 
 
+Threat Intelligence Tools
+  Threat Intelligence handlar om att analysera data och information för att identifiera mönster som kan hjälpa organisationer att förebygga risker från befintliga eller nya hot. 
+  För att minska riskerna behöver man bland annat förstå vem som attackerar, deras motivation, kapacitet samt vilka indikatorer på intrång man bör bevaka.
+
+  Det finns fyra huvudklassificeringar:
+    🔹Strategisk intel: Övergripande analys av hotlandskapet som påverkar affärsbeslut.
+    🔹Teknisk intel: Fokus på bevis och artefakter från attacker, används för att bygga försvar.
+    🔹Taktisk intel: Bedömning av angriparnas metoder (TTPs) för att stärka säkerhetskontroller.
+    🔹Operationell intel: Inblick i angriparens motiv och mål för att skydda organisationens kritiska tillgångar.
+
+Threat Intelligence innebär att analysera data för att identifiera mönster och åtgärder mot befintliga eller nya hot. 
+Det handlar om att förstå vem som attackerar, varför, hur, samt vilka indikatorer på intrång som finns.
+  Det delas in i fyra nivåer:
+    👉Strategisk – övergripande hotbild och risker för affärsbeslut.
+    👉Teknisk – bevis och artefakter från attacker för att bygga försvar.
+    👉Taktisk – angriparnas metoder (TTPs) för att stärka säkerhetskontroller.
+    👉Operationell – angriparens motiv och mål för att skydda kritiska tillgångar.
+
+
+
+UrlScan.io
+  Gratis tjänst som analyserar URLer ifall det är något onstigt med dem. Den analyserar IP, domains, tar en snapshot av web page och annan metadata om websidan.
+
+Scan Results:
+  Summary => Ger övergripande bild om URL, från IP, domain detaljer, page history och screenshot.
+  HTTP => Ger information om HTTP connections som är gjord av scanner av websidan, med detaljer av data fetchad från file typer.
+  Redirects => Ger information om några idikationer på HTTP client-side redirects.
+  Links => Visar alla outgående linkar på sidan
+  Behaviour => ger information om cookies funna på websidan, kan vara bra för att identifirera frameworks använda för att utvecklingen av websidan.
+  Indicators => Listar alla IP's, domains och hashes som är kopplade till websidan, innefattar INTE appliserade malicious aktiviteter som är relaterade till websidan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
