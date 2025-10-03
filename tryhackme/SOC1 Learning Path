@@ -380,7 +380,13 @@ PhishTool
 Cisco talos
   Email/Hash/File Scan
 
-
+YARA-regler består av flera delar som hjälper till att identifiera mönster i filer.
+  🔹Meta: används för beskrivande information, t.ex. en kort beskrivning av regeln. Påverkar inte själva regeln.
+  🔹Strings: definierar text eller hexadecimala strängar som ska sökas i filer. Dessa sparas i variabler och används i villkor. Exempel: söka efter "Hello World!" i filer. Man kan även använda flera strängar och villkor som any of them för att täcka olika varianter.
+  🔹Conditions: reglernas logik. Här används strängvariabler och operatorer som <=, >=, != samt logiska operatorer and, or, not. Det gör det möjligt att kombinera olika krav, t.ex. att en fil både innehåller en viss sträng och har en viss storlek.
+  
+  Exempel ges på hur en regel bara matchar om "Hello World!" förekommer högst 10 gånger eller om filen är mindre än 10 KB och innehåller strängen.
+  Slutligen lyfts en YARA-cheatsheet fram som visualiserar de olika delarna av en regel och fungerar som referens.
 
 
 
