@@ -409,6 +409,65 @@ Instruktionerna visar hur man:
 
 
 
+OpenCTI (Open Cyber Threat Intelligence)
+  Är en öppen källkodsplattform för hantering, lagring och analys av cyberhotinformation (Cyber Threat Intelligence, CTI). Den är utvecklad för att hjälpa organisationer att strukturera, visualisera och dela information om hotaktörer, intrång, sårbarheter och attacker på ett systematiskt sätt.
+
+  🔍 Syfte
+  OpenCTI används för att:
+    🔹Centralisera CTI-data från flera källor (t.ex. MISP, MITRE ATT&CK, TheHive, VirusTotal, etc.).
+    🔹Skapa samband mellan indikatorer, hotaktörer, kampanjer, verktyg och tekniker.
+    🔹Dela hotinformation med andra organisationer via standarder som STIX 2.1 och TAXII.
+    🔹Visualisera hotlandskapet genom grafer och relationer.
+
+🧠 Nyckelfunktioner
+    🔹Grafdatabasmodell: Representerar hotinformation som noder och relationer (t.ex. “APT28 använder malware X mot organisation Y”).
+    🔹Integrationer: Kan kopplas till verktyg som:
+      👉MISP (för indikatorer och IOC-data)
+      👉TheHive (incidenthantering)
+      👉MITRE ATT&CK (taktiker, tekniker och procedurer)
+      👉Elastic / Splunk (logg- och analysplattformar)
+    🔹API & Automation: Har ett kraftfullt GraphQL API som gör det möjligt att automatisera flöden och bygga egna integrationer.
+    🔹Rollbaserad åtkomstkontroll: Stöd för flera användare, roller och säker delning.
+
+🏗️ Teknisk struktur
+  OpenCTI är byggt med moderna tekniker:
+    🔹OpenCTI är byggt med moderna tekniker:
+    🔹Frontend: React + GraphQL
+    🔹Backend: Node.js + Python workers
+    🔹Databas: Elasticsearch, Redis och MinIO (för filer)
+    🔹Körs via: Docker eller Kubernetes (rekommenderas)
+
+🛡️ Användningsområden
+    🔹SOC-team använder det för att koppla incidentdata till kända hotaktörer.
+    🔹Analytiker använder det för att bygga intelligens om pågående kampanjer.
+    🔹Organisationer använder det för att dela CTI med partners eller ISACs.
+    🔹Kan också användas i threat hunting och forensiska analyser.
+
+📘 Exempel
+  Om din organisation upptäcker ett nytt phishing-mejl:
+    1. Du lägger in e-postdomen, IP-adressen och fil-hashen i OpenCTI.
+    2. Systemet visar automatiskt om dessa indikatorer tidigare kopplats till kända grupper (t.ex. APT28).
+    3. Du kan då snabbt bygga en rapport eller larma andra system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
