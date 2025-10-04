@@ -389,12 +389,21 @@ YARA-regler består av flera delar som hjälper till att identifiera mönster i 
   Slutligen lyfts en YARA-cheatsheet fram som visualiserar de olika delarna av en regel och fungerar som referens.
 
 
+Loki
+  Som analytiker kan man använda Loki både för att:
+    🔹upptäcka kända hot med inbyggda Yara-regler, och
+    🔹skapa egna regler baserade på hotinformation eller fynd från incidentutredningar.
 
+Instruktionerna visar hur man:
+  1. Går till verktygsmappen (~/tools) där Loki och yarGen finns.
+  2. Kör kommandot python loki.py -h för att se tillgängliga alternativ.
+  3. Uppdaterar signaturdatabasen med --update (skapar mappen signature-base med mapparna iocs, misc och yara).
+  4. Undersöker Yara-reglerna i yara-mappen.
+  5. Kör en skanning av misstänkta filer med kommandot:
+      python ../../tools/Loki/loki.py -p .
 
-
-
-
-
+  Scenario:
+    Som säkerhetsanalytiker på en medelstor advokatbyrå ska du analysera misstänkta filer som hittats på företagets webbserver. Filerna finns i katalogen suspicious-files, och du ska använda Loki för att skanna dem och identifiera eventuella hot.
 
 
 
