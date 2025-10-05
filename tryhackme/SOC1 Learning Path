@@ -452,6 +452,80 @@ OpenCTI (Open Cyber Threat Intelligence)
 
 
 
+MISP (Malware Information Sharing Platform & Threat Sharing)
+  Är ett öppet källkodsverktyg som används för att dela, lagra och korrelera indikatorer på kompromettering (IOCs) samt annan threat intelligence mellan organisationer, team och säkerhetsverktyg.
+  Det är ett mycket centralt verktyg inom cybersäkerhet och incidenthantering, särskilt inom SOC (Security Operations Center), CERT/CSIRT, och organisationer som arbetar med threat intelligence.
+
+🧠 Vad MISP används till
+  MISP hjälper organisationer att:
+    1. Samla in hotinformation (t.ex. IP-adresser, hashvärden, domäner, e-postadresser) från olika källor.
+    2. Dela denna information med andra betrodda organisationer eller partners.
+    3. Korrelera data för att upptäcka samband mellan incidenter, kampanjer och hotaktörer.
+    4. Automatisera flöden genom integration med SIEM, IDS, EDR, och andra säkerhetssystem.
+
+🔍 Exempel på data som MISP hanterar
+    🔹Indicators of Compromise (IoCs) – IP-adresser, URL:er, hashvärden (MD5, SHA256), domäner, e-post.
+    🔹Tactics, Techniques, and Procedures (TTPs) – beskriver hur angripare agerar (enligt t.ex. MITRE ATT&CK).
+    🔹Malwarefamiljer och kampanjer – beskrivningar av attacker, måltavlor och modus operandi.
+    🔹Attributionsdata – information om hotaktörer (APT-grupper, cyberkriminella etc.).
+
+⚙️ Hur MISP används i praktiken
+1. Installation och konfiguration
+  🔹Körs oftast på en Linux-server (t.ex. Debian eller Ubuntu).
+  🔹Kan installeras via GitHub eller med Docker.
+  🔹Kräver Apache, MariaDB, och PHP.
+
+2. Inhämtning av hotinformation
+  🔹Importera feeds (t.ex. från CIRCL, Abuse.ch, AlienVault OTX).
+  🔹Manuellt lägga till egna observationer (t.ex. från SOC-analys eller forensik).
+
+3. Analys och korrelation
+  🔹MISP automatiskt kopplar ihop relaterade händelser baserat på gemensamma attribut.
+  🔹Visualisering visar hur attacker hänger ihop.
+
+4. Dela och exportera
+  🔹Organisationer kan dela data med varandra via communities.
+  🔹Export till andra system (SIEM, IDS/IPS, EDR) sker via API eller MISP-moduler.
+  🔹Format som STIX, OpenIOC, CSV, och JSON stöds.
+
+🛡️ Integrationer
+  MISP integreras ofta med:
+    🔹SIEM (t.ex. Splunk, ELK/Elastic, QRadar) → för att matcha IoCs mot loggar.
+    🔹IDS/IPS (t.ex. Suricata, Snort) → för att skapa blocklistor.
+    🔹EDR/XDR (t.ex. CrowdStrike, SentinelOne) → för att upptäcka kända indikatorer.
+    🔹TheHive → för incidenthantering (TheHive + MISP är en vanlig kombination i SOC).
+
+📊 Exempel på användningsfall
+    🔹En SOC-analytiker får en varning i SIEM om misstänkt trafik.
+    🔹IP-adressen kontrolleras mot MISP.
+    🔹MISP visar att IP-adressen finns med i en känd kampanj relaterad till ransomware.
+    🔹Analytikern kan då snabbt förstå hotbilden och uppdatera skyddsåtgärder.
+
+🔐 Sammanfattning
+Funktion	        Syfte
+Insamling	        Samla in hotdata från interna och externa källor
+Analys	          Identifiera samband och mönster mellan attacker
+Delning	          Dela hotinformation med andra aktörer
+Integration	      Använd data för att förbättra detektering och respons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
