@@ -1,1 +1,54 @@
+🧠 Vad är Snort?
+Snort är ett intrångsdetekteringssystem (IDS) och intrångsskyddssystem (IPS) utvecklat av Cisco.
+Det används för att övervaka nätverkstrafik i realtid och identifiera misstänkt aktivitet baserat på fördefinierade regler.
+
+Du kan använda Snort i tre huvudsakliga lägen:
+  1. Sniffer Mode – visar alla paket som passerar nätverksgränssnittet.
+  2. Packet Logger Mode – loggar trafiken till filer för senare analys.
+  3. Network Intrusion Detection Mode (NIDS) – analyserar trafiken och jämför den mot ett regelsystem för att upptäcka attacker eller avvikande beteende.
+
+⚙️ Hur Snort fungerar
+Snort fungerar genom att:
+  1. Fånga upp nätverkspaket (via libpcap, samma som Wireshark använder).
+  2. Analysera innehållet i paketen.
+  3. Matcha dessa mot en databas av signaturer (regler) för kända attacker.
+  4. Generera varningar eller blockera trafik beroende på konfigurationen.
+
+📜 Exempel på Snort-regler
+Snort-regler är hjärtat i systemet.
+En regel består av två delar:
+  - Header → anger typ av trafik som ska övervakas.
+  - Options → beskriver vad som ska matchas och vilken åtgärd som ska tas.
+
+🧩 Exempel 1: Enkel ICMP-regel (ping)
+  alert icmp any any -> any any (msg:"Ping request detected"; sid:1000001; rev:1;)
+    👉 Förklaring:
+          alert = åtgärden (generera varning).
+          icmp any any -> any any = gäller all ICMP-trafik (t.ex. ping).
+          msg = text som visas i loggen.
+          sid = unikt ID för regeln.
+
+🧩 Exempel 2: HTTP-regel för att upptäcka ordet "password"
+  alert tcp any any -> any 80 (msg:"Password keyword detected"; content:"password"; nocase; sid:1000002; rev:1;)
+    👉 Förklaring:
+        Övervakar TCP-trafik till port 80 (HTTP).
+        Letar efter strängen "password" i innehållet.
+        nocase = oberoende av versaler/gemener.
+
+🧩 Exempel 3: Blockera försök att logga in via Telnet
+  drop tcp any any -> any 23 (msg:"Telnet connection attempt blocked"; sid:1000003; rev:1;)
+    👉 Förklaring:
+        drop = stoppar paketet (om Snort körs som IPS).
+        port 23 = Telnet (osäkert protokoll).
+
+🧾 Exempel på körning
+För att starta Snort i snifferläge:
+  sudo snort -v -l .
+
+För att köra i IDS-läge med regler:
+  sudo snort -A console -c /etc/snort/snort.conf -i eth0
+
+    -A console = skriv ut varningar till terminalen.
+    -c = anger konfigurationsfil.
+    -i eth0 = anger vilket nätverksinterface som ska övervakas.
 
