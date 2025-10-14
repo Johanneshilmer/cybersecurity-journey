@@ -1,0 +1,34 @@
+NetworkMiner
+Är ett nätverksanalysverktyg (Network Forensic Analysis Tool, NFAT) som används för att analysera nätverkstrafik och extrahera information ur inspelade eller pågående nätverksflöden. 
+Det är utvecklat av Erik Hjelmvik från det svenska företaget Netresec och fungerar främst i Windows, men kan även köras på Linux och macOS med hjälp av Mono.
+
+🔍 Syfte och användningsområden
+NetworkMiner används främst inom nätverksforensik och cybersäkerhet för att:
+  - Återskapa och analysera kommunikation mellan olika enheter i ett nätverk.
+  - Extrahera filer och data (t.ex. bilder, dokument, lösenord, certifikat) från inspelade nätverkstrafikfiler (PCAP).
+  - Identifiera hostar (värdar) i ett nätverk och samla information om dem, såsom IP-adresser, operativsystem, domännamn och användaragentsträngar.
+  - Spåra attacker eller intrångsförsök genom att analysera nätverksdumpfiler efter tecken på misstänkt aktivitet.
+  - Utföra passiv nätverksanalys, vilket innebär att den inte skickar ut någon trafik själv — den lyssnar endast på redan inspelad trafik.
+
+🧠 Hur det fungerar
+NetworkMiner analyserar paketfiler (PCAP) som skapats med exempelvis Wireshark eller tcpdump.
+När du öppnar en sådan fil i NetworkMiner:
+  1. Identifierar programmet alla hosts (IP-adresser) som har skickat eller tagit emot trafik.
+  2. Extraherar metadata (t.ex. användarnamn, cookies, DNS-förfrågningar, HTTP-headers).
+  3. Återskapar eventuella överförda filer, som sedan kan sparas lokalt.
+  4. Visar informationen i ett grafiskt gränssnitt, uppdelat i flikar som Hosts, Files, Images, Messages, Credentials osv.
+
+🧰 Exempel på praktisk användning
+En säkerhetsanalytiker kan öppna en .pcap-fil från ett intrångsförsök och snabbt se:
+  - Vilka datorer som kommunicerade.
+  - Vilka filer som laddades upp eller ner.
+  - Om några lösenord skickades i klartext.
+  - Vilka domäner eller IP-adresser som var involverade i kommunikationen.
+
+⚙️ Skillnad från Wireshark
+Verktyg	              Syfte	                                Analysnivå
+Wireshark	            Detaljerad paketnivåanalys	          Visar varje enskilt paket i trafiken
+NetworkMiner	        Forensisk analys	                    Sammanställer och återskapar helheten: filer, sessionsdata, credentials, hostar
+
+
+NetworkMiner är alltså komplementärt till Wireshark — det används ofta efter att man samlat in trafik, för att snabbt få en överblick och hitta viktiga artefakter.
