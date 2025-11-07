@@ -1,0 +1,6 @@
+Här är olika steg en SOC analytiker kan ta för att undersöka olika "alerts".
+
+  1. Förstå vem som är hotad, till exempel den berörda användaren, värdnamnet, molnet, nätverket eller webbplatsen
+  2. Observera åtgärden som beskrivs i aviseringen, till exempel om det var en misstänkt inloggning, skadlig kod eller nätfiske 
+  3. Granska händelser och leta efter misstänkta åtgärder strax efter eller före aviseringen 
+  4. Använd plattformar för hotinformation eller andra tillgängliga resurser för att verifiera dina tankar
