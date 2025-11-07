@@ -4,3 +4,12 @@ Här är olika steg en SOC analytiker kan ta för att undersöka olika "alerts".
   2. Observera åtgärden som beskrivs i aviseringen, till exempel om det var en misstänkt inloggning, skadlig kod eller nätfiske 
   3. Granska händelser och leta efter misstänkta åtgärder strax efter eller före aviseringen 
   4. Använd plattformar för hotinformation eller andra tillgängliga resurser för att verifiera dina tankar
+
+
+Hur skriver man en bra "Alert Report"
+  "The Five Ws" (Who, What, When, Where, Why)
+    Vem: Vilken användare som loggar in, kör kommandot eller laddar ned filen 
+    Vad: Exakt vilken åtgärd eller händelsesekvens som utfördes 
+    När: Exakt när började och slutade den misstänkta aktiviteten 
+    Var: Vilken enhet, IP-adress eller webbplats som var inblandad i aviseringen 
+    Varför: Det viktigaste W:et, resonemanget bakom din slutliga dom
