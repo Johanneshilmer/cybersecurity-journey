@@ -8,7 +8,8 @@ I'm documenting my progress as I work toward becoming a **SOC Analyst**.
 ## 📚 Active Learning
 
 ### 🎓 Certifications
-- Google Cybersecurity Certificate (in progress)
+- Security Analyst Level 1 (SAL1)
+- Google Cybersecurity Certificate ✅
 - Cisco Networking Essentials ✅
 
 ### 🧠 Platforms
