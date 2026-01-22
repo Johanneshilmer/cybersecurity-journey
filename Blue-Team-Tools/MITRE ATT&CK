@@ -1,0 +1,92 @@
+MITRE ATT&CK (attack.mitre.org) är ett ramverk som används inom cybersäkerhet för att förstå, analysera och försvara sig mot verkliga cyberattacker.
+
+Kort sagt:
+👉 det beskriver hur angripare faktiskt går till väga, steg för steg.
+Vad är MITRE ATT&CK?
+
+Det är en kunskapsbas över:
+
+Taktiker – varför angriparen gör något (målet)
+
+Tekniker – hur de gör det
+
+Subtekniker – detaljerade varianter
+
+Exempel:
+
+Tactic: Credential Access
+
+Technique: Phishing
+
+Sub-technique: Spearphishing via email
+
+Allt är baserat på riktiga attacker, inte teori.
+
+Vad används det till i praktiken?
+🔐 SOC & Blue Team
+
+Kartlägga attacker i SIEM/EDR
+
+Förbättra detection rules
+
+Se vilka attacker man inte täcker idag
+
+Incident response & forensik
+
+“Vi såg PowerShell + registry → aha, T1059 + T1112”
+
+🧠 Red Team & Pentest
+
+Planera realistiska attacker
+
+Undvika “CTF‑beteende”
+
+Efterlikna APT-grupper
+
+🏢 Organisationer & Säkerhetsarkitektur
+
+Gap‑analys: vilka tekniker skyddar vi mot?
+
+Mappa säkerhetskontroller mot attacker
+
+Prioritera rätt skydd
+
+📚 Studier & cert
+
+Väldigt vanligt i:
+
+SOC Analyst‑roller
+
+Threat Intelligence
+
+Incident Response
+
+Används i TryHackMe, Blue Team Labs, osv 👀
+
+Varför är det bättre än “kill chain”?
+
+Mycket mer detaljerat
+
+Icke-linjärt (attacker är kaotiska)
+
+Uppdateras kontinuerligt
+
+Exempel på hur du kan använda det
+
+Säg att du ser detta i loggar:
+
+powershell.exe
+
+rundll32
+
+credential dump
+
+Du kan:
+
+Slå upp teknikerna i ATT&CK
+
+Se vilken fas attacken är i
+
+Förstå vad som troligen kommer härnäst
+
+Stoppa / larma i tid
